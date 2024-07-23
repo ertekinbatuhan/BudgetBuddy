@@ -13,6 +13,7 @@
 		C0A2EA852C4FC38900DB9A14 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A2EA842C4FC38900DB9A14 /* Color+Extension.swift */; };
 		C0A2EAAE2C4FD33500DB9A14 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A2EAAD2C4FD33500DB9A14 /* SearchBar.swift */; };
 		C0A2EAB02C4FD41900DB9A14 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A2EAAF2C4FD41900DB9A14 /* String+Extension.swift */; };
+		C0A81BC42C501E9B005AF972 /* CategoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A81BC32C501E9B005AF972 /* CategoriesViewModel.swift */; };
 		C0D9031E2C4ED80A00D9AAE4 /* Finance_TrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D9031D2C4ED80A00D9AAE4 /* Finance_TrackerApp.swift */; };
 		C0D903202C4ED80A00D9AAE4 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D9031F2C4ED80A00D9AAE4 /* TabBar.swift */; };
 		C0D903222C4ED80B00D9AAE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0D903212C4ED80B00D9AAE4 /* Assets.xcassets */; };
@@ -33,6 +34,7 @@
 		C0A2EA842C4FC38900DB9A14 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		C0A2EAAD2C4FD33500DB9A14 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		C0A2EAAF2C4FD41900DB9A14 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		C0A81BC32C501E9B005AF972 /* CategoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewModel.swift; sourceTree = "<group>"; };
 		C0D9031A2C4ED80A00D9AAE4 /* Finance Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Finance Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0D9031D2C4ED80A00D9AAE4 /* Finance_TrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Finance_TrackerApp.swift; sourceTree = "<group>"; };
 		C0D9031F2C4ED80A00D9AAE4 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 		C0A2EAAA2C4FD03000DB9A14 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				C0A81BC32C501E9B005AF972 /* CategoriesViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 				C0D903322C4EDC2C00D9AAE4 /* CategoriesView.swift in Sources */,
 				C0A2EA752C4FA77900DB9A14 /* CircularProgressView.swift in Sources */,
 				C0D903362C4EE0A500D9AAE4 /* AddExpenseView.swift in Sources */,
+				C0A81BC42C501E9B005AF972 /* CategoriesViewModel.swift in Sources */,
 				C0D903342C4EDE5000D9AAE4 /* GroupedExpenses.swift in Sources */,
 				C0A2EAAE2C4FD33500DB9A14 /* SearchBar.swift in Sources */,
 				C0A2EA812C4FC34900DB9A14 /* Number+Extension.swift in Sources */,

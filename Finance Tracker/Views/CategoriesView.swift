@@ -1,141 +1,109 @@
-//
-//  CategoriesView.swift
-//  Finance Tracker
-//
-//  Created by Batuhan Berk Ertekin on 22.07.2024.
-//
-
 import SwiftUI
 import SwiftData
 
 struct CategoriesView: View {
-    @Query(animation : .snappy) private var allCategories : [Category]
+    @ObservedObject var viewModel: CategoriesViewModel = CategoriesViewModel()
+
+    @Query(animation: .snappy) private var allCategories: [Category]
     @Environment(\.modelContext) private var context
-    
-    @State private var addCategory : Bool = false
-    @State private var categoryName : String  = ""
-    @State private var deleteRequest  : Bool = false
-    @State private var requestedCategory : Category?
-    
-    
+
     var body: some View {
-        NavigationStack{
-    
-            List{
-                ForEach(allCategories.sorted(by: {($0.expenses?.count ?? 0 ) > ($1.expenses?.count ?? 0)})){ category in
-                    DisclosureGroup{
-                        if let expenses  = category.expenses, !expenses.isEmpty {
+        NavigationStack {
+            List {
+                ForEach(viewModel.allCategories) { category in
+                    DisclosureGroup {
+                        if let expenses = category.expenses, !expenses.isEmpty {
                             ForEach(expenses) { expense in
-                                
-                                ExpensesCardView(expense: expense,displayTag: false)
-                                
+                                ExpensesCardView(expense: expense, displayTag: false)
                             }
-                            
-                        }else {
-                            ContentUnavailableView{
-                                Label("No Expenses",systemImage: "tray.fill")
+                        } else {
+                            ContentUnavailableView {
+                                Label("No Expenses", systemImage: "tray.fill")
                             }
                         }
-                    } label : {
+                    } label: {
                         Text(category.categoryName)
-                    }.swipeActions(edge: .trailing, allowsFullSwipe: false) {
-                        Button(){
-                            deleteRequest.toggle()
-                            requestedCategory = category
-                        } label : {
+                    }
+                    .swipeActions(edge: .trailing, allowsFullSwipe: false) {
+                        Button {
+                            viewModel.requestDeleteCategory(category)
+                        } label: {
                             Image(systemName: "trash")
                         }
                         .tint(.red)
                     }
-                    
                 }
-                
-            }.navigationTitle("Categories")
-                .overlay{
-                    
-                    if allCategories.isEmpty {
-                        ContentUnavailableView{
-                            Label("No categories",systemImage: "tray.fill")
-                        }
+            }
+            .navigationTitle("Categories")
+            .overlay {
+                if viewModel.allCategories.isEmpty {
+                    ContentUnavailableView {
+                        Label("No categories", systemImage: "tray.fill")
                     }
                 }
-                .toolbar{
-                    
-                    ToolbarItem(placement : .topBarTrailing){
-                        Button{
-                            addCategory.toggle()
-                        } label : {
-                            Image(systemName: "plus.circle.fill").font(.title3)
-                        }
+            }
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button {
+                        viewModel.addCategory.toggle()
+                    } label: {
+                        Image(systemName: "plus.circle.fill").font(.title3)
                     }
                 }
-                .sheet(isPresented: $addCategory) {
-                    categoryName = ""
-                }
-            
-            
-            content : {
-                NavigationStack{
-                    List{
-                        
-                        Section("Title"){
-                            TextField("General", text : $categoryName)
+            }
+            .sheet(isPresented: $viewModel.addCategory) {
+                viewModel.categoryName = ""
+            } content: {
+                NavigationStack {
+                    List {
+                        Section("Title") {
+                            TextField("General", text: $viewModel.categoryName)
                         }
-                        
                     }
                     .navigationTitle("Category Name")
                     .navigationBarTitleDisplayMode(.inline)
-                    .toolbar{
-                        ToolbarItem(placement : .topBarLeading){
-                            Button("Cancel"){
-                                addCategory = false
+                    .toolbar {
+                        ToolbarItem(placement: .topBarLeading) {
+                            Button("Cancel") {
+                                viewModel.addCategory = false
                             }
                             .tint(.red)
                         }
-                        
-                        ToolbarItem(placement : .topBarTrailing){
-                            Button("Add"){
-                                let category = Category(categoryName: categoryName)
-                                context.insert(category)
-                                
-                                categoryName = ""
-                                addCategory = false
+                        ToolbarItem(placement: .topBarTrailing) {
+                            Button("Add") {
+                                viewModel.addNewCategory(context: context)
                             }
-                            .disabled(categoryName.isEmpty)
+                            .disabled(viewModel.categoryName.isEmpty)
                         }
                     }
-                }.presentationDetents([.height(180)])
-                    .presentationCornerRadius(20)
-                    .interactiveDismissDisabled()
-                
+                }
+                .presentationDetents([.height(180)])
+                .presentationCornerRadius(20)
+                .interactiveDismissDisabled()
             }
         }
-        .alert("If you delete a category, all the associated expenses will be deleted too.",isPresented: $deleteRequest){
-                
-                Button(role : .destructive){
-                    
-                    if let requestedCategory {
-                        
-                        context.delete(requestedCategory)
-                        self.requestedCategory = nil
-                    }
-                   
-                    
-                } label : {
-                    Text("Delete")
-                }
-                
-                Button(role : .cancel){
-                    requestedCategory = nil
-                    
-                } label : {
-                    Text("Cancel")
-                }
+        .alert("If you delete a category, all the associated expenses will be deleted too.", isPresented: $viewModel.deleteRequest) {
+            Button(role: .destructive) {
+                viewModel.deleteCategory(context: context)
+            } label: {
+                Text("Delete")
             }
-        
+            Button(role: .cancel) {
+                viewModel.requestedCategory = nil
+            } label: {
+                Text("Cancel")
+            }
+        }
+        .onAppear {
+            viewModel.fetchCategories(categories: allCategories)
+        }
+        .onChange(of: allCategories) { newCategories in
+            viewModel.fetchCategories(categories: newCategories)
+        }
     }
 }
 
 #Preview {
     CategoriesView()
 }
+
