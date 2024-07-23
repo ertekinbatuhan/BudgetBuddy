@@ -12,6 +12,7 @@
 		C0A2EA832C4FC35600DB9A14 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A2EA822C4FC35600DB9A14 /* Date+Extension.swift */; };
 		C0A2EA852C4FC38900DB9A14 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A2EA842C4FC38900DB9A14 /* Color+Extension.swift */; };
 		C0A2EAAE2C4FD33500DB9A14 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A2EAAD2C4FD33500DB9A14 /* SearchBar.swift */; };
+		C0A2EAB02C4FD41900DB9A14 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A2EAAF2C4FD41900DB9A14 /* String+Extension.swift */; };
 		C0D9031E2C4ED80A00D9AAE4 /* Finance_TrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D9031D2C4ED80A00D9AAE4 /* Finance_TrackerApp.swift */; };
 		C0D903202C4ED80A00D9AAE4 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D9031F2C4ED80A00D9AAE4 /* TabBar.swift */; };
 		C0D903222C4ED80B00D9AAE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0D903212C4ED80B00D9AAE4 /* Assets.xcassets */; };
@@ -31,6 +32,7 @@
 		C0A2EA822C4FC35600DB9A14 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		C0A2EA842C4FC38900DB9A14 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		C0A2EAAD2C4FD33500DB9A14 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		C0A2EAAF2C4FD41900DB9A14 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		C0D9031A2C4ED80A00D9AAE4 /* Finance Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Finance Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0D9031D2C4ED80A00D9AAE4 /* Finance_TrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Finance_TrackerApp.swift; sourceTree = "<group>"; };
 		C0D9031F2C4ED80A00D9AAE4 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				C0A2EA802C4FC34900DB9A14 /* Number+Extension.swift */,
 				C0A2EA822C4FC35600DB9A14 /* Date+Extension.swift */,
 				C0A2EA842C4FC38900DB9A14 /* Color+Extension.swift */,
+				C0A2EAAF2C4FD41900DB9A14 /* String+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 				C0D903302C4EDBBA00D9AAE4 /* ExpensesView.swift in Sources */,
 				C0D9032E2C4ED9A300D9AAE4 /* Category.swift in Sources */,
 				C0A2EA852C4FC38900DB9A14 /* Color+Extension.swift in Sources */,
+				C0A2EAB02C4FD41900DB9A14 /* String+Extension.swift in Sources */,
 				C0D903382C4EE97B00D9AAE4 /* ExpensesCardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
