@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 struct GroupedExpenses : Identifiable {
     var id = UUID()
     var date : Date
