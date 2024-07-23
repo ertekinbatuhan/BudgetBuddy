@@ -122,6 +122,6 @@ struct ExpensesView: View {
 }
 
 #Preview {
-    ContentView()
+    
+    TabBar()
 }
-

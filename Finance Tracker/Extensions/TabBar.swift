@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TabView: View {
+struct TabBar: View {
     
     @State private var currentTab : String = "Expenses"
     
@@ -30,5 +30,5 @@ struct TabView: View {
 }
 
 #Preview {
-    TabView()
+    TabBar()
 }
