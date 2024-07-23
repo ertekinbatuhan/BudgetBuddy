@@ -2,72 +2,117 @@ import SwiftUI
 import SwiftData
 
 struct ExpensesView: View {
+    
     @Query(sort: [SortDescriptor(\Expense.date, order: .reverse)], animation: .snappy) private var allExpenses: [Expense]
+    @Query(sort: [SortDescriptor(\Category.categoryName)], animation: .snappy) private var allCategories: [Category]
     @State private var groupedExpenses: [GroupedExpenses] = []
     @State private var originalGroupedExpenses: [GroupedExpenses] = []
     @State private var addExpense: Bool = false
     @Environment(\.modelContext) private var context
     @Binding var currentTab: String
     @State private var searchText: String = ""
+    
+    private var categoryColors: [Category: Color] {
+        Dictionary(uniqueKeysWithValues: allCategories.map { ($0, .randomColor()) })
+    }
 
     var body: some View {
         NavigationStack {
-            List {
-                ForEach(groupedExpenses) { group in
-                    Section(header: Text(group.groupTitle)) {
-                        ForEach(group.expenses) { expense in
-                            ExpensesCardView(expense: expense)
-                                .swipeActions(edge: .trailing, allowsFullSwipe: false) {
-                                    Button {
-                                        deleteExpense(expense, from: group)
-                                    } label: {
-                                        Image(systemName: "trash")
+            VStack {
+                
+                SearchBar(text: $searchText)
+                    .padding(.horizontal)
+                    .onChange(of: searchText) { newValue in
+                        if !newValue.isEmpty {
+                            filterExpenses(newValue)
+                        } else {
+                            groupedExpenses = originalGroupedExpenses
+                        }
+                    }
+                
+                ZStack {
+                    
+                    CircularProgressView(categories: allCategories, categoryColors: categoryColors)
+                        .frame(width: 200, height: 200)
+                        .background(Color(.systemGray6))
+                        .clipShape(Circle())
+                        .shadow(radius: 10)
+                    
+                    VStack {
+                        Text("Total")
+                            .font(.subheadline)
+                            .foregroundColor(.gray)
+                            .padding(.bottom, 5)
+                        Text(totalAmountString)
+                            .font(.title2)
+                            .fontWeight(.bold)
+                            .foregroundColor(.black)
+                            .lineLimit(1)
+                            .truncationMode(.tail)
+                            .padding(.leading, 5)
+                            .padding(.trailing, 5)
+                    }
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                }
+                .padding(.top)
+                
+                List {
+                    ForEach(groupedExpenses) { group in
+                        Section(header: Text(group.groupTitle).font(.headline).foregroundColor(.primary)) {
+                            ForEach(group.expenses) { expense in
+                                ExpensesCardView(expense: expense)
+                                    .swipeActions(edge: .trailing, allowsFullSwipe: false) {
+                                        Button {
+                                            deleteExpense(expense, from: group)
+                                        } label: {
+                                            Image(systemName: "trash")
+                                        }
+                                        .tint(.red)
                                     }
-                                    .tint(.red)
-                                }
+                            }
                         }
                     }
                 }
-            }
-            .navigationTitle("Expenses")
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button {
-                        addExpense.toggle()
-                    } label: {
-                        Image(systemName: "plus.circle.fill")
-                            .font(.title)
+                .navigationTitle("Expenses")
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        Button {
+                            addExpense.toggle()
+                        } label: {
+                            Image(systemName: "plus.circle.fill")
+                                .font(.title)
+                        }
                     }
                 }
-            }
-            .searchable(text: $searchText, placement: .navigationBarDrawer, prompt: Text("Search"))
-            .onAppear {
-                createGroupedExpenses(allExpenses)
-            }
-            .onChange(of: allExpenses) { newValue in
-                createGroupedExpenses(newValue)
-            }
-            .onChange(of: searchText) { newValue in
-                if !newValue.isEmpty {
-                    filterExpenses(newValue)
-                } else {
-                    groupedExpenses = originalGroupedExpenses
+                .onAppear {
+                    createGroupedExpenses(allExpenses)
                 }
-            }
-            .sheet(isPresented: $addExpense) {
-                AddExpenseView().interactiveDismissDisabled()
-            }
-            .overlay {
-                if allExpenses.isEmpty || groupedExpenses.isEmpty || currentTab == "Categories" {
-                    ContentUnavailableView {
-                        Label("No Expenses", systemImage: "tray.fill")
+                .onChange(of: allExpenses) { newValue in
+                    createGroupedExpenses(newValue)
+                }
+                .sheet(isPresented: $addExpense) {
+                    AddExpenseView().interactiveDismissDisabled()
+                }
+                .overlay {
+                    if allExpenses.isEmpty || groupedExpenses.isEmpty || currentTab == "Kategoriler" {
+                        ContentUnavailableView {
+                            Label("Gider Yok", systemImage: "tray.fill")
+                        }
                     }
                 }
             }
         }
     }
 
-    func filterExpenses(_ text: String) {
+    private var totalAmount: Double {
+        allExpenses.reduce(0) { $0 + $1.amount }
+    }
+
+    private var totalAmountString: String {
+        NumberFormatter.currencyFormatter.string(for: totalAmount) ?? ""
+    }
+
+    private func filterExpenses(_ text: String) {
         Task.detached(priority: .high) {
             let query = text.lowercased()
             let filteredGroups = originalGroupedExpenses.compactMap { group -> GroupedExpenses? in
@@ -119,9 +164,38 @@ struct ExpensesView: View {
             }
         }
     }
+    
+    struct SearchBar: View {
+        @Binding var text: String
+
+        var body: some View {
+            HStack {
+                TextField("Search", text: $text)
+                    .padding(7)
+                    .padding(.horizontal, 25)
+                    .background(Color(.systemGray6))
+                    .cornerRadius(8)
+                    .overlay(
+                        HStack {
+                            Image(systemName: "magnifyingglass")
+                                .foregroundColor(.gray)
+                                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                                .padding(.leading, 8)
+                            
+                            if !text.isEmpty {
+                                Button(action: {
+                                    text = ""
+                                }) {
+                                    Image(systemName: "multiply.circle.fill")
+                                        .foregroundColor(.gray)
+                                        .padding(.trailing, 8)
+                                }
+                            }
+                        }
+                    )
+                    .padding(.horizontal, 10)
+            }
+        }
+    }
 }
 
-#Preview {
-    
-    TabBar()
-}

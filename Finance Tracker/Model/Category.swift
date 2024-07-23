@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftData
+import SwiftUI
 
 @Model
 class Category {
@@ -14,8 +15,7 @@ class Category {
     var categoryName : String
     @Relationship(deleteRule : .cascade, inverse : \Expense.category)
     var expenses : [Expense]?
-    
-    
+  
     init(categoryName: String) {
         self.categoryName = categoryName
        

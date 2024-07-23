@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C0A2EA752C4FA77900DB9A14 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A2EA742C4FA77900DB9A14 /* CircularProgressView.swift */; };
+		C0A2EA812C4FC34900DB9A14 /* NumberFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A2EA802C4FC34900DB9A14 /* NumberFormatter.swift */; };
+		C0A2EA832C4FC35600DB9A14 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A2EA822C4FC35600DB9A14 /* DateFormatter.swift */; };
+		C0A2EA852C4FC38900DB9A14 /* RandomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A2EA842C4FC38900DB9A14 /* RandomColor.swift */; };
 		C0D9031E2C4ED80A00D9AAE4 /* Finance_TrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D9031D2C4ED80A00D9AAE4 /* Finance_TrackerApp.swift */; };
 		C0D903202C4ED80A00D9AAE4 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D9031F2C4ED80A00D9AAE4 /* TabBar.swift */; };
 		C0D903222C4ED80B00D9AAE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0D903212C4ED80B00D9AAE4 /* Assets.xcassets */; };
@@ -21,6 +25,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C0A2EA742C4FA77900DB9A14 /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
+		C0A2EA802C4FC34900DB9A14 /* NumberFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFormatter.swift; sourceTree = "<group>"; };
+		C0A2EA822C4FC35600DB9A14 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
+		C0A2EA842C4FC38900DB9A14 /* RandomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomColor.swift; sourceTree = "<group>"; };
 		C0D9031A2C4ED80A00D9AAE4 /* Finance Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Finance Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0D9031D2C4ED80A00D9AAE4 /* Finance_TrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Finance_TrackerApp.swift; sourceTree = "<group>"; };
 		C0D9031F2C4ED80A00D9AAE4 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
@@ -50,7 +58,6 @@
 			isa = PBXGroup;
 			children = (
 				C0D903352C4EE0A500D9AAE4 /* AddExpenseView.swift */,
-				C0D903372C4EE97B00D9AAE4 /* ExpensesCardView.swift */,
 				C0D903312C4EDC2C00D9AAE4 /* CategoriesView.swift */,
 				C0D9032F2C4EDBBA00D9AAE4 /* ExpensesView.swift */,
 			);
@@ -76,8 +83,13 @@
 		C027F28E2C4F8787004E539E /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				C0D903372C4EE97B00D9AAE4 /* ExpensesCardView.swift */,
+				C0A2EA742C4FA77900DB9A14 /* CircularProgressView.swift */,
 				C0D903332C4EDE5000D9AAE4 /* GroupedExpenses.swift */,
 				C0D9031F2C4ED80A00D9AAE4 /* TabBar.swift */,
+				C0A2EA802C4FC34900DB9A14 /* NumberFormatter.swift */,
+				C0A2EA822C4FC35600DB9A14 /* DateFormatter.swift */,
+				C0A2EA842C4FC38900DB9A14 /* RandomColor.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -190,14 +202,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0A2EA832C4FC35600DB9A14 /* DateFormatter.swift in Sources */,
 				C0D9032C2C4ED95B00D9AAE4 /* Expense.swift in Sources */,
 				C0D903202C4ED80A00D9AAE4 /* TabBar.swift in Sources */,
 				C0D903322C4EDC2C00D9AAE4 /* CategoriesView.swift in Sources */,
+				C0A2EA752C4FA77900DB9A14 /* CircularProgressView.swift in Sources */,
 				C0D903362C4EE0A500D9AAE4 /* AddExpenseView.swift in Sources */,
 				C0D903342C4EDE5000D9AAE4 /* GroupedExpenses.swift in Sources */,
+				C0A2EA812C4FC34900DB9A14 /* NumberFormatter.swift in Sources */,
 				C0D9031E2C4ED80A00D9AAE4 /* Finance_TrackerApp.swift in Sources */,
 				C0D903302C4EDBBA00D9AAE4 /* ExpensesView.swift in Sources */,
 				C0D9032E2C4ED9A300D9AAE4 /* Category.swift in Sources */,
+				C0A2EA852C4FC38900DB9A14 /* RandomColor.swift in Sources */,
 				C0D903382C4EE97B00D9AAE4 /* ExpensesCardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

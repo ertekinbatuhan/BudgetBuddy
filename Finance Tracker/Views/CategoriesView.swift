@@ -20,7 +20,7 @@ struct CategoriesView: View {
     
     var body: some View {
         NavigationStack{
-            
+    
             List{
                 ForEach(allCategories.sorted(by: {($0.expenses?.count ?? 0 ) > ($1.expenses?.count ?? 0)})){ category in
                     DisclosureGroup{
