@@ -65,13 +65,6 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		C027F28C2C4F8708004E539E /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
 		C027F28D2C4F8711004E539E /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +95,13 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		C0A2EAAA2C4FD03000DB9A14 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		C0D903112C4ED80A00D9AAE4 = {
 			isa = PBXGroup;
 			children = (
@@ -121,9 +121,9 @@
 		C0D9031C2C4ED80A00D9AAE4 /* Finance Tracker */ = {
 			isa = PBXGroup;
 			children = (
+				C0A2EAAA2C4FD03000DB9A14 /* ViewModels */,
 				C027F28E2C4F8787004E539E /* Extensions */,
 				C027F28D2C4F8711004E539E /* Models */,
-				C027F28C2C4F8708004E539E /* ViewModel */,
 				C027F28B2C4F86FF004E539E /* Views */,
 				C0D9031D2C4ED80A00D9AAE4 /* Finance_TrackerApp.swift */,
 				C0D903212C4ED80B00D9AAE4 /* Assets.xcassets */,
