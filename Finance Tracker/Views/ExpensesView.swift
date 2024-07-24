@@ -27,10 +27,8 @@ struct ExpensesView: View {
                     
                     CircularProgressView(categories: allCategories, categoryColors: viewModel.categoryColors)
                         .frame(width: 200, height: 200)
-                        .background(Color(.systemGray6))
-                        .clipShape(Circle())
                         .shadow(radius: 10)
-                    
+                       
                     VStack {
                         Text("Total")
                             .font(.subheadline)
@@ -47,7 +45,7 @@ struct ExpensesView: View {
                     }
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                 }
-                .padding(.top)
+                .padding(.bottom)
                 
                 List {
                     ForEach(viewModel.groupedExpenses) { group in
