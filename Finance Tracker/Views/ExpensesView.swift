@@ -7,7 +7,7 @@ struct ExpensesView: View {
     @Query(sort: [SortDescriptor(\Category.categoryName)], animation: .snappy) private var allCategories: [Category]
     @Environment(\.modelContext) private var context
     @Binding var currentTab: String
-    @StateObject private var viewModel = ExpensesViewModel()
+    @ObservedObject private var viewModel = ExpensesViewModel()
     
     var body: some View {
         NavigationStack {

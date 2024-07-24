@@ -2,8 +2,8 @@ import SwiftUI
 import SwiftData
 
 struct CategoriesView: View {
+    
     @ObservedObject var viewModel: CategoriesViewModel = CategoriesViewModel()
-
     @Query(animation: .snappy) private var allCategories: [Category]
     @Environment(\.modelContext) private var context
 

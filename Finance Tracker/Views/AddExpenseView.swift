@@ -5,7 +5,7 @@ struct AddExpenseView: View {
     
     @Environment(\.dismiss) private var dismiss
     @Environment(\.modelContext) private var context
-    @StateObject private var viewModel = AddExpenseViewModel()
+    @ObservedObject private var viewModel = AddExpenseViewModel()
     @Query(animation: .snappy) private var allCategories: [Category]
     
     var body: some View {
