@@ -26,6 +26,7 @@
 		C0D903362C4EE0A500D9AAE4 /* AddExpenseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D903352C4EE0A500D9AAE4 /* AddExpenseView.swift */; };
 		C0D903382C4EE97B00D9AAE4 /* ExpensesCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D903372C4EE97B00D9AAE4 /* ExpensesCardView.swift */; };
 		C0E1074A2C515BEB009AE8D1 /* AddExpenseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E107492C515BEB009AE8D1 /* AddExpenseViewModel.swift */; };
+		C0E1074C2C515F53009AE8D1 /* ExpenseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E1074B2C515F53009AE8D1 /* ExpenseViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		C0D903352C4EE0A500D9AAE4 /* AddExpenseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpenseView.swift; sourceTree = "<group>"; };
 		C0D903372C4EE97B00D9AAE4 /* ExpensesCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesCardView.swift; sourceTree = "<group>"; };
 		C0E107492C515BEB009AE8D1 /* AddExpenseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpenseViewModel.swift; sourceTree = "<group>"; };
+		C0E1074B2C515F53009AE8D1 /* ExpenseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 			children = (
 				C0A81BC32C501E9B005AF972 /* CategoriesViewModel.swift */,
 				C0E107492C515BEB009AE8D1 /* AddExpenseViewModel.swift */,
+				C0E1074B2C515F53009AE8D1 /* ExpenseViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -223,6 +226,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C0E1074A2C515BEB009AE8D1 /* AddExpenseViewModel.swift in Sources */,
+				C0E1074C2C515F53009AE8D1 /* ExpenseViewModel.swift in Sources */,
 				C0A2EA832C4FC35600DB9A14 /* Date+Extension.swift in Sources */,
 				C0D9032C2C4ED95B00D9AAE4 /* Expense.swift in Sources */,
 				C0D903202C4ED80A00D9AAE4 /* TabBar.swift in Sources */,
