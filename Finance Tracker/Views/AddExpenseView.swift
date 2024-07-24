@@ -5,32 +5,27 @@ struct AddExpenseView: View {
     
     @Environment(\.dismiss) private var dismiss
     @Environment(\.modelContext) private var context
-    
-    @State private var title: String = ""
-    @State private var subTitle: String = ""
-    @State private var date: Date = .init()
-    @State private var amount: CGFloat = 0
-    @State private var category: Category?
+    @StateObject private var viewModel = AddExpenseViewModel()
     @Query(animation: .snappy) private var allCategories: [Category]
     
     var body: some View {
         NavigationStack {
             List {
                 Section("Title") {
-                    TextField("Magic Keyboard", text: $title)
+                    TextField("Write something", text: $viewModel.title)
                 }
                 Section("Description") {
-                    TextField("Magic Keyboard", text: $subTitle)
+                    TextField("Write something", text: $viewModel.subTitle)
                 }
                 Section("Amount Spent") {
                     HStack {
                         Text("$").fontWeight(.semibold)
-                        TextField("Magic Keyboard", value: $amount, formatter: NumberFormatter.decimalFormatter)
+                        TextField("Write something", value: $viewModel.amount, formatter: NumberFormatter.decimalFormatter)
                             .keyboardType(.numberPad)
                     }
                 }
                 Section("Date") {
-                    DatePicker("", selection: $date, displayedComponents: [.date])
+                    DatePicker("", selection: $viewModel.date, displayedComponents: [.date])
                         .datePickerStyle(.graphical)
                         .labelsHidden()
                 }
@@ -42,14 +37,14 @@ struct AddExpenseView: View {
                         Menu {
                             ForEach(allCategories) { category in
                                 Button(category.categoryName) {
-                                    self.category = category
+                                    viewModel.category = category
                                 }
                             }
                             Button("None") {
-                                category = nil
+                                viewModel.category = nil
                             }
                         } label: {
-                            if let categoryName = category?.categoryName {
+                            if let categoryName = viewModel.category?.categoryName {
                                 Text(categoryName)
                             } else {
                                 Text("None")
@@ -69,21 +64,14 @@ struct AddExpenseView: View {
                 }
                 
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    Button("Add", action: addExpense)
-                        .disabled(isAddButtonisDisabled)
+                    Button("Add", action: {
+                        viewModel.addExpense(context: context)
+                        dismiss()
+                    })
+                    .disabled(viewModel.isAddButtonDisabled)
                 }
             }
         }
-    }
-    
-    var isAddButtonisDisabled: Bool {
-        return title.isEmpty || subTitle.isEmpty || amount == .zero
-    }
-    
-    func addExpense() {
-        let expense = Expense(title: title, subTitle: subTitle, amount: amount, date: date, category: category)
-        context.insert(expense)
-        dismiss()
     }
 }
 

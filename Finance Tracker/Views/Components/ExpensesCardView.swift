@@ -29,8 +29,7 @@ struct ExpensesCardView: View {
             .lineLimit(1)
             
             Spacer(minLength: 5)
-            
-            
+        
             Text(expense.currencyString).font(.title3.bold())
         }
     }
