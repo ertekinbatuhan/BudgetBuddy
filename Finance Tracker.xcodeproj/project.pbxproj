@@ -13,6 +13,7 @@
 		C04E528D2C541B3F00566111 /* CoinViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04E528C2C541B3F00566111 /* CoinViewModel.swift */; };
 		C04E528F2C541F7200566111 /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04E528E2C541F7200566111 /* Double+Extension.swift */; };
 		C04E52922C542E8700566111 /* NavigationAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04E52912C542E8700566111 /* NavigationAppearance.swift */; };
+		C04E52952C54311200566111 /* CoinError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04E52942C54311200566111 /* CoinError.swift */; };
 		C0A2EA752C4FA77900DB9A14 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A2EA742C4FA77900DB9A14 /* CircularProgressView.swift */; };
 		C0A2EA812C4FC34900DB9A14 /* Number+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A2EA802C4FC34900DB9A14 /* Number+Extension.swift */; };
 		C0A2EA832C4FC35600DB9A14 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A2EA822C4FC35600DB9A14 /* Date+Extension.swift */; };
@@ -41,6 +42,7 @@
 		C04E528C2C541B3F00566111 /* CoinViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinViewModel.swift; sourceTree = "<group>"; };
 		C04E528E2C541F7200566111 /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
 		C04E52912C542E8700566111 /* NavigationAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationAppearance.swift; sourceTree = "<group>"; };
+		C04E52942C54311200566111 /* CoinError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinError.swift; sourceTree = "<group>"; };
 		C0A2EA742C4FA77900DB9A14 /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
 		C0A2EA802C4FC34900DB9A14 /* Number+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Number+Extension.swift"; sourceTree = "<group>"; };
 		C0A2EA822C4FC35600DB9A14 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
@@ -111,12 +113,20 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		C04E52902C542E6900566111 /* Utils */ = {
+		C04E52932C5430EA00566111 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				C04E52942C54311200566111 /* CoinError.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		C04E52962C5433FE00566111 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
 				C04E52912C542E8700566111 /* NavigationAppearance.swift */,
 			);
-			path = Utils;
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		C0A2EA862C4FC70C00DB9A14 /* Components */ = {
@@ -160,7 +170,8 @@
 		C0D9031C2C4ED80A00D9AAE4 /* Finance Tracker */ = {
 			isa = PBXGroup;
 			children = (
-				C04E52902C542E6900566111 /* Utils */,
+				C04E52962C5433FE00566111 /* Utilities */,
+				C04E52932C5430EA00566111 /* Enums */,
 				C0A2EAAA2C4FD03000DB9A14 /* ViewModels */,
 				C027F28E2C4F8787004E539E /* Extensions */,
 				C027F28D2C4F8711004E539E /* Models */,
@@ -261,6 +272,7 @@
 				C0A2EA832C4FC35600DB9A14 /* Date+Extension.swift in Sources */,
 				C0D9032C2C4ED95B00D9AAE4 /* Expense.swift in Sources */,
 				C0D903202C4ED80A00D9AAE4 /* TabBar.swift in Sources */,
+				C04E52952C54311200566111 /* CoinError.swift in Sources */,
 				C0D903322C4EDC2C00D9AAE4 /* CategoriesView.swift in Sources */,
 				C0A2EA752C4FA77900DB9A14 /* CircularProgressView.swift in Sources */,
 				C04E52812C541A2A00566111 /* CoinsView.swift in Sources */,
