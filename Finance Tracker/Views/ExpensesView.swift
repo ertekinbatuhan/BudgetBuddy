@@ -2,10 +2,11 @@ import SwiftUI
 import SwiftData
 
 struct ExpensesView: View {
-    
+
     @Query(sort: [SortDescriptor(\Expense.date, order: .reverse)], animation: .snappy) private var allExpenses: [Expense]
     @Query(sort: [SortDescriptor(\Category.categoryName)], animation: .snappy) private var allCategories: [Category]
     @Environment(\.modelContext) private var context
+    @Environment(\.colorScheme) var colorScheme
     @Binding var currentTab: String
     @ObservedObject private var viewModel = ExpensesViewModel()
     
@@ -37,7 +38,7 @@ struct ExpensesView: View {
                         Text(viewModel.totalAmountString)
                             .font(.title2)
                             .fontWeight(.bold)
-                            .foregroundColor(.black)
+                            .foregroundColor(colorScheme == .dark ? .white : .black)
                             .lineLimit(1)
                             .truncationMode(.tail)
                             .padding(.leading, 5)
