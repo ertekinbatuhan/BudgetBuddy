@@ -62,7 +62,7 @@ struct CoinsView: View {
                                         }
                                         .padding(.horizontal)
 
-                                        Text("\(coin.symbol)")
+                                        Text("\(coin.symbol.uppercased())")
                                             .font(.subheadline)
                                             .foregroundColor(.secondary)
 
