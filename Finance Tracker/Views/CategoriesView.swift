@@ -47,7 +47,7 @@ struct CategoriesView: View {
                     Button {
                         viewModel.addCategory.toggle()
                     } label: {
-                        Image(systemName: "plus.circle.fill").font(.title3)
+                        Image(systemName: "plus.circle.fill").font(.title)
                     }
                 }
             }

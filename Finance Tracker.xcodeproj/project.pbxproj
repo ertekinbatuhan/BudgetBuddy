@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C04E52812C541A2A00566111 /* CoinsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04E52802C541A2A00566111 /* CoinsView.swift */; };
+		C04E52862C541A7D00566111 /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04E52852C541A7D00566111 /* Coin.swift */; };
 		C0A2EA752C4FA77900DB9A14 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A2EA742C4FA77900DB9A14 /* CircularProgressView.swift */; };
 		C0A2EA812C4FC34900DB9A14 /* Number+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A2EA802C4FC34900DB9A14 /* Number+Extension.swift */; };
 		C0A2EA832C4FC35600DB9A14 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A2EA822C4FC35600DB9A14 /* Date+Extension.swift */; };
@@ -30,6 +32,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C04E52802C541A2A00566111 /* CoinsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinsView.swift; sourceTree = "<group>"; };
+		C04E52852C541A7D00566111 /* Coin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
 		C0A2EA742C4FA77900DB9A14 /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
 		C0A2EA802C4FC34900DB9A14 /* Number+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Number+Extension.swift"; sourceTree = "<group>"; };
 		C0A2EA822C4FC35600DB9A14 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
@@ -71,6 +75,7 @@
 				C0D903352C4EE0A500D9AAE4 /* AddExpenseView.swift */,
 				C0D903312C4EDC2C00D9AAE4 /* CategoriesView.swift */,
 				C0D9032F2C4EDBBA00D9AAE4 /* ExpensesView.swift */,
+				C04E52802C541A2A00566111 /* CoinsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -81,6 +86,7 @@
 				C0D903332C4EDE5000D9AAE4 /* GroupedExpenses.swift */,
 				C0D9032B2C4ED95B00D9AAE4 /* Expense.swift */,
 				C0D9032D2C4ED9A300D9AAE4 /* Category.swift */,
+				C04E52852C541A7D00566111 /* Coin.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -232,6 +238,7 @@
 				C0D903202C4ED80A00D9AAE4 /* TabBar.swift in Sources */,
 				C0D903322C4EDC2C00D9AAE4 /* CategoriesView.swift in Sources */,
 				C0A2EA752C4FA77900DB9A14 /* CircularProgressView.swift in Sources */,
+				C04E52812C541A2A00566111 /* CoinsView.swift in Sources */,
 				C0D903362C4EE0A500D9AAE4 /* AddExpenseView.swift in Sources */,
 				C0A81BC42C501E9B005AF972 /* CategoriesViewModel.swift in Sources */,
 				C0D903342C4EDE5000D9AAE4 /* GroupedExpenses.swift in Sources */,
@@ -242,6 +249,7 @@
 				C0D9032E2C4ED9A300D9AAE4 /* Category.swift in Sources */,
 				C0A2EA852C4FC38900DB9A14 /* Color+Extension.swift in Sources */,
 				C0A2EAB02C4FD41900DB9A14 /* String+Extension.swift in Sources */,
+				C04E52862C541A7D00566111 /* Coin.swift in Sources */,
 				C0D903382C4EE97B00D9AAE4 /* ExpensesCardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -19,7 +19,7 @@ struct AddExpenseView: View {
                 }
                 Section("Amount Spent") {
                     HStack {
-                        Text("$").fontWeight(.semibold)
+                        Text("₺").fontWeight(.semibold)
                         TextField("Write something", value: $viewModel.amount, formatter: NumberFormatter.decimalFormatter)
                             .keyboardType(.numberPad)
                     }
