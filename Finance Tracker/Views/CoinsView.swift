@@ -10,17 +10,8 @@ import SwiftUI
 struct CoinsView: View {
     @ObservedObject private var coinViewModel = CoinViewModel()
 
-   init() {
-        let appearance = UINavigationBarAppearance()
-        appearance.configureWithOpaqueBackground()
-        appearance.backgroundColor = .systemBackground
-        appearance.titleTextAttributes = [.foregroundColor: UIColor.systemBlue]
-        appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.systemBlue]
-        appearance.shadowColor = nil
-
-        UINavigationBar.appearance().standardAppearance = appearance
-        UINavigationBar.appearance().scrollEdgeAppearance = appearance
-        UINavigationBar.appearance().compactAppearance = appearance
+    init() {
+        NavigationAppearance.configure()
     }
 
     var body: some View {
@@ -35,7 +26,7 @@ struct CoinsView: View {
                         .foregroundColor(.blue)
                         .frame(maxWidth: .infinity, alignment: .leading)
 
-                    if !coinViewModel.coin.isEmpty {
+                    if !coinViewModel.topEarners.isEmpty {
                         ScrollView(.horizontal, showsIndicators: false) {
                             LazyHStack(spacing: 20) {
                                 ForEach(coinViewModel.topEarners) { coin in
@@ -96,7 +87,11 @@ struct CoinsView: View {
                         .foregroundColor(.blue)
                         .frame(maxWidth: .infinity, alignment: .leading)
 
-                    ForEach(coinViewModel.coin) { coin in
+                    if coinViewModel.coin.isEmpty {
+                        ProgressView()
+                            .padding(.top, 20)
+                    } else {
+                        ForEach(coinViewModel.coin) { coin in
                             HStack {
                                 AsyncImage(url: URL(string: coin.image)) { coin in
                                     switch coin {
@@ -115,7 +110,7 @@ struct CoinsView: View {
                                             .frame(width: 50, height: 50)
                                             .cornerRadius(8)
                                     default:
-                                        EmptyView()
+                                       EmptyView()
                                     }
                                 }
 
@@ -150,8 +145,9 @@ struct CoinsView: View {
                             .padding(.horizontal)
                         }
                     }
-                    .padding(.horizontal)
                 }
+                .padding(.horizontal)
+            }
             .navigationTitle("Live Prices")
             .navigationBarTitleDisplayMode(.inline)
             .onAppear {
@@ -162,6 +158,6 @@ struct CoinsView: View {
 }
 
 #Preview {
-   CoinsView()
+    CoinsView()
 }
 
