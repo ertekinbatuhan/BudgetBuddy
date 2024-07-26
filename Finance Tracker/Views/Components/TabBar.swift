@@ -19,6 +19,10 @@ struct TabBar: View {
                 Image(systemName: "creditcard.fill")
                 Text("Expenses")
             }
+            CoinsView().tag("Coins").tabItem{
+                Image(systemName: "bitcoinsign.circle")
+                Text("Coins")
+            }
             
             CategoriesView().tag("Categories").tabItem{
                 Image(systemName: "list.clipboard.fill")

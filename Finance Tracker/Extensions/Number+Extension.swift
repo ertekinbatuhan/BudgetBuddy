@@ -14,6 +14,13 @@ extension NumberFormatter {
         formatter.maximumFractionDigits = 2
         return formatter
     }
+    static var dollarFormatter: NumberFormatter {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        formatter.currencySymbol = "$"
+        formatter.maximumFractionDigits = 2
+        return formatter
+    }
     
     static var decimalFormatter: NumberFormatter {
         let formatter = NumberFormatter()
