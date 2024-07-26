@@ -16,19 +16,21 @@ struct CircularProgressView: View {
                 let startAngle = getStartAngle(for: category)
                 let endAngle = startAngle + (percentage * 360)
                 
+                let gap: Double = 1 
+                
                 Circle()
-                    .trim(from: startAngle / 360, to: endAngle / 360)
+                    .trim(from: (startAngle / 360) + (gap / 360), to: (endAngle / 360) - (gap / 360))
                     .stroke(
                         categoryColors[category]?.opacity(0.8) ?? .gray,
                         style: StrokeStyle(
                             lineWidth: 30,
-                            lineCap: .round
+                            lineCap: .butt
                         )
                     )
                     .rotationEffect(.degrees(-90))
             }
         }
-        .frame(width: 200, height: 200) 
+        .frame(width: 200, height: 200)
     }
     
     private func calculateTotalAmount(for category: Category) -> Double {
@@ -41,5 +43,4 @@ struct CircularProgressView: View {
         return (usedAmount / totalAmount) * 360
     }
 }
-
 
