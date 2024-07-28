@@ -12,7 +12,7 @@ import SwiftData
 struct Finance_TrackerApp: App {
     var body: some Scene {
         WindowGroup {
-            TabBar()
+          SignInView()
         }
         
         .modelContainer(for : [Expense.self, Category.self])

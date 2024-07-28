@@ -14,6 +14,9 @@
 		C04E528F2C541F7200566111 /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04E528E2C541F7200566111 /* Double+Extension.swift */; };
 		C04E52922C542E8700566111 /* NavigationAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04E52912C542E8700566111 /* NavigationAppearance.swift */; };
 		C04E52952C54311200566111 /* CoinError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04E52942C54311200566111 /* CoinError.swift */; };
+		C081000E2C56AF0200A47939 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C081000D2C56AF0200A47939 /* SignInView.swift */; };
+		C08100102C56BD0300A47939 /* SocialLoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C081000F2C56BD0300A47939 /* SocialLoginButton.swift */; };
+		C08100122C56BD3000A47939 /* OrView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08100112C56BD3000A47939 /* OrView.swift */; };
 		C0A2EA752C4FA77900DB9A14 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A2EA742C4FA77900DB9A14 /* CircularProgressView.swift */; };
 		C0A2EA812C4FC34900DB9A14 /* Number+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A2EA802C4FC34900DB9A14 /* Number+Extension.swift */; };
 		C0A2EA832C4FC35600DB9A14 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A2EA822C4FC35600DB9A14 /* Date+Extension.swift */; };
@@ -43,6 +46,9 @@
 		C04E528E2C541F7200566111 /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
 		C04E52912C542E8700566111 /* NavigationAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationAppearance.swift; sourceTree = "<group>"; };
 		C04E52942C54311200566111 /* CoinError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinError.swift; sourceTree = "<group>"; };
+		C081000D2C56AF0200A47939 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		C081000F2C56BD0300A47939 /* SocialLoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialLoginButton.swift; sourceTree = "<group>"; };
+		C08100112C56BD3000A47939 /* OrView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrView.swift; sourceTree = "<group>"; };
 		C0A2EA742C4FA77900DB9A14 /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
 		C0A2EA802C4FC34900DB9A14 /* Number+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Number+Extension.swift"; sourceTree = "<group>"; };
 		C0A2EA822C4FC35600DB9A14 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
@@ -81,11 +87,11 @@
 		C027F28B2C4F86FF004E539E /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				C0A2EA862C4FC70C00DB9A14 /* Components */,
 				C0D903352C4EE0A500D9AAE4 /* AddExpenseView.swift */,
 				C0D903312C4EDC2C00D9AAE4 /* CategoriesView.swift */,
 				C0D9032F2C4EDBBA00D9AAE4 /* ExpensesView.swift */,
 				C04E52802C541A2A00566111 /* CoinsView.swift */,
+				C081000D2C56AF0200A47939 /* SignInView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -136,6 +142,8 @@
 				C0A2EA742C4FA77900DB9A14 /* CircularProgressView.swift */,
 				C0D9031F2C4ED80A00D9AAE4 /* TabBar.swift */,
 				C0A2EAAD2C4FD33500DB9A14 /* SearchBar.swift */,
+				C081000F2C56BD0300A47939 /* SocialLoginButton.swift */,
+				C08100112C56BD3000A47939 /* OrView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -170,6 +178,7 @@
 		C0D9031C2C4ED80A00D9AAE4 /* Finance Tracker */ = {
 			isa = PBXGroup;
 			children = (
+				C0A2EA862C4FC70C00DB9A14 /* Components */,
 				C04E52962C5433FE00566111 /* Utilities */,
 				C04E52932C5430EA00566111 /* Enums */,
 				C0A2EAAA2C4FD03000DB9A14 /* ViewModels */,
@@ -276,14 +285,17 @@
 				C0D903322C4EDC2C00D9AAE4 /* CategoriesView.swift in Sources */,
 				C0A2EA752C4FA77900DB9A14 /* CircularProgressView.swift in Sources */,
 				C04E52812C541A2A00566111 /* CoinsView.swift in Sources */,
+				C081000E2C56AF0200A47939 /* SignInView.swift in Sources */,
 				C0D903362C4EE0A500D9AAE4 /* AddExpenseView.swift in Sources */,
 				C04E528D2C541B3F00566111 /* CoinViewModel.swift in Sources */,
 				C0A81BC42C501E9B005AF972 /* CategoriesViewModel.swift in Sources */,
 				C0D903342C4EDE5000D9AAE4 /* GroupedExpenses.swift in Sources */,
+				C08100122C56BD3000A47939 /* OrView.swift in Sources */,
 				C0A2EAAE2C4FD33500DB9A14 /* SearchBar.swift in Sources */,
 				C0A2EA812C4FC34900DB9A14 /* Number+Extension.swift in Sources */,
 				C0D9031E2C4ED80A00D9AAE4 /* Finance_TrackerApp.swift in Sources */,
 				C0D903302C4EDBBA00D9AAE4 /* ExpensesView.swift in Sources */,
+				C08100102C56BD0300A47939 /* SocialLoginButton.swift in Sources */,
 				C04E528F2C541F7200566111 /* Double+Extension.swift in Sources */,
 				C0D9032E2C4ED9A300D9AAE4 /* Category.swift in Sources */,
 				C0A2EA852C4FC38900DB9A14 /* Color+Extension.swift in Sources */,

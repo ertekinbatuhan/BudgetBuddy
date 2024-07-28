@@ -12,7 +12,6 @@ struct GroupedExpenses : Identifiable {
     var date : Date
     var expenses : [Expense]
     
-    
     var groupTitle : String {
         
         let calendar = Calendar.current
