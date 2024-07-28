@@ -78,6 +78,13 @@ struct SignInView: View {
                     }
                     .padding(.horizontal, 30)
                     
+                    Button() {
+                        
+                    } label : {
+                        Text("Don't have an account?")
+                            .foregroundColor(colorScheme == .dark ? .white : .black)
+                    }.padding()
+                    
                     Spacer()
                 }
                 .padding(.top, 20)
