@@ -25,7 +25,7 @@ struct SignUpView: View {
                         .aspectRatio(contentMode: .fill)
                         .frame(width: geometry.size.width, height: geometry.size.height * 0.35)
                         .padding(.horizontal)
-                        .padding(.top,10)
+                        .padding(.top,5)
                     
                     Spacer().frame(height: 40)  
                     
@@ -80,7 +80,6 @@ struct SignUpView: View {
                         })
                     }
                     .padding(.horizontal, 30)
-                    
                     
                     HStack(spacing : 10){
                         

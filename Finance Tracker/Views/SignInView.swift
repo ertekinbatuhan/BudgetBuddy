@@ -28,7 +28,7 @@ struct SignInView: View {
                         .padding(.horizontal)
                         .padding(.top,25)
                     
-                    Spacer().frame(height: 40)  
+                    Spacer().frame(height: 40)
                     
                     Text("Sign In")
                         .font(.largeTitle)
@@ -90,7 +90,7 @@ struct SignInView: View {
                         Button() {
                             
                         } label : {
-                            Text("Register")
+                            Text("Sign Up")
                                 .foregroundColor(colorScheme == .dark ? .blue : .blue)
                         }
                     }.padding()
