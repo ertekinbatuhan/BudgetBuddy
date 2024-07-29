@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C0217D9F2C57D90F00DD15F6 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0217D9E2C57D90F00DD15F6 /* SignUpView.swift */; };
 		C04E52812C541A2A00566111 /* CoinsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04E52802C541A2A00566111 /* CoinsView.swift */; };
 		C04E52862C541A7D00566111 /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04E52852C541A7D00566111 /* Coin.swift */; };
 		C04E52892C541B0400566111 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C04E52882C541B0400566111 /* Alamofire */; };
@@ -40,6 +41,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C0217D9E2C57D90F00DD15F6 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		C04E52802C541A2A00566111 /* CoinsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinsView.swift; sourceTree = "<group>"; };
 		C04E52852C541A7D00566111 /* Coin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
 		C04E528C2C541B3F00566111 /* CoinViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinViewModel.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 				C0D9032F2C4EDBBA00D9AAE4 /* ExpensesView.swift */,
 				C04E52802C541A2A00566111 /* CoinsView.swift */,
 				C081000D2C56AF0200A47939 /* SignInView.swift */,
+				C0217D9E2C57D90F00DD15F6 /* SignUpView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -300,6 +303,7 @@
 				C0D9032E2C4ED9A300D9AAE4 /* Category.swift in Sources */,
 				C0A2EA852C4FC38900DB9A14 /* Color+Extension.swift in Sources */,
 				C04E52922C542E8700566111 /* NavigationAppearance.swift in Sources */,
+				C0217D9F2C57D90F00DD15F6 /* SignUpView.swift in Sources */,
 				C0A2EAB02C4FD41900DB9A14 /* String+Extension.swift in Sources */,
 				C04E52862C541A7D00566111 /* Coin.swift in Sources */,
 				C0D903382C4EE97B00D9AAE4 /* ExpensesCardView.swift in Sources */,

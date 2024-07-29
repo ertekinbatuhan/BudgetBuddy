@@ -1,36 +1,35 @@
 //
-//  SignInView.swift
+//  SignUpView.swift
 //  Finance Tracker
 //
-//  Created by Batuhan Berk Ertekin on 28.07.2024.
+//  Created by Batuhan Berk Ertekin on 29.07.2024.
 //
 
 import SwiftUI
 
-struct SignInView: View {
+struct SignUpView: View {
     
-    @State  private var email = ""
-    @State  private var password = ""
+    @State private var email = ""
+    @State private var password = ""
     @Environment(\.colorScheme) var colorScheme
 
     var body: some View {
         GeometryReader { geometry in
-            
             NavigationStack {
                 VStack {
                     
                     Spacer()
                    
-                    Image("signIn")
+                    Image("wallet")
                         .resizable()
                         .aspectRatio(contentMode: .fill)
                         .frame(width: geometry.size.width, height: geometry.size.height * 0.35)
                         .padding(.horizontal)
-                        .padding(.top,25)
+                        .padding(.top,10)
                     
                     Spacer().frame(height: 40)  
                     
-                    Text("Sign In")
+                    Text("Sign Up")
                         .font(.largeTitle)
                         .foregroundColor(colorScheme == .dark ? .white : .black)
                         .padding(.bottom, 10)
@@ -52,7 +51,7 @@ struct SignInView: View {
                     Button(action: {
                       
                     }) {
-                        Text("Sign In")
+                        Text("Sign Up")
                             .font(.headline)
                             .foregroundColor(colorScheme == .light ? .white : .black)
                             .padding()
@@ -85,15 +84,16 @@ struct SignInView: View {
                     
                     HStack(spacing : 10){
                         
-                        Text("Don't have an account?")
+                        Text("Already have an account?")
                         
                         Button() {
                             
                         } label : {
-                            Text("Register")
+                            Text("Sign In")
                                 .foregroundColor(colorScheme == .dark ? .blue : .blue)
                         }
-                    }.padding()
+                    }
+                    .padding()
                     
                     Spacer()
                 }
@@ -106,6 +106,6 @@ struct SignInView: View {
 }
 
 #Preview {
-    SignInView()
+   SignUpView()
 }
 
