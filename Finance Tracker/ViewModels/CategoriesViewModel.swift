@@ -33,9 +33,20 @@ class CategoriesViewModel: ObservableObject {
     }
 
     func deleteCategory(context: ModelContext) {
-        if let requestedCategory {
+        if let requestedCategory = requestedCategory {
+            if let expenses = requestedCategory.expenses {
+                for expense in expenses {
+                    context.delete(expense)
+                }
+            }
             context.delete(requestedCategory)
+            do {
+                try context.save()
+            } catch {
+                print("Error saving context after deleting category: \(error)")
+            }
             self.requestedCategory = nil
         }
     }
+
 }

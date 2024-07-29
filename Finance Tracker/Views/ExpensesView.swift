@@ -92,7 +92,7 @@ struct ExpensesView: View {
                     AddExpenseView().interactiveDismissDisabled()
                 }
                 .overlay {
-                    if allExpenses.isEmpty || viewModel.groupedExpenses.isEmpty || currentTab == "Kategoriler" {
+                    if allExpenses.isEmpty || viewModel.groupedExpenses.isEmpty || currentTab == "Categories" {
                         ContentUnavailableView {
                             Label("No Expenses", systemImage: "tray.fill")
                         }

@@ -11,14 +11,11 @@ import SwiftUI
 
 @Model
 class Category {
-    
-    var categoryName : String
-    @Relationship(deleteRule : .cascade, inverse : \Expense.category)
+    var categoryName: String
+    @Relationship(deleteRule: .cascade, inverse: \Expense.category)
     var expenses : [Expense]?
-  
+    
     init(categoryName: String) {
         self.categoryName = categoryName
-       
     }
-    
 }
