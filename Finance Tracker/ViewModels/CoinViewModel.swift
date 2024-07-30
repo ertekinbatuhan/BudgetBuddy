@@ -16,7 +16,7 @@ class CoinViewModel: ObservableObject {
         fetchCoins()
     }
     
-    var topEarners: [Coin] {
+    var topGainers: [Coin] {
         coin.sorted(by: { $0.priceChangePercentage24HInCurrency ?? 0 > $1.priceChangePercentage24HInCurrency ?? 0 })
     }
     

@@ -12,6 +12,7 @@ struct SignInView: View {
     @State  private var email = ""
     @State  private var password = ""
     @Environment(\.colorScheme) var colorScheme
+    @ObservedObject private var signInViewModel = SignInViewModel()
 
     var body: some View {
         GeometryReader { geometry in
@@ -49,19 +50,21 @@ struct SignInView: View {
                         .cornerRadius(10)
                         .padding(.horizontal, 30)
                     
-                    Button(action: {
-                      
-                    }) {
-                        Text("Sign In")
-                            .font(.headline)
-                            .foregroundColor(colorScheme == .light ? .white : .black)
-                            .padding()
-                            .frame(maxWidth: .infinity, maxHeight: 50)
-                            .background(colorScheme == .dark ? .white : .black)
-                            .cornerRadius(10)
-                            .padding(.horizontal, 30)
-                    }
+                    NavigationLink(destination: TabBar().navigationBarBackButtonHidden(true), isActive: $signInViewModel.isSignedIn) {
+                        Button(action: {
+                            signInViewModel.signIn(email: email, password: password)
+                        }) {
+                            Text("Sign In")
+                                .font(.headline)
+                                .foregroundColor(colorScheme == .light ? .white : .black)
+                                .padding()
+                                .frame(maxWidth: .infinity, maxHeight: 50)
+                                .background(colorScheme == .dark ? .white : .black)
+                                .cornerRadius(10)
+                                .padding(.horizontal, 30)
+                        }
                     .padding(.top, 15)
+                    }
                     
                     OrView(title: "or")
                         .foregroundColor(colorScheme == .dark ? .white : .black)
@@ -100,6 +103,7 @@ struct SignInView: View {
                 .padding(.top, 20)
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .background(Color(.systemBackground))
+                
             }
         }
     }

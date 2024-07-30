@@ -26,10 +26,10 @@ struct CoinsView: View {
                         .foregroundColor(.blue)
                         .frame(maxWidth: .infinity, alignment: .leading)
 
-                    if !coinViewModel.topEarners.isEmpty {
+                    if !coinViewModel.topGainers.isEmpty {
                         ScrollView(.horizontal, showsIndicators: false) {
                             LazyHStack(spacing: 20) {
-                                ForEach(coinViewModel.topEarners) { coin in
+                                ForEach(coinViewModel.topGainers) { coin in
                                     VStack {
                                         AsyncImage(url: URL(string: coin.image)) { coin in
                                             switch coin {
