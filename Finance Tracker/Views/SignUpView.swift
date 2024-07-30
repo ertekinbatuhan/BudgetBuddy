@@ -11,6 +11,7 @@ struct SignUpView: View {
     
     @State private var email = ""
     @State private var password = ""
+    @State private var router = false 
     @Environment(\.colorScheme) var colorScheme
     @ObservedObject var signUpViewModel = SignUpViewModel()
 
@@ -89,11 +90,13 @@ struct SignUpView: View {
                         
                         Text("Already have an account?")
                         
-                        Button() {
-                            
-                        } label : {
-                            Text("Sign In")
-                                .foregroundColor(colorScheme == .dark ? .blue : .blue)
+                        NavigationLink(destination : SignInView().navigationBarBackButtonHidden(true) , isActive: $router) {
+                            Button() {
+                                router = true
+                            } label : {
+                                Text("Sign In")
+                                    .foregroundColor(colorScheme == .dark ? .blue : .blue)
+                           }
                         }
                     }
                     .padding()
