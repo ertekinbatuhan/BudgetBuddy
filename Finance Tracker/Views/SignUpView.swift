@@ -12,6 +12,7 @@ struct SignUpView: View {
     @State private var email = ""
     @State private var password = ""
     @Environment(\.colorScheme) var colorScheme
+    @ObservedObject var signUpViewModel = SignUpViewModel()
 
     var body: some View {
         GeometryReader { geometry in
@@ -48,19 +49,22 @@ struct SignUpView: View {
                         .cornerRadius(10)
                         .padding(.horizontal, 30)
                     
-                    Button(action: {
-                      
-                    }) {
-                        Text("Sign Up")
-                            .font(.headline)
-                            .foregroundColor(colorScheme == .light ? .white : .black)
-                            .padding()
-                            .frame(maxWidth: .infinity, maxHeight: 50)
-                            .background(colorScheme == .dark ? .white : .black)
-                            .cornerRadius(10)
-                            .padding(.horizontal, 30)
-                    }
+                    NavigationLink(destination: TabBar(), isActive: $signUpViewModel.isSignedUp) {
+                        Button(action: {
+                            
+                            signUpViewModel.createUser(email: email, password: password)
+                        }) {
+                            Text("Sign Up")
+                                .font(.headline)
+                                .foregroundColor(colorScheme == .light ? .white : .black)
+                                .padding()
+                                .frame(maxWidth: .infinity, maxHeight: 50)
+                                .background(colorScheme == .dark ? .white : .black)
+                                .cornerRadius(10)
+                                .padding(.horizontal, 30)
+                        }
                     .padding(.top, 15)
+                    }
                     
                     OrView(title: "or")
                         .foregroundColor(colorScheme == .dark ? .white : .black)
