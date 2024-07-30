@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		C0217D9F2C57D90F00DD15F6 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0217D9E2C57D90F00DD15F6 /* SignUpView.swift */; };
+		C02323342C58D45A00943FEF /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = C02323332C58D45A00943FEF /* FirebaseAnalytics */; };
+		C02323362C58D46600943FEF /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = C02323352C58D46600943FEF /* FirebaseAuth */; };
+		C02323382C58D46900943FEF /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = C02323372C58D46900943FEF /* FirebaseFirestore */; };
 		C04E52812C541A2A00566111 /* CoinsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04E52802C541A2A00566111 /* CoinsView.swift */; };
 		C04E52862C541A7D00566111 /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04E52852C541A7D00566111 /* Coin.swift */; };
 		C04E52892C541B0400566111 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C04E52882C541B0400566111 /* Alamofire */; };
@@ -79,6 +82,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C02323342C58D45A00943FEF /* FirebaseAnalytics in Frameworks */,
+				C02323382C58D46900943FEF /* FirebaseFirestore in Frameworks */,
+				C02323362C58D46600943FEF /* FirebaseAuth in Frameworks */,
 				C04E52892C541B0400566111 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -86,6 +92,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C02323322C58D45A00943FEF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C027F28B2C4F86FF004E539E /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -167,6 +180,7 @@
 			children = (
 				C0D9031C2C4ED80A00D9AAE4 /* Finance Tracker */,
 				C0D9031B2C4ED80A00D9AAE4 /* Products */,
+				C02323322C58D45A00943FEF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -221,6 +235,9 @@
 			name = "Finance Tracker";
 			packageProductDependencies = (
 				C04E52882C541B0400566111 /* Alamofire */,
+				C02323332C58D45A00943FEF /* FirebaseAnalytics */,
+				C02323352C58D46600943FEF /* FirebaseAuth */,
+				C02323372C58D46900943FEF /* FirebaseFirestore */,
 			);
 			productName = "Finance Tracker";
 			productReference = C0D9031A2C4ED80A00D9AAE4 /* Finance Tracker.app */;
@@ -252,6 +269,7 @@
 			mainGroup = C0D903112C4ED80A00D9AAE4;
 			packageReferences = (
 				C04E52872C541B0400566111 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				C02323312C58D44400943FEF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = C0D9031B2C4ED80A00D9AAE4 /* Products */;
 			projectDirPath = "";
@@ -514,6 +532,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		C02323312C58D44400943FEF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.29.0;
+			};
+		};
 		C04E52872C541B0400566111 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -525,6 +551,21 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		C02323332C58D45A00943FEF /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C02323312C58D44400943FEF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		C02323352C58D46600943FEF /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C02323312C58D44400943FEF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		C02323372C58D46900943FEF /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C02323312C58D44400943FEF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
 		C04E52882C541B0400566111 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = C04E52872C541B0400566111 /* XCRemoteSwiftPackageReference "Alamofire" */;
