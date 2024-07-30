@@ -9,15 +9,15 @@ import SwiftUI
 
 struct SignInView: View {
     
-    @State  private var email = ""
-    @State  private var password = ""
+    @State private var email = ""
+    @State private var password = ""
     @Environment(\.colorScheme) var colorScheme
     @ObservedObject private var signInViewModel = SignInViewModel()
 
     var body: some View {
         GeometryReader { geometry in
             
-            NavigationStack {
+            NavigationView {
                 VStack {
                     
                     Spacer()
@@ -27,7 +27,7 @@ struct SignInView: View {
                         .aspectRatio(contentMode: .fill)
                         .frame(width: geometry.size.width, height: geometry.size.height * 0.35)
                         .padding(.horizontal)
-                        .padding(.top,25)
+                        .padding(.top, 25)
                     
                     Spacer().frame(height: 40)
                     
@@ -63,8 +63,8 @@ struct SignInView: View {
                                 .cornerRadius(10)
                                 .padding(.horizontal, 30)
                         }
-                    .padding(.top, 15)
                     }
+                    .padding(.top, 15)
                     
                     OrView(title: "or")
                         .foregroundColor(colorScheme == .dark ? .white : .black)
@@ -72,11 +72,11 @@ struct SignInView: View {
                     
                     HStack(spacing: 20) {
                         SocialLoginButton(iconName: "google", action: {
-                            
+                           
                         })
                         
                         SocialLoginButton(iconName: "facebook", action: {
-                            
+                           
                         })
                         
                         SocialLoginButton(iconName: "apple", action: {
@@ -85,9 +85,7 @@ struct SignInView: View {
                     }
                     .padding(.horizontal, 30)
                     
-                    
                     HStack(spacing : 10){
-                        
                         Text("Don't have an account?")
                         
                         Button() {
@@ -96,14 +94,14 @@ struct SignInView: View {
                             Text("Sign Up")
                                 .foregroundColor(colorScheme == .dark ? .blue : .blue)
                         }
-                    }.padding()
+                    }
+                    .padding()
                     
                     Spacer()
                 }
                 .padding(.top, 20)
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .background(Color(.systemBackground))
-                
             }
         }
     }
@@ -112,4 +110,3 @@ struct SignInView: View {
 #Preview {
     SignInView()
 }
-
