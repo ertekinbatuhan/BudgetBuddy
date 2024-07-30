@@ -16,7 +16,7 @@ struct SignUpView: View {
 
     var body: some View {
         GeometryReader { geometry in
-            NavigationStack {
+           NavigationView {
                 VStack {
                     
                     Spacer()
@@ -49,7 +49,7 @@ struct SignUpView: View {
                         .cornerRadius(10)
                         .padding(.horizontal, 30)
                     
-                    NavigationLink(destination: TabBar(), isActive: $signUpViewModel.isSignedUp) {
+                    NavigationLink(destination: TabBar().navigationBarBackButtonHidden(true), isActive: $signUpViewModel.isSignedUp) {
                         Button(action: {
                             
                             signUpViewModel.createUser(email: email, password: password)
