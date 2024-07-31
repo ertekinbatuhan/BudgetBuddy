@@ -11,6 +11,8 @@
 		C02323342C58D45A00943FEF /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = C02323332C58D45A00943FEF /* FirebaseAnalytics */; };
 		C02323362C58D46600943FEF /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = C02323352C58D46600943FEF /* FirebaseAuth */; };
 		C02323382C58D46900943FEF /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = C02323372C58D46900943FEF /* FirebaseFirestore */; };
+		C03E3E452C5A148200EC8F2A /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03E3E442C5A148200EC8F2A /* AuthViewModel.swift */; };
+		C03E3E472C5A14BD00EC8F2A /* AuthCheckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03E3E462C5A14BD00EC8F2A /* AuthCheckView.swift */; };
 		C04E52812C541A2A00566111 /* CoinsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04E52802C541A2A00566111 /* CoinsView.swift */; };
 		C04E52862C541A7D00566111 /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04E52852C541A7D00566111 /* Coin.swift */; };
 		C04E52892C541B0400566111 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C04E52882C541B0400566111 /* Alamofire */; };
@@ -48,6 +50,8 @@
 
 /* Begin PBXFileReference section */
 		C0217D9E2C57D90F00DD15F6 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		C03E3E442C5A148200EC8F2A /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		C03E3E462C5A14BD00EC8F2A /* AuthCheckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCheckView.swift; sourceTree = "<group>"; };
 		C04E52802C541A2A00566111 /* CoinsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinsView.swift; sourceTree = "<group>"; };
 		C04E52852C541A7D00566111 /* Coin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
 		C04E528C2C541B3F00566111 /* CoinViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinViewModel.swift; sourceTree = "<group>"; };
@@ -114,6 +118,7 @@
 				C04E52802C541A2A00566111 /* CoinsView.swift */,
 				C081000D2C56AF0200A47939 /* SignInView.swift */,
 				C0217D9E2C57D90F00DD15F6 /* SignUpView.swift */,
+				C03E3E462C5A14BD00EC8F2A /* AuthCheckView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -179,6 +184,7 @@
 				C04E528C2C541B3F00566111 /* CoinViewModel.swift */,
 				C0B08BDF2C58EDB10066CE3B /* SignUpViewModel.swift */,
 				C0B08BE12C594A220066CE3B /* SignInViewModel.swift */,
+				C03E3E442C5A148200EC8F2A /* AuthViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -332,7 +338,9 @@
 				C04E528F2C541F7200566111 /* Double+Extension.swift in Sources */,
 				C0D9032E2C4ED9A300D9AAE4 /* Category.swift in Sources */,
 				C0A2EA852C4FC38900DB9A14 /* Color+Extension.swift in Sources */,
+				C03E3E472C5A14BD00EC8F2A /* AuthCheckView.swift in Sources */,
 				C04E52922C542E8700566111 /* NavigationAppearance.swift in Sources */,
+				C03E3E452C5A148200EC8F2A /* AuthViewModel.swift in Sources */,
 				C0217D9F2C57D90F00DD15F6 /* SignUpView.swift in Sources */,
 				C0A2EAB02C4FD41900DB9A14 /* String+Extension.swift in Sources */,
 				C04E52862C541A7D00566111 /* Coin.swift in Sources */,

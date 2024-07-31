@@ -7,10 +7,10 @@ struct CategoriesView: View {
     @Query(animation: .snappy) private var allCategories: [Category]
     @Environment(\.modelContext) private var context
     @ObservedObject private var authViewModel = AuthViewModel()
-    @State private var router = false
+    @State private var showSignInView = false
 
     var body: some View {
-        NavigationStack {
+        NavigationView {
             List {
                 ForEach(viewModel.allCategories) { category in
                     DisclosureGroup {
@@ -54,13 +54,11 @@ struct CategoriesView: View {
                 }
                 
                 ToolbarItem(placement: .topBarLeading) {
-                    NavigationLink(destination: SignInView().navigationBarBackButtonHidden(true), isActive : $router ) {
-                        Button {
-                            AuthViewModel().signOut()
-                            router = true
-                        } label: {
-                            Text("Log Out")
-                    }
+                    Button {
+                        authViewModel.signOut()
+                        showSignInView = true
+                    } label: {
+                        Text("Log Out")
                     }
                 }
             }
@@ -95,6 +93,9 @@ struct CategoriesView: View {
                 .presentationDetents([.height(180)])
                 .presentationCornerRadius(20)
                 .interactiveDismissDisabled()
+            }
+            .fullScreenCover(isPresented: $showSignInView) {
+                SignInView().navigationBarBackButtonHidden(true)
             }
         }
         .alert("If you delete a category, all the associated expenses will be deleted too.", isPresented: $viewModel.deleteRequest) {
