@@ -10,7 +10,7 @@ struct CategoriesView: View {
     @State private var showSignInView = false
 
     var body: some View {
-        NavigationView {
+        NavigationStack {
             List {
                 ForEach(viewModel.allCategories) { category in
                     DisclosureGroup {

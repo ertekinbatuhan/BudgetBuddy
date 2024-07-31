@@ -7,13 +7,12 @@ struct ExpensesView: View {
     @Query(sort: [SortDescriptor(\Category.categoryName)], animation: .snappy) private var allCategories: [Category]
     @Environment(\.modelContext) private var context
     @Environment(\.colorScheme) var colorScheme
-    @Binding var currentTab: String
+    @Binding var currentTab: TabItem
     @ObservedObject private var viewModel = ExpensesViewModel()
     
     var body: some View {
         NavigationStack {
             VStack {
-                
                 SearchBar(text: $viewModel.searchText)
                     .padding(.horizontal)
                     .onChange(of: viewModel.searchText) { newValue in
@@ -92,7 +91,7 @@ struct ExpensesView: View {
                     AddExpenseView().interactiveDismissDisabled()
                 }
                 .overlay {
-                    if allExpenses.isEmpty || viewModel.groupedExpenses.isEmpty || currentTab == "Categories" {
+                    if allExpenses.isEmpty || viewModel.groupedExpenses.isEmpty || currentTab == .categories {
                         ContentUnavailableView {
                             Label("No Expenses", systemImage: "tray.fill")
                         }

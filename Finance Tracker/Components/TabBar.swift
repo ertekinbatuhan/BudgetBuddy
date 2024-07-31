@@ -9,26 +9,22 @@ import SwiftUI
 
 struct TabBar: View {
     
-    @State private var currentTab : String = "Expenses"
+    @State private var selectedTab: TabItem = .expenses
     
     var body: some View {
-        
-        TabView(selection: $currentTab){
-            
-            ExpensesView(currentTab: $currentTab).tag("Expenses").tabItem{
-                Image(systemName: "creditcard.fill")
-                Text("Expenses")
+        TabView(selection: $selectedTab) {
+            ExpensesView(currentTab: $selectedTab).tag(TabItem.expenses).tabItem {
+                Image(systemName: TabItem.expenses.imageName)
+                Text(TabItem.expenses.title)
             }
-            CoinsView().tag("Coins").tabItem{
-                Image(systemName: "bitcoinsign.circle")
-                Text("Coins")
+            CoinsView().tag(TabItem.coins).tabItem {
+                Image(systemName: TabItem.coins.imageName)
+                Text(TabItem.coins.title)
             }
-            
-            CategoriesView().tag("Categories").tabItem{
-                Image(systemName: "list.clipboard.fill")
-                Text("Categories")
+            CategoriesView().tag(TabItem.categories).tabItem {
+                Image(systemName: TabItem.categories.imageName)
+                Text(TabItem.categories.title)
             }
-            
         }
     }
 }

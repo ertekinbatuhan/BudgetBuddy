@@ -9,6 +9,7 @@ import Foundation
 import Firebase
 
 class AuthViewModel: ObservableObject {
+    
     @Published var isUserLoggedIn: Bool = false
 
     init() {

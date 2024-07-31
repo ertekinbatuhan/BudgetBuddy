@@ -9,8 +9,6 @@ import SwiftUI
 
 struct AuthCheckView: View {
     
-    // State or Observed object 
-    
     @ObservedObject private var authViewModel = AuthViewModel()
 
     var body: some View {
