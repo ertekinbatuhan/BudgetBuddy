@@ -6,6 +6,8 @@ struct CategoriesView: View {
     @ObservedObject var viewModel: CategoriesViewModel = CategoriesViewModel()
     @Query(animation: .snappy) private var allCategories: [Category]
     @Environment(\.modelContext) private var context
+    @ObservedObject private var authViewModel = AuthViewModel()
+    @State private var router = false
 
     var body: some View {
         NavigationStack {
@@ -50,6 +52,17 @@ struct CategoriesView: View {
                         Image(systemName: "plus.circle.fill").font(.title)
                     }
                 }
+                
+                ToolbarItem(placement: .topBarLeading) {
+                    NavigationLink(destination: SignInView().navigationBarBackButtonHidden(true), isActive : $router ) {
+                        Button {
+                            AuthViewModel().signOut()
+                            router = true
+                        } label: {
+                            Text("Log Out")
+                    }
+                    }
+                }
             }
             .sheet(isPresented: $viewModel.addCategory) {
                 viewModel.categoryName = ""
@@ -75,6 +88,8 @@ struct CategoriesView: View {
                             }
                             .disabled(viewModel.categoryName.isEmpty)
                         }
+                        
+                        
                     }
                 }
                 .presentationDetents([.height(180)])

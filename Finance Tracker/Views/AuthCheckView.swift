@@ -1,0 +1,26 @@
+//
+//  AuthCheckView.swift
+//  Finance Tracker
+//
+//  Created by Batuhan Berk Ertekin on 31.07.2024.
+//
+
+import SwiftUI
+
+struct AuthCheckView: View {
+    
+    // State or Observed object 
+    
+    @ObservedObject private var authViewModel = AuthViewModel()
+
+    var body: some View {
+        if authViewModel.isUserLoggedIn {
+           TabBar()
+        } else {
+            SignInView()
+        }
+    }
+}
+#Preview {
+    AuthCheckView()
+}

@@ -23,7 +23,7 @@ struct Finance_TrackerApp: App {
     
     var body: some Scene {
         WindowGroup {
-       SignUpView()
+      AuthCheckView()
         }
         
         .modelContainer(for : [Expense.self, Category.self])
