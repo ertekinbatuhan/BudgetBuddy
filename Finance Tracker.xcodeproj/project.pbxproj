@@ -20,6 +20,7 @@
 		C04E528F2C541F7200566111 /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04E528E2C541F7200566111 /* Double+Extension.swift */; };
 		C04E52922C542E8700566111 /* NavigationAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04E52912C542E8700566111 /* NavigationAppearance.swift */; };
 		C04E52952C54311200566111 /* CoinError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04E52942C54311200566111 /* CoinError.swift */; };
+		C06263512C5AA8C1001090CB /* TabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06263502C5AA8C1001090CB /* TabItem.swift */; };
 		C081000E2C56AF0200A47939 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C081000D2C56AF0200A47939 /* SignInView.swift */; };
 		C08100102C56BD0300A47939 /* SocialLoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C081000F2C56BD0300A47939 /* SocialLoginButton.swift */; };
 		C08100122C56BD3000A47939 /* OrView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08100112C56BD3000A47939 /* OrView.swift */; };
@@ -58,6 +59,7 @@
 		C04E528E2C541F7200566111 /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
 		C04E52912C542E8700566111 /* NavigationAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationAppearance.swift; sourceTree = "<group>"; };
 		C04E52942C54311200566111 /* CoinError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinError.swift; sourceTree = "<group>"; };
+		C06263502C5AA8C1001090CB /* TabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItem.swift; sourceTree = "<group>"; };
 		C081000D2C56AF0200A47939 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		C081000F2C56BD0300A47939 /* SocialLoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialLoginButton.swift; sourceTree = "<group>"; };
 		C08100112C56BD3000A47939 /* OrView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrView.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				C04E52942C54311200566111 /* CoinError.swift */,
+				C06263502C5AA8C1001090CB /* TabItem.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -345,6 +348,7 @@
 				C0A2EAB02C4FD41900DB9A14 /* String+Extension.swift in Sources */,
 				C04E52862C541A7D00566111 /* Coin.swift in Sources */,
 				C0D903382C4EE97B00D9AAE4 /* ExpensesCardView.swift in Sources */,
+				C06263512C5AA8C1001090CB /* TabItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
