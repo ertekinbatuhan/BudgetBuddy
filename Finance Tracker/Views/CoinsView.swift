@@ -18,7 +18,7 @@ struct CoinsView: View {
         NavigationStack {
             ScrollView {
                 LazyVStack(spacing: 10) {
-                    Text("Top Gaining")
+                    Text("Top Gainers")
                         .font(.title2)
                         .fontWeight(.bold)
                         .padding(.horizontal)
@@ -80,7 +80,7 @@ struct CoinsView: View {
                             .padding(.top, 10)
                     }
 
-                    Text("Top Losing")
+                    Text("Top Losers")
                         .font(.title2)
                         .fontWeight(.bold)
                         .padding(.horizontal)
