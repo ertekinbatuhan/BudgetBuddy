@@ -17,20 +17,19 @@ struct CoinsView: View {
     var body: some View {
         NavigationStack {
             ScrollView {
-                LazyVStack(spacing: 20) {
-                    Text("Top Gainers")
-                        .font(.title)
+                LazyVStack(spacing: 10) {
+                    Text("Top Gaining")
+                        .font(.title2)
                         .fontWeight(.bold)
                         .padding(.horizontal)
-                        .padding(.top)
                         .foregroundColor(.blue)
                         .frame(maxWidth: .infinity, alignment: .leading)
 
                     if !coinViewModel.topGainers.isEmpty {
                         ScrollView(.horizontal, showsIndicators: false) {
-                            LazyHStack(spacing: 20) {
+                            LazyHStack(spacing: 15) {
                                 ForEach(coinViewModel.topGainers) { coin in
-                                    VStack {
+                                    VStack(spacing: 5) {
                                         AsyncImage(url: URL(string: coin.image)) { coin in
                                             switch coin {
                                             case .empty:
@@ -39,19 +38,18 @@ struct CoinsView: View {
                                                 image
                                                     .resizable()
                                                     .aspectRatio(contentMode: .fill)
-                                                    .frame(width: 50, height: 50)
+                                                    .frame(width: 40, height: 40)
                                                     .cornerRadius(8)
                                             case .failure:
                                                 Image(systemName: "photo")
                                                     .resizable()
                                                     .aspectRatio(contentMode: .fill)
-                                                    .frame(width: 50, height: 50)
+                                                    .frame(width: 40, height: 40)
                                                     .cornerRadius(8)
                                             default:
                                                 EmptyView()
                                             }
                                         }
-                                        .padding(.horizontal)
 
                                         Text("\(coin.symbol.uppercased())")
                                             .font(.subheadline)
@@ -68,20 +66,84 @@ struct CoinsView: View {
                                         }
                                     }
                                     .padding(.vertical, 8)
+                                    .padding(.horizontal, 12)
+                                    .frame(width: 100) // Genişlik ayarlandı
                                     .background(Color.gray.opacity(0.1))
                                     .cornerRadius(10)
                                 }
                             }
                             .padding(.horizontal)
                         }
-                        .frame(height: 150)
+                        .frame(height: 130)
                     } else {
                         ProgressView()
-                            .padding(.top, 20)
+                            .padding(.top, 10)
+                    }
+
+                    Text("Top Losing")
+                        .font(.title2)
+                        .fontWeight(.bold)
+                        .padding(.horizontal)
+                        .foregroundColor(.blue)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+
+                    if !coinViewModel.topLosers.isEmpty {
+                        ScrollView(.horizontal, showsIndicators: false) {
+                            LazyHStack(spacing: 15) {
+                                ForEach(coinViewModel.topLosers) { coin in
+                                    VStack(spacing: 5) {
+                                        AsyncImage(url: URL(string: coin.image)) { coin in
+                                            switch coin {
+                                            case .empty:
+                                                ProgressView()
+                                            case .success(let image):
+                                                image
+                                                    .resizable()
+                                                    .aspectRatio(contentMode: .fill)
+                                                    .frame(width: 40, height: 40)
+                                                    .cornerRadius(8)
+                                            case .failure:
+                                                Image(systemName: "photo")
+                                                    .resizable()
+                                                    .aspectRatio(contentMode: .fill)
+                                                    .frame(width: 40, height: 40)
+                                                    .cornerRadius(8)
+                                            default:
+                                                EmptyView()
+                                            }
+                                        }
+
+                                        Text("\(coin.symbol.uppercased())")
+                                            .font(.subheadline)
+                                            .foregroundColor(.secondary)
+
+                                        if let changePercentage = coin.priceChangePercentage24HInCurrency {
+                                            Text(changePercentage.toPercentage())
+                                                .font(.subheadline)
+                                                .foregroundColor(changePercentage >= 0 ? .green : .red)
+                                        } else {
+                                            Text("N/A")
+                                                .font(.subheadline)
+                                                .foregroundColor(.gray)
+                                        }
+                                    }
+                                    .padding(.vertical, 8)
+                                    .padding(.horizontal, 12)
+                                    .frame(width: 100) // Genişlik ayarlandı
+                                    .background(Color.gray.opacity(0.1))
+                                    .cornerRadius(10)
+                                }
+                            }
+                            .padding(.horizontal)
+                        }
+                        .frame(height: 130)
+                    } else {
+                        ProgressView()
+                            .padding(.top, 10)
                     }
 
                     Text("All Coins")
-                        .font(.title)
+                        .font(.title2)
                         .fontWeight(.bold)
                         .padding(.horizontal)
                         .foregroundColor(.blue)
@@ -89,10 +151,10 @@ struct CoinsView: View {
 
                     if coinViewModel.coin.isEmpty {
                         ProgressView()
-                            .padding(.top, 20)
+                            .padding(.top, 10)
                     } else {
                         ForEach(coinViewModel.coin) { coin in
-                            HStack {
+                            HStack(spacing: 10) {
                                 AsyncImage(url: URL(string: coin.image)) { coin in
                                     switch coin {
                                     case .empty:
@@ -101,20 +163,20 @@ struct CoinsView: View {
                                         image
                                             .resizable()
                                             .aspectRatio(contentMode: .fill)
-                                            .frame(width: 50, height: 50)
+                                            .frame(width: 40, height: 40)
                                             .cornerRadius(8)
                                     case .failure:
                                         Image(systemName: "photo")
                                             .resizable()
                                             .aspectRatio(contentMode: .fill)
-                                            .frame(width: 50, height: 50)
+                                            .frame(width: 40, height: 40)
                                             .cornerRadius(8)
                                     default:
                                        EmptyView()
                                     }
                                 }
 
-                                VStack(alignment: .leading, spacing: 4) {
+                                VStack(alignment: .leading, spacing: 2) {
                                     Text("\(coin.name)")
                                         .font(.headline)
 
@@ -125,7 +187,7 @@ struct CoinsView: View {
 
                                 Spacer()
 
-                                VStack(alignment: .trailing, spacing: 4) {
+                                VStack(alignment: .trailing, spacing: 2) {
                                     Text(coin.currentPrice.toCurrency())
                                         .font(.subheadline)
                                         .foregroundColor(.secondary)
