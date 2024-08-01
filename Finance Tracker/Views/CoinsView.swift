@@ -67,7 +67,7 @@ struct CoinsView: View {
                                     }
                                     .padding(.vertical, 8)
                                     .padding(.horizontal, 12)
-                                    .frame(width: 100) // Genişlik ayarlandı
+                                    .frame(width: 100)
                                     .background(Color.gray.opacity(0.1))
                                     .cornerRadius(10)
                                 }
@@ -129,7 +129,7 @@ struct CoinsView: View {
                                     }
                                     .padding(.vertical, 8)
                                     .padding(.horizontal, 12)
-                                    .frame(width: 100) // Genişlik ayarlandı
+                                    .frame(width: 100) 
                                     .background(Color.gray.opacity(0.1))
                                     .cornerRadius(10)
                                 }
