@@ -23,8 +23,8 @@ struct Finance_TrackerApp: App {
     
     var body: some Scene {
         WindowGroup {
-            AuthCheckView() // AuthCheckView uygun şekilde tanımlanmalı
+            AuthCheckView()
         }
-        .modelContainer(for: [Finance.self, Category.self]) // Model sınıfları doğru şekilde tanımlanmalı
+        .modelContainer(for: [Finance.self, Category.self])
     }
 }
