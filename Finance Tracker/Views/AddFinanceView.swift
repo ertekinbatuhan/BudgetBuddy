@@ -19,10 +19,10 @@ struct AddFinanceView: View {
         NavigationStack {
             List {
                 Section("Title") {
-                    TextField("Write something", text: $viewModel.title)
+                    TextField("Enter title here", text: $viewModel.title)
                 }
                 Section("Description") {
-                    TextField("Write something", text: $viewModel.subTitle)
+                    TextField("Enter description here", text: $viewModel.subTitle)
                 }
                 
                 Section("Amount") {
