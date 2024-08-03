@@ -1,30 +1,35 @@
+//
+//  ExpensesView.swift
+//  Finance Tracker
+//
+//  Created by Batuhan Berk Ertekin on 23.07.2024.
+//
+
 import SwiftUI
 import SwiftData
 
-struct ExpensesView: View {
+struct FinanceView: View {
 
     @Query(sort: [SortDescriptor(\Expense.date, order: .reverse)], animation: .snappy) private var allExpenses: [Expense]
     @Query(sort: [SortDescriptor(\Category.categoryName)], animation: .snappy) private var allCategories: [Category]
     @Environment(\.modelContext) private var context
     @Environment(\.colorScheme) var colorScheme
     @Binding var currentTab: TabItem
-    @ObservedObject private var viewModel = ExpensesViewModel()
+    @State private var selectedType: FinanceType = .expense
+    @ObservedObject private var viewModel = FinanceViewModel()
     
     var body: some View {
         NavigationStack {
             VStack {
+               
                 SearchBar(text: $viewModel.searchText)
                     .padding(.horizontal)
-                    .onChange(of: viewModel.searchText) { newValue in
-                        if !newValue.isEmpty {
-                            viewModel.filterExpenses(newValue)
-                        } else {
-                            viewModel.groupedExpenses = viewModel.originalGroupedExpenses
-                        }
+                    .onChange(of: viewModel.searchText) { _ in
+                        viewModel.resetFilters()
                     }
                 
+                
                 ZStack {
-                    
                     CircularProgressView(categories: allCategories, categoryColors: viewModel.categoryColors)
                         .frame(width: 200, height: 200)
                         .shadow(radius: 10)
@@ -34,7 +39,7 @@ struct ExpensesView: View {
                             .font(.subheadline)
                             .foregroundColor(.gray)
                             .padding(.bottom, 5)
-                        Text(viewModel.totalAmountString)
+                        Text(selectedType == .expense ? viewModel.totalExpenseAmountString : viewModel.totalIncomingAmountString)
                             .font(.title2)
                             .fontWeight(.bold)
                             .foregroundColor(colorScheme == .dark ? .white : .black)
@@ -46,6 +51,19 @@ struct ExpensesView: View {
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                 }
                 .padding(.bottom)
+                
+                // Segmented Picker
+                Picker("Select Type", selection: $selectedType) {
+                    Text("Expenses").tag(FinanceType.expense)
+                    Text("Income").tag(FinanceType.income)
+                }
+                .pickerStyle(SegmentedPickerStyle())
+                .padding(.horizontal)
+                .padding(.bottom)
+                .onChange(of: selectedType) { _ in
+                    viewModel.selectedType = selectedType
+                    viewModel.resetFilters()
+                }
                 
                 List {
                     ForEach(viewModel.groupedExpenses) { group in
@@ -64,6 +82,7 @@ struct ExpensesView: View {
                         }
                     }
                 }
+                
                 .navigationTitle("Expenses")
                 .toolbar {
                     ToolbarItem(placement: .navigationBarTrailing) {
@@ -88,12 +107,16 @@ struct ExpensesView: View {
                     viewModel.allCategories = newValue
                 }
                 .sheet(isPresented: $viewModel.addExpense) {
-                    AddExpenseView().interactiveDismissDisabled()
+                    AddFinanceView().interactiveDismissDisabled()
                 }
                 .overlay {
                     if allExpenses.isEmpty || viewModel.groupedExpenses.isEmpty || currentTab == .categories {
-                        ContentUnavailableView {
-                            Label("No Expenses", systemImage: "tray.fill")
+                        VStack {
+                            Spacer()
+                            ContentUnavailableView {
+                                Label("No Expenses", systemImage: "tray.fill")
+                            }
+                            Spacer()
                         }
                     }
                 }
@@ -101,4 +124,3 @@ struct ExpensesView: View {
         }
     }
 }
-

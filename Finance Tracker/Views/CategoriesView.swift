@@ -1,3 +1,10 @@
+//
+//  CategoriesView.swift
+//  Finance Tracker
+//
+//  Created by Batuhan Berk Ertekin on 23.07.2024.
+//
+
 import SwiftUI
 import SwiftData
 
@@ -122,4 +129,3 @@ struct CategoriesView: View {
 #Preview {
     CategoriesView()
 }
-

@@ -18,7 +18,6 @@ struct SignInView: View {
     var body: some View {
         NavigationView{
             VStack {
-                
                 Spacer()
                 
                 GeometryReader { geometry in
@@ -73,17 +72,9 @@ struct SignInView: View {
                     .padding(.vertical, 15)
                 
                 HStack(spacing: 20) {
-                    SocialLoginButton(iconName: "google", action: {
-                       
-                    })
-                    
-                    SocialLoginButton(iconName: "facebook", action: {
-                       
-                    })
-                    
-                    SocialLoginButton(iconName: "apple", action: {
-                        
-                    })
+                    SocialLoginButton(iconName: "google", action: {})
+                    SocialLoginButton(iconName: "facebook", action: {})
+                    SocialLoginButton(iconName: "apple", action: {})
                 }
                 .padding(.horizontal, 30)
                 
