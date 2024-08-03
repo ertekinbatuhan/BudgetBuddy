@@ -84,11 +84,14 @@ final class Finance_TrackerUITests: XCTestCase {
     func testSegmentedPickerSwitching() throws {
         let app = XCUIApplication()
         app.launch()
-        XCUIApplication()/*@START_MENU_TOKEN@*/.buttons["Income"]/*[[".segmentedControls.buttons[\"Income\"]",".buttons[\"Income\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-        XCUIApplication().buttons["Expenses"].tap()
-        
+
+        let incomeButton = app.buttons["Income"]
+        let expensesButton = app.buttons["Expenses"]
+
+        incomeButton.tap()
+        expensesButton.tap()
     }
-    
+
 
 
     func testLaunchPerformance() throws {
