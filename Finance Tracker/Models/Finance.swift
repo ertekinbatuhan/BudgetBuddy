@@ -1,5 +1,5 @@
 //
-//  Expense.swift
+//  Finance.swift
 //  Finance Tracker
 //
 //  Created by Batuhan Berk Ertekin on 22.07.2024.

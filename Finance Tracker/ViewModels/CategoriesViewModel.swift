@@ -34,9 +34,9 @@ class CategoriesViewModel: ObservableObject {
 
     func deleteCategory(context: ModelContext) {
         if let requestedCategory = requestedCategory {
-            if let expenses = requestedCategory.finances {
-                for expense in expenses {
-                    context.delete(expense)
+            if let finances = requestedCategory.finances {
+                for finance in finances {
+                    context.delete(finance)
                 }
             }
             context.delete(requestedCategory)

@@ -10,7 +10,7 @@ import SwiftData
 
 struct FinanceView: View {
 
-    @Query(sort: [SortDescriptor(\Finance.date, order: .reverse)], animation: .snappy) private var allExpenses: [Finance]
+    @Query(sort: [SortDescriptor(\Finance.date, order: .reverse)], animation: .snappy) private var allFinances: [Finance]
     @Query(sort: [SortDescriptor(\Category.categoryName)], animation: .snappy) private var allCategories: [Category]
     @Environment(\.modelContext) private var context
     @Environment(\.colorScheme) var colorScheme
@@ -65,13 +65,13 @@ struct FinanceView: View {
                 }
                 
                 List {
-                    ForEach(viewModel.groupedExpenses) { group in
+                    ForEach(viewModel.groupedFinances) { group in
                         Section(header: Text(group.groupTitle).font(.headline).foregroundColor(.primary)) {
-                            ForEach(group.finances) { expense in
-                                FinanceCardView(finance: expense)
+                            ForEach(group.finances) { finance in
+                                FinanceCardView(finance: finance)
                                     .swipeActions(edge: .trailing, allowsFullSwipe: false) {
                                         Button {
-                                            viewModel.deleteExpense(expense, from: group, context: context)
+                                            viewModel.deleteFinance(finance, from: group, context: context)
                                         } label: {
                                             Image(systemName: "trash")
                                         }
@@ -93,13 +93,13 @@ struct FinanceView: View {
                     }
                 }
                 .onAppear {
-                    viewModel.allExpenses = allExpenses
+                    viewModel.allExpenses = allFinances
                     viewModel.allCategories = allCategories
-                    viewModel.createGroupedExpenses(allExpenses)
+                    viewModel.createGroupedFinances(allFinances)
                 }
-                .onChange(of: allExpenses) { newValue in
+                .onChange(of: allFinances) { newValue in
                     viewModel.allExpenses = newValue
-                    viewModel.createGroupedExpenses(newValue)
+                    viewModel.createGroupedFinances(newValue)
                 }
                 .onChange(of: allCategories) { newValue in
                     viewModel.allCategories = newValue
@@ -108,7 +108,7 @@ struct FinanceView: View {
                     AddFinanceView().interactiveDismissDisabled()
                 }
                 .overlay {
-                    if allExpenses.isEmpty || viewModel.groupedExpenses.isEmpty || currentTab == .categories {
+                    if allFinances.isEmpty || viewModel.groupedFinances.isEmpty || currentTab == .categories {
                         VStack {
                             Spacer()
                             ContentUnavailableView {
