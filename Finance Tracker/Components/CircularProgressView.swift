@@ -5,7 +5,8 @@ struct CircularProgressView: View {
     let categoryColors: [Category: Color]
 
     private var totalAmount: Double {
-        categories.flatMap { $0.expenses ?? [] }.reduce(0) { $0 + $1.amount }
+        categories.flatMap { $0.expenses ?? [] }
+                  .reduce(0) { $0 + $1.amount }
     }
 
     var body: some View {
@@ -39,7 +40,8 @@ struct CircularProgressView: View {
     
     private func getStartAngle(for category: Category) -> Double {
         let usedCategories = categories.prefix(while: { $0 != category })
-        let usedAmount = usedCategories.flatMap { $0.expenses ?? [] }.reduce(0) { $0 + $1.amount }
+        let usedAmount = usedCategories.flatMap { $0.expenses ?? [] }
+                                        .reduce(0) { $0 + $1.amount }
         return (usedAmount / totalAmount) * 360
     }
 }

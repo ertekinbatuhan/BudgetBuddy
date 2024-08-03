@@ -9,13 +9,13 @@ import SwiftUI
 
 struct TabBar: View {
     
-    @State private var selectedTab: TabItem = .expenses
+    @State private var selectedTab: TabItem = .home
     
     var body: some View {
         TabView(selection: $selectedTab) {
-            ExpensesView(currentTab: $selectedTab).tag(TabItem.expenses).tabItem {
-                Image(systemName: TabItem.expenses.imageName)
-                Text(TabItem.expenses.title)
+            FinanceView(currentTab: $selectedTab).tag(TabItem.home).tabItem {
+                Image(systemName: TabItem.home.imageName)
+                Text(TabItem.home.title)
             }
             CoinsView().tag(TabItem.coins).tabItem {
                 Image(systemName: TabItem.coins.imageName)
