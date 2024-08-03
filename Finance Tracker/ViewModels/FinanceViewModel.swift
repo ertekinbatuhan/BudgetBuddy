@@ -15,18 +15,18 @@ class FinanceViewModel: ObservableObject {
     @Published var searchText: String = ""
     @Published var addFinance: Bool = false
     @Published var selectedType: FinanceType = .expense
-    var allExpenses: [Finance] = []
+    var allFinances: [Finance] = []
     var allCategories: [Category] = []
     
     var expenseCategories: [Category] {
         allCategories.filter { category in
-            allExpenses.contains { $0.financeType == .expense && $0.category == category }
+            allFinances.contains { $0.financeType == .expense && $0.category == category }
         }
     }
     
     var incomeCategories: [Category] {
         allCategories.filter { category in
-            allExpenses.contains { $0.financeType == .income && $0.category == category }
+            allFinances.contains { $0.financeType == .income && $0.category == category }
         }
     }
     
@@ -56,7 +56,7 @@ class FinanceViewModel: ObservableObject {
     }
     
     func totalAmount(for type: FinanceType) -> Double {
-        return allExpenses.filter { $0.financeType == type }.reduce(0) { $0 + $1.amount }
+        return allFinances.filter { $0.financeType == type }.reduce(0) { $0 + $1.amount }
     }
     
     func filterFinances(_ text: String) {

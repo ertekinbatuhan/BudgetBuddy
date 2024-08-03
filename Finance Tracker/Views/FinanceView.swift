@@ -93,12 +93,12 @@ struct FinanceView: View {
                     }
                 }
                 .onAppear {
-                    viewModel.allExpenses = allFinances
+                    viewModel.allFinances = allFinances
                     viewModel.allCategories = allCategories
                     viewModel.createGroupedFinances(allFinances)
                 }
                 .onChange(of: allFinances) { newValue in
-                    viewModel.allExpenses = newValue
+                    viewModel.allFinances = newValue
                     viewModel.createGroupedFinances(newValue)
                 }
                 .onChange(of: allCategories) { newValue in
