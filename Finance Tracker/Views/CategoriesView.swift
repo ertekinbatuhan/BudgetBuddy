@@ -27,7 +27,7 @@ struct CategoriesView: View {
                             }
                         } else {
                             ContentUnavailableView {
-                                Label("No Expenses", systemImage: "tray.fill")
+                                Label("No Finance", systemImage: "tray.fill")
                             }
                         }
                     } label: {
