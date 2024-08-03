@@ -92,7 +92,6 @@ struct AddFinanceView: View {
                     }
                     .tint(.red)
                 }
-                
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button("Add", action: {
                         viewModel.addFinance(context: context)
