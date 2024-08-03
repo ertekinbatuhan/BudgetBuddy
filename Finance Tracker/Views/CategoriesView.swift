@@ -23,7 +23,7 @@ struct CategoriesView: View {
                     DisclosureGroup {
                         if let expenses = category.expenses, !expenses.isEmpty {
                             ForEach(expenses) { expense in
-                                ExpensesCardView(expense: expense, displayTag: false)
+                                FinanceCardView(finance: expense, displayTag: false)
                             }
                         } else {
                             ContentUnavailableView {

@@ -45,7 +45,7 @@
 		C0D903322C4EDC2C00D9AAE4 /* CategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D903312C4EDC2C00D9AAE4 /* CategoriesView.swift */; };
 		C0D903342C4EDE5000D9AAE4 /* GroupedExpenses.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D903332C4EDE5000D9AAE4 /* GroupedExpenses.swift */; };
 		C0D903362C4EE0A500D9AAE4 /* AddFinanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D903352C4EE0A500D9AAE4 /* AddFinanceView.swift */; };
-		C0D903382C4EE97B00D9AAE4 /* ExpensesCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D903372C4EE97B00D9AAE4 /* ExpensesCardView.swift */; };
+		C0D903382C4EE97B00D9AAE4 /* FinanceCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D903372C4EE97B00D9AAE4 /* FinanceCardView.swift */; };
 		C0E1074A2C515BEB009AE8D1 /* AddFinanceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E107492C515BEB009AE8D1 /* AddFinanceViewModel.swift */; };
 		C0E1074C2C515F53009AE8D1 /* FinanceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E1074B2C515F53009AE8D1 /* FinanceViewModel.swift */; };
 /* End PBXBuildFile section */
@@ -86,7 +86,7 @@
 		C0D903312C4EDC2C00D9AAE4 /* CategoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesView.swift; sourceTree = "<group>"; };
 		C0D903332C4EDE5000D9AAE4 /* GroupedExpenses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupedExpenses.swift; sourceTree = "<group>"; };
 		C0D903352C4EE0A500D9AAE4 /* AddFinanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFinanceView.swift; sourceTree = "<group>"; };
-		C0D903372C4EE97B00D9AAE4 /* ExpensesCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesCardView.swift; sourceTree = "<group>"; };
+		C0D903372C4EE97B00D9AAE4 /* FinanceCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceCardView.swift; sourceTree = "<group>"; };
 		C0E107492C515BEB009AE8D1 /* AddFinanceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFinanceViewModel.swift; sourceTree = "<group>"; };
 		C0E1074B2C515F53009AE8D1 /* FinanceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -171,7 +171,7 @@
 		C0A2EA862C4FC70C00DB9A14 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				C0D903372C4EE97B00D9AAE4 /* ExpensesCardView.swift */,
+				C0D903372C4EE97B00D9AAE4 /* FinanceCardView.swift */,
 				C0A2EA742C4FA77900DB9A14 /* CircularProgressView.swift */,
 				C0D9031F2C4ED80A00D9AAE4 /* TabBar.swift */,
 				C0A2EAAD2C4FD33500DB9A14 /* SearchBar.swift */,
@@ -351,7 +351,7 @@
 				C0217D9F2C57D90F00DD15F6 /* SignUpView.swift in Sources */,
 				C0A2EAB02C4FD41900DB9A14 /* String+Extension.swift in Sources */,
 				C04E52862C541A7D00566111 /* Coin.swift in Sources */,
-				C0D903382C4EE97B00D9AAE4 /* ExpensesCardView.swift in Sources */,
+				C0D903382C4EE97B00D9AAE4 /* FinanceCardView.swift in Sources */,
 				C06263512C5AA8C1001090CB /* TabItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

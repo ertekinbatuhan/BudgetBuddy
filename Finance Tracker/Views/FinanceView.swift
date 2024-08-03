@@ -28,7 +28,6 @@ struct FinanceView: View {
                         viewModel.resetFilters()
                     }
                 
-                
                 ZStack {
                     CircularProgressView(categories: allCategories, categoryColors: viewModel.categoryColors)
                         .frame(width: 200, height: 200)
@@ -69,7 +68,7 @@ struct FinanceView: View {
                     ForEach(viewModel.groupedExpenses) { group in
                         Section(header: Text(group.groupTitle).font(.headline).foregroundColor(.primary)) {
                             ForEach(group.expenses) { expense in
-                                ExpensesCardView(expense: expense)
+                                FinanceCardView(finance: expense)
                                     .swipeActions(edge: .trailing, allowsFullSwipe: false) {
                                         Button {
                                             viewModel.deleteExpense(expense, from: group, context: context)
@@ -82,8 +81,7 @@ struct FinanceView: View {
                         }
                     }
                 }
-                
-                .navigationTitle("Expenses")
+                .navigationTitle("Welcome")
                 .toolbar {
                     ToolbarItem(placement: .navigationBarTrailing) {
                         Button {
@@ -114,7 +112,13 @@ struct FinanceView: View {
                         VStack {
                             Spacer()
                             ContentUnavailableView {
-                                Label("No Expenses", systemImage: "tray.fill")
+                                VStack {
+                                    if selectedType == .expense {
+                                        Label("No Expenses", systemImage: "tray.fill")
+                                    } else {
+                                        Label("No Income", systemImage: "arrow.up.circle.fill")
+                                    }
+                                }
                             }
                             Spacer()
                         }
