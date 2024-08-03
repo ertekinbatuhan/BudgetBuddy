@@ -29,7 +29,8 @@ struct FinanceView: View {
                     }
                 
                 ZStack {
-                    CircularProgressView(categories: allCategories, categoryColors: viewModel.categoryColors)
+                    CircularProgressView(categories: selectedType == .expense ? viewModel.expenseCategories : viewModel.incomeCategories,
+                                         categoryColors: viewModel.categoryColors)
                         .frame(width: 200, height: 200)
                         .shadow(radius: 10)
                        

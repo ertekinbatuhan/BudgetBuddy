@@ -18,8 +18,33 @@ class FinanceViewModel: ObservableObject {
     var allExpenses: [Expense] = []
     var allCategories: [Category] = []
     
+    var expenseCategories: [Category] {
+        allCategories.filter { category in
+            allExpenses.contains { $0.expenseType == .expense && $0.category == category }
+        }
+    }
+    
+    var incomeCategories: [Category] {
+        allCategories.filter { category in
+            allExpenses.contains { $0.expenseType == .income && $0.category == category }
+        }
+    }
+    
+    var expenseCategoryColors: [Category: Color] {
+        Dictionary(uniqueKeysWithValues: expenseCategories.map { ($0, .randomColor()) })
+    }
+    
+    var incomeCategoryColors: [Category: Color] {
+        Dictionary(uniqueKeysWithValues: incomeCategories.map { ($0, .randomColor()) })
+    }
+    
     var categoryColors: [Category: Color] {
-        Dictionary(uniqueKeysWithValues: allCategories.map { ($0, .randomColor()) })
+        switch selectedType {
+        case .expense:
+            return expenseCategoryColors
+        case .income:
+            return incomeCategoryColors
+        }
     }
     
     var totalExpenseAmountString: String {
@@ -105,3 +130,4 @@ class FinanceViewModel: ObservableObject {
         }
     }
 }
+    
