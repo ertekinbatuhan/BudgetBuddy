@@ -1,20 +1,20 @@
 //
-//  ExpenseViewModel.swift
+//  FinanceViewModel.swift
 //  Finance Tracker
 //
 //  Created by Batuhan Berk Ertekin on 24.07.2024.
 //
 
-import Foundation
 import SwiftUI
 import SwiftData
 
-class ExpensesViewModel: ObservableObject {
+class FinanceViewModel: ObservableObject {
     
     @Published var groupedExpenses: [GroupedExpenses] = []
     @Published var originalGroupedExpenses: [GroupedExpenses] = []
     @Published var searchText: String = ""
     @Published var addExpense: Bool = false
+    @Published var selectedType: FinanceType = .expense
     var allExpenses: [Expense] = []
     var allCategories: [Category] = []
     
@@ -22,28 +22,50 @@ class ExpensesViewModel: ObservableObject {
         Dictionary(uniqueKeysWithValues: allCategories.map { ($0, .randomColor()) })
     }
     
-    var totalAmountString: String {
-        NumberFormatter.currencyFormatter.string(for: totalAmount) ?? ""
+    var totalExpenseAmountString: String {
+        NumberFormatter.currencyFormatter.string(for: totalAmount(for: .expense)) ?? ""
     }
     
-    private var totalAmount: Double {
-        allExpenses.reduce(0) { $0 + $1.amount }
+    var totalIncomingAmountString: String {
+        NumberFormatter.currencyFormatter.string(for: totalAmount(for: .income)) ?? ""
+    }
+    
+    func totalAmount(for type: FinanceType) -> Double {
+        return allExpenses.filter { $0.expenseType == type }.reduce(0) { $0 + $1.amount }
     }
     
     func filterExpenses(_ text: String) {
-        Task.detached(priority: .high) {
-            let query = text.lowercased()
-            let filteredGroups = self.originalGroupedExpenses.compactMap { group -> GroupedExpenses? in
-                let filteredExpenses = group.expenses.filter { $0.title.lowercased().contains(query) }
+        let query = text.lowercased()
+        
+        let filteredGroups = self.originalGroupedExpenses
+            .compactMap { group -> GroupedExpenses? in
+                let filteredExpenses = group.expenses.filter {
+                    $0.title.lowercased().contains(query) && $0.expenseType == self.selectedType
+                }
                 return filteredExpenses.isEmpty ? nil : GroupedExpenses(date: group.date, expenses: filteredExpenses)
             }
-            
-            await MainActor.run {
-                self.groupedExpenses = filteredGroups
-            }
-        }
+        
+        self.groupedExpenses = filteredGroups
     }
     
+    func filterExpensesByType(_ type: FinanceType) {
+        let filteredGroups = self.originalGroupedExpenses
+            .compactMap { group -> GroupedExpenses? in
+                let filteredExpenses = group.expenses.filter { $0.expenseType == type }
+                return filteredExpenses.isEmpty ? nil : GroupedExpenses(date: group.date, expenses: filteredExpenses)
+            }
+        
+        self.groupedExpenses = filteredGroups
+    }
+    
+    func resetFilters() {
+        if searchText.isEmpty {
+            filterExpensesByType(selectedType)
+        } else {
+            filterExpenses(searchText)
+        }
+    }
+
     func deleteExpense(_ expense: Expense, from group: GroupedExpenses, context: ModelContext) {
         context.delete(expense)
         withAnimation {
@@ -74,11 +96,11 @@ class ExpensesViewModel: ObservableObject {
             }
             
             await MainActor.run {
-                self.groupedExpenses = sortedDict.compactMap { dict in
+                self.originalGroupedExpenses = sortedDict.compactMap { dict in
                     let date = Calendar.current.date(from: dict.key) ?? .init()
                     return GroupedExpenses(date: date, expenses: dict.value)
                 }
-                self.originalGroupedExpenses = self.groupedExpenses
+                self.resetFilters()
             }
         }
     }
