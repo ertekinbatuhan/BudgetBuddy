@@ -50,6 +50,45 @@ final class Finance_TrackerUITests: XCTestCase {
         
        financeSaveButton.tap()
     }
+    
+    
+    func testAddingCategory() throws {
+        let app = XCUIApplication()
+        app.launch()
+
+        let categoriesTabButton = app.tabBars["Tab Bar"].buttons["Categories"]
+        categoriesTabButton.tap()
+    
+        let addCategoryButton = app.navigationBars["Categories"].buttons["Add"]
+        addCategoryButton.tap()
+
+        let categoryNameTextField = app.collectionViews.textFields["General"]
+        categoryNameTextField.tap()
+        categoryNameTextField.typeText(" UI test successful")
+
+        let addButton = app.navigationBars["Category Name"].buttons["Add"]
+        addButton.tap()
+    }
+
+    func testTabBarSwitching() throws {
+        let app = XCUIApplication()
+        app.launch()
+        
+        let tabBar = XCUIApplication().tabBars["Tab Bar"]
+        tabBar.buttons["Coins"].tap()
+        tabBar.buttons["Categories"].tap()
+        tabBar.buttons["Home"].tap()
+        
+    }
+    
+    func testSegmentedPickerSwitching() throws {
+        let app = XCUIApplication()
+        app.launch()
+        XCUIApplication()/*@START_MENU_TOKEN@*/.buttons["Income"]/*[[".segmentedControls.buttons[\"Income\"]",".buttons[\"Income\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        XCUIApplication().buttons["Expenses"].tap()
+        
+    }
+    
 
 
     func testLaunchPerformance() throws {
