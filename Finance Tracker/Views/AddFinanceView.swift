@@ -83,7 +83,7 @@ struct AddFinanceView: View {
                     }
                 }
             }
-            .navigationTitle("Add Expense")
+            .navigationTitle("Add Finance")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
