@@ -8,7 +8,7 @@
 import Foundation
 import SwiftData
 
-extension Expense {
+extension Finance {
     @Transient
     var currencyString: String {
         let formatter = NumberFormatter()

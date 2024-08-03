@@ -12,8 +12,8 @@ import SwiftUI
 @Model
 class Category {
     var categoryName: String
-    @Relationship(deleteRule: .cascade, inverse: \Expense.category)
-    var expenses : [Expense]?
+    @Relationship(deleteRule: .cascade, inverse: \Finance.category)
+    var finances : [Finance]?
     
     init(categoryName: String) {
         self.categoryName = categoryName

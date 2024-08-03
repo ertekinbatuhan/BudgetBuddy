@@ -21,7 +21,7 @@ struct CategoriesView: View {
             List {
                 ForEach(viewModel.allCategories) { category in
                     DisclosureGroup {
-                        if let expenses = category.expenses, !expenses.isEmpty {
+                        if let expenses = category.finances, !expenses.isEmpty {
                             ForEach(expenses) { expense in
                                 FinanceCardView(finance: expense, displayTag: false)
                             }

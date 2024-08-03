@@ -17,7 +17,7 @@ class CategoriesViewModel: ObservableObject {
     @Published var allCategories: [Category] = []
 
     func fetchCategories(categories: [Category]) {
-        allCategories = categories.sorted(by: { ($0.expenses?.count ?? 0) > ($1.expenses?.count ?? 0) })
+        allCategories = categories.sorted(by: { ($0.finances?.count ?? 0) > ($1.finances?.count ?? 0) })
     }
 
     func addNewCategory(context: ModelContext) {
@@ -34,7 +34,7 @@ class CategoriesViewModel: ObservableObject {
 
     func deleteCategory(context: ModelContext) {
         if let requestedCategory = requestedCategory {
-            if let expenses = requestedCategory.expenses {
+            if let expenses = requestedCategory.finances {
                 for expense in expenses {
                     context.delete(expense)
                 }

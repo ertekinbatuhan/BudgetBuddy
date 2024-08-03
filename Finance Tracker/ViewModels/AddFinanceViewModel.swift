@@ -16,7 +16,7 @@ class AddFinanceViewModel: ObservableObject {
     }
     
     func addFinance(context: ModelContext) {
-        let finance = Expense(title: title, subTitle: subTitle, amount: Double(amount), date: date, type: selectedType, category: category)
+        let finance = Finance(title: title, subTitle: subTitle, amount: Double(amount), date: date, type: selectedType, category: category)
         context.insert(finance)
     }
 }

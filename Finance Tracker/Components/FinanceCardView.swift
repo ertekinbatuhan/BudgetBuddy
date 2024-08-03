@@ -9,7 +9,7 @@ import SwiftUI
 
 struct FinanceCardView: View {
     
-    @Bindable var finance : Expense
+    @Bindable var finance : Finance
     
     var displayTag : Bool = true
     

@@ -18,9 +18,9 @@ struct SignUpView: View {
     var body: some View {
         NavigationView {
             VStack {
-                
+               
                 Spacer()
-            
+                
                 GeometryReader { geometry in
                     Image("wallet")
                         .resizable()

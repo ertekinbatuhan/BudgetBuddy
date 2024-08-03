@@ -7,10 +7,10 @@
 
 import Foundation
 
-struct GroupedExpenses : Identifiable {
+struct GroupedFinances : Identifiable {
     var id = UUID()
     var date : Date
-    var expenses : [Expense]
+    var finances : [Finance]
     
     var groupTitle : String {
         

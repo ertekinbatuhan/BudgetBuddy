@@ -10,7 +10,7 @@ import SwiftData
 
 struct FinanceView: View {
 
-    @Query(sort: [SortDescriptor(\Expense.date, order: .reverse)], animation: .snappy) private var allExpenses: [Expense]
+    @Query(sort: [SortDescriptor(\Finance.date, order: .reverse)], animation: .snappy) private var allExpenses: [Finance]
     @Query(sort: [SortDescriptor(\Category.categoryName)], animation: .snappy) private var allCategories: [Category]
     @Environment(\.modelContext) private var context
     @Environment(\.colorScheme) var colorScheme
@@ -52,7 +52,6 @@ struct FinanceView: View {
                 }
                 .padding(.bottom)
                 
-                // Segmented Picker
                 Picker("Select Type", selection: $selectedType) {
                     Text("Expenses").tag(FinanceType.expense)
                     Text("Income").tag(FinanceType.income)
@@ -68,7 +67,7 @@ struct FinanceView: View {
                 List {
                     ForEach(viewModel.groupedExpenses) { group in
                         Section(header: Text(group.groupTitle).font(.headline).foregroundColor(.primary)) {
-                            ForEach(group.expenses) { expense in
+                            ForEach(group.finances) { expense in
                                 FinanceCardView(finance: expense)
                                     .swipeActions(edge: .trailing, allowsFullSwipe: false) {
                                         Button {
@@ -86,7 +85,7 @@ struct FinanceView: View {
                 .toolbar {
                     ToolbarItem(placement: .navigationBarTrailing) {
                         Button {
-                            viewModel.addExpense.toggle()
+                            viewModel.addFinance.toggle()
                         } label: {
                             Image(systemName: "plus.circle.fill")
                                 .font(.title)
@@ -105,7 +104,7 @@ struct FinanceView: View {
                 .onChange(of: allCategories) { newValue in
                     viewModel.allCategories = newValue
                 }
-                .sheet(isPresented: $viewModel.addExpense) {
+                .sheet(isPresented: $viewModel.addFinance) {
                     AddFinanceView().interactiveDismissDisabled()
                 }
                 .overlay {

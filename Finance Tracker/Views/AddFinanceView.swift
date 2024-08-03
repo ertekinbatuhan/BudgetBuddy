@@ -47,7 +47,7 @@ struct AddFinanceView: View {
                                 }
                                 .padding()
                             }
-                            .buttonStyle(PlainButtonStyle()) // Görünüm stili ayarı
+                            .buttonStyle(PlainButtonStyle()) 
                         }
                     }
                 }

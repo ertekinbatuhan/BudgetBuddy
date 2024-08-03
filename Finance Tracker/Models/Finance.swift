@@ -9,7 +9,7 @@ import Foundation
 import SwiftData
 
 @Model
-class Expense {
+class Finance {
     
     var title: String
     var subTitle: String
@@ -27,7 +27,7 @@ class Expense {
         self.category = category
     }
     
-    var expenseType: FinanceType{
+    var financeType: FinanceType{
         return FinanceType(rawValue: type) ?? .expense
     }
 }

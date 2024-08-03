@@ -25,6 +25,6 @@ struct Finance_TrackerApp: App {
         WindowGroup {
             AuthCheckView() // AuthCheckView uygun şekilde tanımlanmalı
         }
-        .modelContainer(for: [Expense.self, Category.self]) // Model sınıfları doğru şekilde tanımlanmalı
+        .modelContainer(for: [Finance.self, Category.self]) // Model sınıfları doğru şekilde tanımlanmalı
     }
 }
