@@ -15,7 +15,7 @@
 ![Screenshot 2024-08-03 at 16 26 06](https://github.com/user-attachments/assets/9b7fc2f0-55e3-43bc-a5d5-7352e0754fb6)
 ![Screenshot 2024-08-03 at 16 19 03](https://github.com/user-attachments/assets/b7e05488-5551-40f8-a752-707a56beb78e)
 
-## Used Technologies
+## Technologies Used
 
 - **SwiftUI**: 
   - Leverages Apple's modern UI framework for creating user interfaces with a declarative Swift syntax, enabling dynamic and interactive layouts.
@@ -29,7 +29,7 @@
 - **Firebase**: 
   - Integrated for real-time data synchronization, user authentication, and cloud storage, providing a scalable backend solution.
 
-## Used Architecture
+## Architecture Used 
 The Finance Tracker app is built using the MVVM (Model-View-ViewModel) architectural pattern. This architecture helps to separate the business logic and data handling from the user interface, making the app more modular, testable, and maintainable.
 
 - **Model**: Represents the data and business logic of the application. It handles the data operations and communicates with external services or databases.
