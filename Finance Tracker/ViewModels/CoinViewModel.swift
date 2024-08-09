@@ -9,10 +9,13 @@ import Foundation
 import Alamofire
 
 class CoinViewModel: ObservableObject {
-    
     @Published var coin = [Coin]()
+    @Published var error: CoinError?
     
-    init() {
+    private let coinService: CoinService
+    
+    init(coinService: CoinService = CoinService()) {
+        self.coinService = coinService
         fetchCoins()
     }
     
@@ -25,30 +28,14 @@ class CoinViewModel: ObservableObject {
     }
     
     func fetchCoins() {
-        let url = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=true&price_change_percentage=24h&locale=en"
-        
-        AF.request(url, method: .get).responseDecodable(of: [Coin].self) { response in
-            switch response.result {
-            case .success(let coins):
-                DispatchQueue.main.async {
+        coinService.fetchCoins { result in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let coins):
                     self.coin = coins
+                case .failure(let error):
+                    self.error = error
                 }
-                
-            case .failure(let error):
-                let coinError: CoinError
-                
-                if let afError = error.asAFError {
-                    switch afError {
-                    case .responseValidationFailed(reason: .dataFileReadFailed):
-                        coinError = .invalidResponse
-                    default:
-                        coinError = .networkError(error.localizedDescription)
-                    }
-                } else {
-                    coinError = .decodingError
-                }
-                
-                print(coinError.localizedDescription)
             }
         }
     }
