@@ -9,6 +9,7 @@
 - Track and visualize your expenses and income.
 - Manage categories like investments, salaries, shopping, and debt payments.
 - Monitor your cryptocurrency holdings.
+- Ensure secure user authentication and session management.
 - User-friendly interface with dynamic charts and graphs.
 
 ## Screenshots
