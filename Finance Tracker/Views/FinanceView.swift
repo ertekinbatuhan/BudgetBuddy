@@ -16,7 +16,7 @@ struct FinanceView: View {
     @Environment(\.colorScheme) var colorScheme
     @Binding var currentTab: TabItem
     @State private var selectedType: FinanceType = .expense
-    @ObservedObject private var viewModel = FinanceViewModel()
+    @StateObject private var viewModel = FinanceViewModel()
     
     var body: some View {
         NavigationStack {
