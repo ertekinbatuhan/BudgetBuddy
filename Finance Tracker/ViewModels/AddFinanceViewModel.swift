@@ -2,8 +2,20 @@ import Foundation
 import SwiftUI
 import SwiftData
 
-class AddFinanceViewModel: ObservableObject {
+protocol AddFinanceViewModelProtocol {
+    var title: String { get set }
+    var subTitle: String { get set }
+    var date: Date { get set }
+    var amount: Double { get set }
+    var category: Category? { get set }
+    var selectedType: FinanceType { get set }
     
+    var isAddButtonDisabled: Bool { get }
+    
+    func addFinance(context: ModelContext)
+}
+
+class AddFinanceViewModel: AddFinanceViewModelProtocol , ObservableObject {
     @Published var title: String = ""
     @Published var subTitle: String = ""
     @Published var date: Date = .init()
@@ -20,4 +32,3 @@ class AddFinanceViewModel: ObservableObject {
         context.insert(finance)
     }
 }
-
