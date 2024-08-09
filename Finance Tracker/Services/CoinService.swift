@@ -8,7 +8,11 @@
 import Foundation
 import Alamofire
 
-class CoinService {
+protocol CoinServiceProtocol {
+    func fetchCoins(completion: @escaping (Result<[Coin], CoinError>) -> Void)
+}
+
+class CoinService: CoinServiceProtocol {
     func fetchCoins(completion: @escaping (Result<[Coin], CoinError>) -> Void) {
         let url = Constants.URLs.coinURL
         
@@ -36,3 +40,4 @@ class CoinService {
         }
     }
 }
+

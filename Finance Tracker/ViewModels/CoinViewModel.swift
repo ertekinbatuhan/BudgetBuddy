@@ -8,7 +8,17 @@
 import Foundation
 import Alamofire
 
-class CoinViewModel: ObservableObject {
+protocol CoinViewModelProtocol {
+    var coin: [Coin] { get set }
+    var error: CoinError? { get set }
+    var topGainers: [Coin] { get }
+    var topLosers: [Coin] { get }
+
+    func fetchCoins()
+}
+
+
+class CoinViewModel: CoinViewModelProtocol,ObservableObject {
     @Published var coin = [Coin]()
     @Published var error: CoinError?
     
