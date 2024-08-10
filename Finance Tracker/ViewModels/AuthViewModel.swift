@@ -9,6 +9,7 @@ import Foundation
 import Firebase
 
 protocol AuthViewModelProtocol {
+    var isUserLoggedIn: Bool { get }
     func checkUserStatus()
     func signOut()
 }

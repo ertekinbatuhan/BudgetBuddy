@@ -9,6 +9,7 @@ import Foundation
 import Firebase
 
 protocol SignInViewModelProtocol {
+    var isSignedIn: Bool { get }
     func signIn(email : String, password : String)
 }
 
