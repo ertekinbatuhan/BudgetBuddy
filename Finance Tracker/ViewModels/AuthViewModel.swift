@@ -8,7 +8,12 @@
 import Foundation
 import Firebase
 
-class AuthViewModel: ObservableObject {
+protocol AuthViewModelProtocol {
+    func checkUserStatus()
+    func signOut()
+}
+
+class AuthViewModel: ObservableObject , AuthViewModelProtocol {
     
     @Published var isUserLoggedIn: Bool = false
 

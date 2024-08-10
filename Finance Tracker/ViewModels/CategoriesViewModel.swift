@@ -10,7 +10,6 @@ import SwiftUI
 import SwiftData
 
 protocol CategoriesViewModelProtocol {
-    
     func fetchCategories(categories: [Category])
     func addNewCategory(context: ModelContext)
     func requestDeleteCategory(_ category: Category)
