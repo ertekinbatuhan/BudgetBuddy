@@ -9,19 +9,6 @@ import SwiftUI
 import SwiftData
 
 protocol FinanceViewModelProtocol {
-    var groupedFinances: [GroupedFinances] { get set }
-    var originalGroupedFinances: [GroupedFinances] { get set }
-    var searchText: String { get set }
-    var addFinance: Bool { get set }
-    var selectedType: FinanceType { get set }
-    var allFinances: [Finance] { get set }
-    var allCategories: [Category] { get set }
-    var expenseCategories: [Category] { get }
-    var incomeCategories: [Category] { get }
-    var categoryColors: [Category: Color] { get }
-    var totalExpenseAmountString: String { get }
-    var totalIncomingAmountString: String { get }
-
     func totalAmount(for type: FinanceType) -> Double
     func filterFinances(_ text: String)
     func filterFinancesByType(_ type: FinanceType)

@@ -9,14 +9,8 @@ import Foundation
 import Alamofire
 
 protocol CoinViewModelProtocol {
-    var coin: [Coin] { get set }
-    var error: CoinError? { get set }
-    var topGainers: [Coin] { get }
-    var topLosers: [Coin] { get }
-
     func fetchCoins()
 }
-
 
 class CoinViewModel: CoinViewModelProtocol,ObservableObject {
     @Published var coin = [Coin]()

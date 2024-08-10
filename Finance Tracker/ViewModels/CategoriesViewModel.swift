@@ -9,7 +9,15 @@ import Foundation
 import SwiftUI
 import SwiftData
 
-class CategoriesViewModel: ObservableObject {
+protocol CategoriesViewModelProtocol {
+    
+    func fetchCategories(categories: [Category])
+    func addNewCategory(context: ModelContext)
+    func requestDeleteCategory(_ category: Category)
+    func deleteCategory(context: ModelContext)
+}
+
+class CategoriesViewModel: ObservableObject, CategoriesViewModelProtocol {
     @Published var addCategory: Bool = false
     @Published var categoryName: String = ""
     @Published var deleteRequest: Bool = false
@@ -48,5 +56,4 @@ class CategoriesViewModel: ObservableObject {
             self.requestedCategory = nil
         }
     }
-
 }
