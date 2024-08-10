@@ -16,9 +16,9 @@ class CoinViewModel: CoinViewModelProtocol,ObservableObject {
     @Published var coin = [Coin]()
     @Published var error: CoinError?
     
-    private let coinService: CoinService
+    private let coinService: CoinServiceProtocol
     
-    init(coinService: CoinService = CoinService()) {
+    init(coinService: CoinServiceProtocol = CoinService()) {
         self.coinService = coinService
         fetchCoins()
     }
