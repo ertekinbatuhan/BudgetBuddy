@@ -8,7 +8,11 @@
 import Foundation
 import Firebase
 
-class SignInViewModel: ObservableObject {
+protocol SignInViewModelProtocol {
+    func signIn(email : String, password : String)
+}
+
+class SignInViewModel: ObservableObject, SignInViewModelProtocol {
     
     @Published var isSignedIn: Bool = false
   
