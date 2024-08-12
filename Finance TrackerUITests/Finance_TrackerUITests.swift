@@ -51,6 +51,30 @@ final class Finance_TrackerUITests: XCTestCase {
        financeSaveButton.tap()
     }
     
+    func testDeletingCategory() throws {
+        let app = XCUIApplication()
+        app.launch()
+
+        let categoriesTabButton = app.tabBars["Tab Bar"].buttons["Categories"]
+        categoriesTabButton.tap()
+        
+        let initialCategoryCount = app.collectionViews.cells.count
+    
+        let categoryCell = app.collectionViews.cells.element(boundBy: 0)
+
+        categoryCell.swipeLeft()
+
+        let deleteButton = app.buttons["Trash"]
+        deleteButton.tap()
+
+        let alertDeleteButton = app.alerts.buttons["Delete"]
+        alertDeleteButton.tap()
+        
+        let expectation = XCTNSPredicateExpectation(predicate: NSPredicate(format: "count == %d", initialCategoryCount - 1), object: app.collectionViews.cells)
+        
+        let result = XCTWaiter.wait(for: [expectation], timeout: 5)
+        XCTAssertEqual(result, .completed)
+    }
     
     func testAddingCategory() throws {
         let app = XCUIApplication()
@@ -91,9 +115,7 @@ final class Finance_TrackerUITests: XCTestCase {
         incomeButton.tap()
         expensesButton.tap()
     }
-
-
-
+    
     func testLaunchPerformance() throws {
         if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {
             // This measures how long it takes to launch your application.
