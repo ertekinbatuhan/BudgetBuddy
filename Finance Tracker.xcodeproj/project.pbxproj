@@ -22,6 +22,8 @@
 		C04E52922C542E8700566111 /* NavigationAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04E52912C542E8700566111 /* NavigationAppearance.swift */; };
 		C04E52952C54311200566111 /* CoinError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04E52942C54311200566111 /* CoinError.swift */; };
 		C055637A2C6BDB0700CA13AA /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05563792C6BDB0700CA13AA /* NotificationManager.swift */; };
+		C055637C2C6BE60000CA13AA /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = C055637B2C6BE60000CA13AA /* FirebaseAnalytics */; };
+		C055637E2C6BE72500CA13AA /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C055637D2C6BE72500CA13AA /* Reminder.swift */; };
 		C06263512C5AA8C1001090CB /* TabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06263502C5AA8C1001090CB /* TabItem.swift */; };
 		C081000E2C56AF0200A47939 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C081000D2C56AF0200A47939 /* SignInView.swift */; };
 		C08100102C56BD0300A47939 /* SocialLoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C081000F2C56BD0300A47939 /* SocialLoginButton.swift */; };
@@ -85,6 +87,7 @@
 		C04E52912C542E8700566111 /* NavigationAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationAppearance.swift; sourceTree = "<group>"; };
 		C04E52942C54311200566111 /* CoinError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinError.swift; sourceTree = "<group>"; };
 		C05563792C6BDB0700CA13AA /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		C055637D2C6BE72500CA13AA /* Reminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
 		C06263502C5AA8C1001090CB /* TabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItem.swift; sourceTree = "<group>"; };
 		C081000D2C56AF0200A47939 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		C081000F2C56BD0300A47939 /* SocialLoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialLoginButton.swift; sourceTree = "<group>"; };
@@ -125,6 +128,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C055637C2C6BE60000CA13AA /* FirebaseAnalytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,6 +181,7 @@
 				C0D9032B2C4ED95B00D9AAE4 /* Finance.swift */,
 				C0D9032D2C4ED9A300D9AAE4 /* Category.swift */,
 				C04E52852C541A7D00566111 /* Coin.swift */,
+				C055637D2C6BE72500CA13AA /* Reminder.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -321,6 +326,9 @@
 				C01383562C5EBA770008341A /* PBXTargetDependency */,
 			);
 			name = "Finance TrackerTests";
+			packageProductDependencies = (
+				C055637B2C6BE60000CA13AA /* FirebaseAnalytics */,
+			);
 			productName = "Finance TrackerTests";
 			productReference = C01383512C5EBA770008341A /* Finance TrackerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -478,6 +486,7 @@
 				C04E528D2C541B3F00566111 /* CoinViewModel.swift in Sources */,
 				C0A81BC42C501E9B005AF972 /* CategoriesViewModel.swift in Sources */,
 				C0D903342C4EDE5000D9AAE4 /* GroupedFinances.swift in Sources */,
+				C055637E2C6BE72500CA13AA /* Reminder.swift in Sources */,
 				C0B08BE22C594A220066CE3B /* SignInViewModel.swift in Sources */,
 				C08100122C56BD3000A47939 /* OrView.swift in Sources */,
 				C0A2EAAE2C4FD33500DB9A14 /* SearchBar.swift in Sources */,
@@ -525,6 +534,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = PQ82KF7KP4;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.batuhanberkertekin.Finance-TrackerTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -543,6 +553,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = PQ82KF7KP4;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.batuhanberkertekin.Finance-TrackerTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -846,6 +857,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = C04E52872C541B0400566111 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		C055637B2C6BE60000CA13AA /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C02323312C58D44400943FEF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

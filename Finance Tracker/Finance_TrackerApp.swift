@@ -25,6 +25,6 @@ struct Finance_TrackerApp: App {
         WindowGroup {
             AuthCheckView()
         }
-        .modelContainer(for: [Finance.self, Category.self])
+        .modelContainer(for: [Finance.self, Reminder.self , Category.self])
     }
 }
