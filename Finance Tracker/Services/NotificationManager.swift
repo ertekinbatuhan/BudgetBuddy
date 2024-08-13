@@ -8,6 +8,7 @@
 import Foundation
 import UserNotifications
 
+
 class NotificationManager: NSObject, UNUserNotificationCenterDelegate {
     
     static let shared = NotificationManager()

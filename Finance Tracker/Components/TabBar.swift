@@ -13,6 +13,12 @@ struct TabBar: View {
     
     var body: some View {
         TabView(selection: $selectedTab) {
+            
+            ReminderView().tag(TabItem.home).tabItem {
+                Image(systemName: TabItem.home.imageName)
+                Text(TabItem.home.title)
+            }
+            
             FinanceView(currentTab: $selectedTab).tag(TabItem.home).tabItem {
                 Image(systemName: TabItem.home.imageName)
                 Text(TabItem.home.title)

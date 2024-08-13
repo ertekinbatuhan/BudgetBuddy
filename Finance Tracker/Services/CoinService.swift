@@ -8,6 +8,7 @@
 import Foundation
 import Alamofire
 
+
 protocol CoinServiceProtocol {
     func fetchCoins(completion: @escaping (Result<[Coin], CoinError>) -> Void)
 }

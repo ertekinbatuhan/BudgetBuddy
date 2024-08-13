@@ -8,12 +8,15 @@
 import Foundation
 
 enum TabItem: String {
+    case reminders = "Reminders"
     case home = "Home"
     case coins = "Coins"
     case categories = "Categories"
     
     var imageName: String {
         switch self {
+        case .reminders:
+            return "homekit"
         case .home:
             return "homekit"
         case .coins:
@@ -25,6 +28,8 @@ enum TabItem: String {
     
     var title: String {
         switch self {
+        case .reminders:
+            return "Reminders"
         case .home:
             return "Home"
         case .coins:
