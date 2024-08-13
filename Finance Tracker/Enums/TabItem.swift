@@ -16,7 +16,7 @@ enum TabItem: String {
     var imageName: String {
         switch self {
         case .reminders:
-            return "homekit"
+            return "calendar.badge.plus"
         case .home:
             return "homekit"
         case .coins:

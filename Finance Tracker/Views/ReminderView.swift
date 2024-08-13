@@ -15,7 +15,7 @@ struct ReminderView: View {
     @Environment(\.modelContext) private var context: ModelContext
     @State private var showAddReminder = false
     @ObservedObject private var viewModel = ReminderViewModel()
-
+    
     private var groupedReminders: [Date: [Reminder]] {
         Dictionary(grouping: viewModel.filteredReminders(reminders), by: { Calendar.current.startOfDay(for: $0.date) })
     }
@@ -45,11 +45,11 @@ struct ReminderView: View {
                                 ForEach(groupedReminders[date] ?? []) { reminder in
                                     HStack {
                                         Rectangle()
-                                            .fill(Color.randomReminderColor())
+                                            .fill(Color.randomColor())
                                             .frame(width: 8)
                                             .frame(maxHeight: .infinity)
                                             .cornerRadius(12.0)
-
+                                        
                                         VStack(alignment: .leading) {
                                             HStack {
                                                 Text(reminder.title)
@@ -57,19 +57,19 @@ struct ReminderView: View {
                                                     .fontWeight(.bold)
                                                     .foregroundColor(.primary)
                                                     .frame(maxWidth: .infinity, alignment: .leading)
-
+                                                
                                                 HStack(spacing: 4) {
                                                     Image(systemName: "clock.fill")
                                                         .font(.subheadline)
                                                         .foregroundColor(.secondary)
-
+                                                    
                                                     Text(reminder.date, style: .time)
                                                         .font(.subheadline)
                                                         .foregroundColor(.secondary)
                                                 }
                                                 .frame(maxWidth: .infinity, alignment: .trailing)
                                             }
-
+                                            
                                             if !reminder.notes.isEmpty {
                                                 Text(reminder.notes)
                                                     .font(.body)
