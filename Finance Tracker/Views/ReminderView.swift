@@ -45,7 +45,7 @@ struct ReminderView: View {
                                 ForEach(groupedReminders[date] ?? []) { reminder in
                                     HStack {
                                         Rectangle()
-                                            .fill(Color.random())
+                                            .fill(Color.randomReminderColor())
                                             .frame(width: 8)
                                             .frame(maxHeight: .infinity)
                                             .cornerRadius(12.0)
@@ -111,7 +111,7 @@ struct ReminderView: View {
                 }
             }
             .sheet(isPresented: $showAddReminder) {
-               // AddReminderView()
+                AddReminderView()
             }
         }
     }

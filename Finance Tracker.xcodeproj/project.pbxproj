@@ -59,6 +59,7 @@
 		C0EBE7422C6BF8F400829ED0 /* ReminderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0EBE7412C6BF8F400829ED0 /* ReminderView.swift */; };
 		C0EBE7442C6BF93200829ED0 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = C0EBE7432C6BF93200829ED0 /* Lottie */; };
 		C0EBE7472C6BFAB500829ED0 /* notfound.json in Resources */ = {isa = PBXBuildFile; fileRef = C0EBE7462C6BFAB500829ED0 /* notfound.json */; };
+		C0EBE74A2C6C03E200829ED0 /* AddReminderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0EBE7492C6C03E200829ED0 /* AddReminderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -128,6 +129,7 @@
 		C0E1074B2C515F53009AE8D1 /* FinanceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceViewModel.swift; sourceTree = "<group>"; };
 		C0EBE7412C6BF8F400829ED0 /* ReminderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderView.swift; sourceTree = "<group>"; };
 		C0EBE7462C6BFAB500829ED0 /* notfound.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = notfound.json; sourceTree = "<group>"; };
+		C0EBE7492C6C03E200829ED0 /* AddReminderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReminderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +181,7 @@
 				C0217D9E2C57D90F00DD15F6 /* SignUpView.swift */,
 				C03E3E462C5A14BD00EC8F2A /* AuthCheckView.swift */,
 				C0EBE7412C6BF8F400829ED0 /* ReminderView.swift */,
+				C0EBE7492C6C03E200829ED0 /* AddReminderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -526,6 +529,7 @@
 				C04E52922C542E8700566111 /* NavigationAppearance.swift in Sources */,
 				C03E3E452C5A148200EC8F2A /* AuthViewModel.swift in Sources */,
 				C0217D9F2C57D90F00DD15F6 /* SignUpView.swift in Sources */,
+				C0EBE74A2C6C03E200829ED0 /* AddReminderView.swift in Sources */,
 				C0A2EAB02C4FD41900DB9A14 /* String+Extension.swift in Sources */,
 				C04E52862C541A7D00566111 /* Coin.swift in Sources */,
 				C0D903382C4EE97B00D9AAE4 /* FinanceCardView.swift in Sources */,
