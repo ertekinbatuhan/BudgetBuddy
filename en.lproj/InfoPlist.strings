@@ -1,0 +1,10 @@
+/* 
+  InfoPlist.strings
+  Finance Tracker
+
+  Created by Batuhan Berk Ertekin on 14.08.2024.
+  
+*/
+
+"CFBundleName" = "MoneyManager";
+"CFBundleDisplayName" = "MoneyManager";

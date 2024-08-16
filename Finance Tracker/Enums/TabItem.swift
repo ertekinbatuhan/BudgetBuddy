@@ -8,10 +8,10 @@
 import Foundation
 
 enum TabItem: String {
-    case reminders = "Reminders"
-    case home = "Home"
-    case coins = "Coins"
-    case categories = "Categories"
+    case reminders = "TAB_REMINDERS"
+    case home = "TAB_HOME"
+    case coins = "TAB_COINS"
+    case categories = "TAB_CATEGORIES"
     
     var imageName: String {
         switch self {
@@ -29,14 +29,15 @@ enum TabItem: String {
     var title: String {
         switch self {
         case .reminders:
-            return "Reminders"
+            return NSLocalizedString("TAB_REMINDERS_TITLE", comment: "")
         case .home:
-            return "Home"
+            return NSLocalizedString("TAB_HOME_TITLE", comment: "")
         case .coins:
-            return "Coins"
+            return NSLocalizedString("TAB_COINS_TITLE", comment: "")
         case .categories:
-            return "Categories"
+            return NSLocalizedString("TAB_CATEGORIES_TITLE", comment: "")
         }
     }
+
 }
 

@@ -11,12 +11,13 @@ extension DateFormatter {
     static let dayMonthYearFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateFormat = "dd MMM yyyy"
+        formatter.dateStyle = .full
         return formatter
     }()
     
     static var dateFormatter: DateFormatter {
         let formatter = DateFormatter()
-        formatter.dateStyle = .medium
+        formatter.dateStyle = .full
         formatter.timeZone = TimeZone.current
         return formatter
     }

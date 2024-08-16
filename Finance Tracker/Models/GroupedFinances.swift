@@ -7,18 +7,17 @@
 
 import Foundation
 
-struct GroupedFinances : Identifiable {
+struct GroupedFinances: Identifiable {
     var id = UUID()
-    var date : Date
-    var finances : [Finance]
+    var date: Date
+    var finances: [Finance]
     
-    var groupTitle : String {
-        
+    var groupTitle: String {
         let calendar = Calendar.current
         if calendar.isDateInToday(date) {
-            return "Today"
-        } else if  calendar.isDateInYesterday(date) {
-            return "Yesterday"
+            return NSLocalizedString("Today", comment: "")
+        } else if calendar.isDateInYesterday(date) {
+            return NSLocalizedString("Yesterday", comment: "")
         } else {
             return date.formatted(date: .abbreviated, time: .omitted)
         }

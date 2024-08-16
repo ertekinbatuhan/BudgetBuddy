@@ -17,25 +17,20 @@ struct FinanceView: View {
     @Binding var currentTab: TabItem
     @State private var selectedType: FinanceType = .expense
     @StateObject private var viewModel = FinanceViewModel()
-    
+    private let adCoordinator = AdCoordinator.shared
+    @State private var calculateViewModel = CalculateViewModel()
+
     var body: some View {
         NavigationStack {
             VStack {
-               
-                SearchBar(text: $viewModel.searchText)
-                    .padding(.horizontal)
-                    .onChange(of: viewModel.searchText) { _ in
-                        viewModel.resetFilters()
-                    }
-                
                 ZStack {
                     CircularProgressView(categories: selectedType == .expense ? viewModel.expenseCategories : viewModel.incomeCategories,
                                          categoryColors: viewModel.categoryColors)
                         .frame(width: 200, height: 200)
                         .shadow(radius: 10)
-                       
+                    
                     VStack {
-                        Text("Total")
+                        Text("CONVERSATION_TOTAL")
                             .font(.subheadline)
                             .foregroundColor(.gray)
                             .padding(.bottom, 5)
@@ -45,21 +40,26 @@ struct FinanceView: View {
                             .foregroundColor(colorScheme == .dark ? .white : .black)
                             .lineLimit(1)
                             .truncationMode(.tail)
-                            .padding(.leading, 5)
-                            .padding(.trailing, 5)
+                            .padding(.horizontal, 5)
                     }
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                 }
                 .padding(.bottom)
+                .searchable(text: $viewModel.searchText)
+                .padding(.top, 15)
                 
                 Picker("Select Type", selection: $selectedType) {
-                    Text("Expenses").tag(FinanceType.expense)
-                    Text("Income").tag(FinanceType.income)
+                    Text("CONVERSATION_EXPENSES").tag(FinanceType.expense)
+                    Text("CONVERSATION_INCOME").tag(FinanceType.income)
                 }
                 .pickerStyle(SegmentedPickerStyle())
                 .padding(.horizontal)
                 .padding(.bottom)
-                .onChange(of: selectedType) { _ in
+             //   .onChange(of: selectedType) { //bura komple iptal
+               //     viewModel.resetFilters()
+                //    viewModel.filterFinances(viewModel.searchText) //bunu eklemiş sadece
+              //  }
+                .onChange(of: selectedType) {
                     viewModel.selectedType = selectedType
                     viewModel.resetFilters()
                 }
@@ -72,6 +72,10 @@ struct FinanceView: View {
                                     .swipeActions(edge: .trailing, allowsFullSwipe: false) {
                                         Button {
                                             viewModel.deleteFinance(finance, from: group, context: context)
+                                            if calculateViewModel.calculateCount % 3 == 0 {
+                                                adCoordinator.presentAd()
+                                            }
+                                            calculateViewModel.calculateCount += 1
                                         } label: {
                                             Image(systemName: "trash")
                                         }
@@ -81,7 +85,7 @@ struct FinanceView: View {
                         }
                     }
                 }
-                .navigationTitle("Welcome")
+                .navigationTitle("CONVERSATION_WELCOME_TITLE")
                 .toolbar {
                     ToolbarItem(placement: .navigationBarTrailing) {
                         Button {
@@ -97,13 +101,22 @@ struct FinanceView: View {
                     viewModel.allCategories = allCategories
                     viewModel.createGroupedFinances(allFinances)
                 }
-                .onChange(of: allFinances) { newValue in
-                    viewModel.allFinances = newValue
-                    viewModel.createGroupedFinances(newValue)
+                .onChange(of: allFinances) {
+                    viewModel.allFinances = allFinances
+                    viewModel.createGroupedFinances(allFinances)
                 }
-                .onChange(of: allCategories) { newValue in
-                    viewModel.allCategories = newValue
+                .onChange(of: allCategories) { 
+                    viewModel.allCategories = allCategories
                 }
+                .onChange(of: viewModel.searchText) { newValue in
+                    if newValue.isEmpty {
+                        viewModel.resetFilters()
+                        viewModel.createGroupedFinances(allFinances)
+                    } else {
+                        viewModel.filterFinances(newValue)
+                    }
+                }
+                
                 .sheet(isPresented: $viewModel.addFinance) {
                     AddFinanceView().interactiveDismissDisabled()
                 }
@@ -114,9 +127,9 @@ struct FinanceView: View {
                             ContentUnavailableView {
                                 VStack {
                                     if selectedType == .expense {
-                                        Label("No Expenses", systemImage: "tray.fill")
+                                        Label("CONVERSATION_NOEXPENSES", systemImage: "tray.fill")
                                     } else {
-                                        Label("No Income", systemImage: "arrow.up.circle.fill")
+                                        Label("CONVERSATION_NOINCOME", systemImage: "arrow.up.circle.fill")
                                     }
                                 }
                             }

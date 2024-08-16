@@ -18,7 +18,7 @@ struct CoinsView: View {
         NavigationStack {
             ScrollView {
                 LazyVStack(spacing: 10) {
-                    Text("Top Gainers")
+                    Text("TOPGAINERS")
                         .font(.title2)
                         .fontWeight(.bold)
                         .padding(.horizontal)
@@ -80,7 +80,7 @@ struct CoinsView: View {
                             .padding(.top, 10)
                     }
 
-                    Text("Top Losers")
+                    Text("TOPLOSERS")
                         .font(.title2)
                         .fontWeight(.bold)
                         .padding(.horizontal)
@@ -142,7 +142,7 @@ struct CoinsView: View {
                             .padding(.top, 10)
                     }
 
-                    Text("All Coins")
+                    Text("ALLCOINS")
                         .font(.title2)
                         .fontWeight(.bold)
                         .padding(.horizontal)
@@ -210,7 +210,7 @@ struct CoinsView: View {
                 }
                 .padding(.horizontal)
             }
-            .navigationTitle("Live Prices")
+            .navigationTitle("LIVEPRICES")
             .navigationBarTitleDisplayMode(.inline)
             .onAppear {
                 coinViewModel.fetchCoins()

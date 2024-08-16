@@ -7,121 +7,146 @@
 
 import SwiftUI
 import SwiftData
+import GoogleMobileAds
 
 struct CategoriesView: View {
     
     @ObservedObject var viewModel: CategoriesViewModel = CategoriesViewModel()
     @Query(animation: .snappy) private var allCategories: [Category]
     @Environment(\.modelContext) private var context
-    @ObservedObject private var authViewModel = AuthViewModel()
-    @State private var showSignInView = false
-
+  //  @ObservedObject private var authViewModel = AuthViewModel()
+  //  @State private var showSignInView = false
+    
+    private  let adCoordinator = AdCoordinator.shared
+    @State private var  calculateViewModel = CalculateViewModel()
+    
     var body: some View {
         NavigationStack {
             List {
-                ForEach(viewModel.allCategories) { category in
-                    DisclosureGroup {
-                        if let expenses = category.finances, !expenses.isEmpty {
-                            ForEach(expenses) { expense in
-                                FinanceCardView(finance: expense, displayTag: false)
+                // bu çözüldü
+                Section(header: Text("")) {
+                    
+                    ForEach(viewModel.allCategories) { category in
+                        DisclosureGroup {
+                            if let expenses = category.finances, !expenses.isEmpty {
+                                ForEach(expenses) { expense in
+                                    FinanceCardView(finance: expense, displayTag: false)
+                                }
+                            } else {
+                                ContentUnavailableView {
+                                    Label("CONVERSATION_NOFINANCE", systemImage: "tray.fill")
+                                }
                             }
-                        } else {
-                            ContentUnavailableView {
-                                Label("No Finance", systemImage: "tray.fill")
-                            }
-                        }
-                    } label: {
-                        Text(category.categoryName)
-                    }
-                    .swipeActions(edge: .trailing, allowsFullSwipe: false) {
-                        Button {
-                            viewModel.requestDeleteCategory(category)
                         } label: {
-                            Image(systemName: "trash")
+                            Text(category.categoryName)
                         }
-                        .tint(.red)
+                        .swipeActions(edge: .trailing, allowsFullSwipe: false) {
+                            Button {
+                                viewModel.requestDeleteCategory(category)
+                            } label: {
+                                Image(systemName: "trash")
+                            }
+                            .tint(.red)
+                        }
                     }
                 }
             }
-            .navigationTitle("Categories")
+            
+          
+            .navigationTitle("CONVERSATION_CATEGORIES")
             .overlay {
                 if viewModel.allCategories.isEmpty {
                     ContentUnavailableView {
-                        Label("No categories", systemImage: "tray.fill")
+                        Label("CONVERSATION_NOCATEGORIES", systemImage: "tray.fill")
                     }
                 }
             }
+         
+            BannerView() .frame(width: GADAdSizeBanner.size.width,
+                       height: GADAdSizeBanner.size.height)
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
+                     
                         viewModel.addCategory.toggle()
                     } label: {
                         Image(systemName: "plus.circle.fill").font(.title)
                     }
                 }
                 
-                ToolbarItem(placement: .topBarLeading) {
+              /*  ToolbarItem(placement: .topBarLeading) {
                     Button {
                         authViewModel.signOut()
                         showSignInView = true
                     } label: {
-                        Text("Log Out")
+                        Text("CONVERSION_LOGOUT_BUTTON")
                     }
                 }
+               
+               */
             }
             .sheet(isPresented: $viewModel.addCategory) {
                 viewModel.categoryName = ""
             } content: {
                 NavigationStack {
                     List {
-                        Section("Title") {
-                            TextField("General", text: $viewModel.categoryName)
+                        Section("CATEGORY_TITLE") {
+                            TextField("CATEGORY_GENERAL", text: $viewModel.categoryName)
                         }
                     }
-                    .navigationTitle("Category Name")
+                    .navigationTitle("CONVERSION_CATEGORYNAME")
                     .navigationBarTitleDisplayMode(.inline)
                     .toolbar {
                         ToolbarItem(placement: .topBarLeading) {
-                            Button("Cancel") {
+                            Button("CANCEL_BUTTON") {
                                 viewModel.addCategory = false
                             }
                             .tint(.red)
                         }
                         ToolbarItem(placement: .topBarTrailing) {
-                            Button("Add") {
+                            Button("ADD_BUTTON") {
                                 viewModel.addNewCategory(context: context)
+                              
                             }
                             .disabled(viewModel.categoryName.isEmpty)
                         }
-                        
-                        
                     }
                 }
                 .presentationDetents([.height(180)])
                 .presentationCornerRadius(20)
                 .interactiveDismissDisabled()
             }
-            .fullScreenCover(isPresented: $showSignInView) {
-                SignInView().navigationBarBackButtonHidden(true)
-            }
+           // .fullScreenCover(isPresented: $showSignInView) {
+             //   SignInView().navigationBarBackButtonHidden(true)
+           // }
+            //If you delete a category, all the associated expenses will be deleted too.
         }
-        .alert("If you delete a category, all the associated expenses will be deleted too.", isPresented: $viewModel.deleteRequest) {
+        .alert("ALERT", isPresented: $viewModel.deleteRequest) {
             Button(role: .destructive) {
                 viewModel.deleteCategory(context: context)
+                
+                if calculateViewModel.calculateCount % 3 == 0 {
+                    adCoordinator.presentAd()
+                }
+                calculateViewModel.calculateCount += 1
+                
+                
             } label: {
-                Text("Delete")
+                Text("DELETE_BUTTON")
             }
             Button(role: .cancel) {
                 viewModel.requestedCategory = nil
             } label: {
-                Text("Cancel")
+                Text("CANCEL_BUTTON")
             }
         }
         .onAppear {
             viewModel.fetchCategories(categories: allCategories)
         }
-        .onChange(of: allCategories) { newCategories in
-            viewModel.fetchCategories(categories: newCategories)
+        .onChange(of: allCategories) {
+            viewModel.fetchCategories(categories: allCategories)
+            
+           
         }
     }
 }

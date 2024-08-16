@@ -29,8 +29,9 @@ struct FinanceCardView: View {
             .lineLimit(1)
             
             Spacer(minLength: 5)
-        
+           
             Text(finance.currencyString).font(.title3.bold())
+            
         }
     }
 }

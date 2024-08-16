@@ -7,8 +7,8 @@
 
 import SwiftUI
 import SwiftData
-import FirebaseCore
-
+import GoogleMobileAds
+/*
 class AppDelegate: NSObject, UIApplicationDelegate {
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
@@ -16,14 +16,25 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         return true
     }
 }
+ 
+ */
 
 @main
 struct Finance_TrackerApp: App {
-    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+  //  @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+
+    init() {
+
+        GADMobileAds.sharedInstance().start(completionHandler: nil)
+        
+       }
     
     var body: some Scene {
         WindowGroup {
-            AuthCheckView()
+          TabBar()
+            
+         //   TestBannerView()
+          
         }
         .modelContainer(for: [Finance.self, Reminder.self , Category.self])
     }

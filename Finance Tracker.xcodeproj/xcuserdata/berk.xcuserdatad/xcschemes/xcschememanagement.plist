@@ -7,7 +7,7 @@
 		<key>Finance Tracker.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 		<key>Promises (Playground) 1.xcscheme</key>
 		<dict>
@@ -29,6 +29,24 @@
 			<false/>
 			<key>orderHint</key>
 			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>C01383502C5EBA770008341A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C0D3B8EA2C5E985D00F5D52C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C0D903192C4ED80A00D9AAE4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

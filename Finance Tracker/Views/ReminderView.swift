@@ -8,7 +8,7 @@
 import SwiftUI
 import SwiftData
 import Lottie
-
+import GoogleMobileAds
 struct ReminderView: View {
     
     @Query(sort: [SortDescriptor(\Reminder.date, order: .reverse)], animation: .snappy) private var reminders: [Reminder]
@@ -16,10 +16,13 @@ struct ReminderView: View {
     @State private var showAddReminder = false
     @ObservedObject private var viewModel = ReminderViewModel()
     
+    private  let adCoordinator = AdCoordinator.shared
+    @State private var  calculateViewModel = CalculateViewModel()
+    
     private var groupedReminders: [Date: [Reminder]] {
         Dictionary(grouping: viewModel.filteredReminders(reminders), by: { Calendar.current.startOfDay(for: $0.date) })
     }
-    
+  
     var body: some View {
         NavigationStack {
             VStack {
@@ -29,8 +32,8 @@ struct ReminderView: View {
                             LottieView(animation: .named("notfound")).looping()
                                 .frame(width: geometry.size.width * 0.8, height: geometry.size.width * 0.8)
                                 .shadow(radius: 10)
-                            
-                            Text("No reminders yet")
+                            //No reminders yet
+                            Text("REMINDERS_TEXT")
                                 .font(.headline)
                                 .foregroundColor(.gray)
                                 .padding(.top, 10)
@@ -85,8 +88,12 @@ struct ReminderView: View {
                                     .swipeActions {
                                         Button(role: .destructive) {
                                             viewModel.deleteReminder(reminder, context: context)
+                                            if calculateViewModel.calculateCount % 2 == 0 {
+                                                adCoordinator.presentAd()
+                                            }
+                                            calculateViewModel.calculateCount += 1
                                         } label: {
-                                            Label("Delete", systemImage: "trash")
+                                            Label("DELETE_TRASH", systemImage: "trash")
                                         }
                                     }
                                 }
@@ -97,7 +104,12 @@ struct ReminderView: View {
                     .background(Color(UIColor.systemGray6))
                 }
             }
-            .navigationTitle("Reminders")
+           BannerView()
+               .frame(width: GADAdSizeBanner.size.width,
+                       height: GADAdSizeBanner.size.height)
+         
+            
+            .navigationTitle("REMINDERS_TITLE")
             .searchable(text: $viewModel.searchText)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {

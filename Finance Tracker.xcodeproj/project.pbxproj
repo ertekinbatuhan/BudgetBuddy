@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		C018047E2C5D38430025BD03 /* FinanceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C018047D2C5D38420025BD03 /* FinanceType.swift */; };
 		C0217D9F2C57D90F00DD15F6 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0217D9E2C57D90F00DD15F6 /* SignUpView.swift */; };
-		C02323342C58D45A00943FEF /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = C02323332C58D45A00943FEF /* FirebaseAnalytics */; };
-		C02323362C58D46600943FEF /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = C02323352C58D46600943FEF /* FirebaseAuth */; };
-		C02323382C58D46900943FEF /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = C02323372C58D46900943FEF /* FirebaseFirestore */; };
+		C02F2F212C6C7C00006D8741 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C02F2F1F2C6C7C00006D8741 /* Localizable.strings */; };
+		C02F2F272C6C9956006D8741 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C02F2F252C6C9956006D8741 /* InfoPlist.strings */; };
+		C02F2F2C2C6CB4F2006D8741 /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = C02F2F2B2C6CB4F2006D8741 /* GoogleMobileAds */; };
 		C03E3E452C5A148200EC8F2A /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03E3E442C5A148200EC8F2A /* AuthViewModel.swift */; };
 		C03E3E472C5A14BD00EC8F2A /* AuthCheckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03E3E462C5A14BD00EC8F2A /* AuthCheckView.swift */; };
 		C04E52812C541A2A00566111 /* CoinsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04E52802C541A2A00566111 /* CoinsView.swift */; };
@@ -22,13 +22,15 @@
 		C04E52922C542E8700566111 /* NavigationAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04E52912C542E8700566111 /* NavigationAppearance.swift */; };
 		C04E52952C54311200566111 /* CoinError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04E52942C54311200566111 /* CoinError.swift */; };
 		C055637A2C6BDB0700CA13AA /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05563792C6BDB0700CA13AA /* NotificationManager.swift */; };
-		C055637C2C6BE60000CA13AA /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = C055637B2C6BE60000CA13AA /* FirebaseAnalytics */; };
 		C055637E2C6BE72500CA13AA /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C055637D2C6BE72500CA13AA /* Reminder.swift */; };
 		C05563812C6BEB7800CA13AA /* ReminderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05563802C6BEB7800CA13AA /* ReminderViewModel.swift */; };
 		C06263512C5AA8C1001090CB /* TabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06263502C5AA8C1001090CB /* TabItem.swift */; };
+		C06B6D2C2C6D2961008C248A /* CalculateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06B6D2B2C6D2961008C248A /* CalculateViewModel.swift */; };
 		C081000E2C56AF0200A47939 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C081000D2C56AF0200A47939 /* SignInView.swift */; };
 		C08100102C56BD0300A47939 /* SocialLoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C081000F2C56BD0300A47939 /* SocialLoginButton.swift */; };
 		C08100122C56BD3000A47939 /* OrView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08100112C56BD3000A47939 /* OrView.swift */; };
+		C084E1802C6E775C00A421E4 /* GraphicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C084E17F2C6E775C00A421E4 /* GraphicView.swift */; };
+		C092008E2C6CE1680053331C /* AdCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C092008D2C6CE1680053331C /* AdCoordinator.swift */; };
 		C0A2EA752C4FA77900DB9A14 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A2EA742C4FA77900DB9A14 /* CircularProgressView.swift */; };
 		C0A2EA812C4FC34900DB9A14 /* Number+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A2EA802C4FC34900DB9A14 /* Number+Extension.swift */; };
 		C0A2EA832C4FC35600DB9A14 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A2EA822C4FC35600DB9A14 /* Date+Extension.swift */; };
@@ -41,6 +43,7 @@
 		C0B08BDE2C58ED130066CE3B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C0B08BDD2C58ED130066CE3B /* GoogleService-Info.plist */; };
 		C0B08BE02C58EDB10066CE3B /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B08BDF2C58EDB10066CE3B /* SignUpViewModel.swift */; };
 		C0B08BE22C594A220066CE3B /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B08BE12C594A220066CE3B /* SignInViewModel.swift */; };
+		C0CCC0762C6DE3DF00F03AA3 /* BannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CCC0752C6DE3DF00F03AA3 /* BannerView.swift */; };
 		C0D3B8EE2C5E985D00F5D52C /* Finance_TrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D3B8ED2C5E985D00F5D52C /* Finance_TrackerUITests.swift */; };
 		C0D3B8F02C5E985D00F5D52C /* Finance_TrackerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D3B8EF2C5E985D00F5D52C /* Finance_TrackerUITestsLaunchTests.swift */; };
 		C0D9031E2C4ED80A00D9AAE4 /* Finance_TrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D9031D2C4ED80A00D9AAE4 /* Finance_TrackerApp.swift */; };
@@ -83,6 +86,11 @@
 		C01383512C5EBA770008341A /* Finance TrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Finance TrackerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C018047D2C5D38420025BD03 /* FinanceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceType.swift; sourceTree = "<group>"; };
 		C0217D9E2C57D90F00DD15F6 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		C02F2F202C6C7C00006D8741 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C02F2F242C6C8AD0006D8741 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C02F2F262C6C9956006D8741 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C02F2F282C6C9964006D8741 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C02F2F292C6C9AAE006D8741 /* Finance-Tracker-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Finance-Tracker-Info.plist"; sourceTree = SOURCE_ROOT; };
 		C03E3E442C5A148200EC8F2A /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		C03E3E462C5A14BD00EC8F2A /* AuthCheckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCheckView.swift; sourceTree = "<group>"; };
 		C04E52802C541A2A00566111 /* CoinsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinsView.swift; sourceTree = "<group>"; };
@@ -95,9 +103,12 @@
 		C055637D2C6BE72500CA13AA /* Reminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
 		C05563802C6BEB7800CA13AA /* ReminderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderViewModel.swift; sourceTree = "<group>"; };
 		C06263502C5AA8C1001090CB /* TabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItem.swift; sourceTree = "<group>"; };
+		C06B6D2B2C6D2961008C248A /* CalculateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateViewModel.swift; sourceTree = "<group>"; };
 		C081000D2C56AF0200A47939 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		C081000F2C56BD0300A47939 /* SocialLoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialLoginButton.swift; sourceTree = "<group>"; };
 		C08100112C56BD3000A47939 /* OrView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrView.swift; sourceTree = "<group>"; };
+		C084E17F2C6E775C00A421E4 /* GraphicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphicView.swift; sourceTree = "<group>"; };
+		C092008D2C6CE1680053331C /* AdCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdCoordinator.swift; sourceTree = "<group>"; };
 		C0A2EA742C4FA77900DB9A14 /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
 		C0A2EA802C4FC34900DB9A14 /* Number+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Number+Extension.swift"; sourceTree = "<group>"; };
 		C0A2EA822C4FC35600DB9A14 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
@@ -110,6 +121,7 @@
 		C0B08BDD2C58ED130066CE3B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C0B08BDF2C58EDB10066CE3B /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		C0B08BE12C594A220066CE3B /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
+		C0CCC0752C6DE3DF00F03AA3 /* BannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerView.swift; sourceTree = "<group>"; };
 		C0D3B8EB2C5E985D00F5D52C /* Finance TrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Finance TrackerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0D3B8ED2C5E985D00F5D52C /* Finance_TrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Finance_TrackerUITests.swift; sourceTree = "<group>"; };
 		C0D3B8EF2C5E985D00F5D52C /* Finance_TrackerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Finance_TrackerUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -137,7 +149,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C055637C2C6BE60000CA13AA /* FirebaseAnalytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,10 +163,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C02F2F2C2C6CB4F2006D8741 /* GoogleMobileAds in Frameworks */,
 				C0EBE7442C6BF93200829ED0 /* Lottie in Frameworks */,
-				C02323342C58D45A00943FEF /* FirebaseAnalytics in Frameworks */,
-				C02323382C58D46900943FEF /* FirebaseFirestore in Frameworks */,
-				C02323362C58D46600943FEF /* FirebaseAuth in Frameworks */,
 				C04E52892C541B0400566111 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -182,6 +191,8 @@
 				C03E3E462C5A14BD00EC8F2A /* AuthCheckView.swift */,
 				C0EBE7412C6BF8F400829ED0 /* ReminderView.swift */,
 				C0EBE7492C6C03E200829ED0 /* AddReminderView.swift */,
+				C0CCC0752C6DE3DF00F03AA3 /* BannerView.swift */,
+				C084E17F2C6E775C00A421E4 /* GraphicView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -208,6 +219,15 @@
 				C04E528E2C541F7200566111 /* Double+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C02F2F2F2C6CB61B006D8741 /* Admob */ = {
+			isa = PBXGroup;
+			children = (
+				C092008D2C6CE1680053331C /* AdCoordinator.swift */,
+			);
+			name = Admob;
+			path = Enums/Admob;
 			sourceTree = "<group>";
 		};
 		C04E52932C5430EA00566111 /* Enums */ = {
@@ -253,6 +273,7 @@
 				C0B08BE12C594A220066CE3B /* SignInViewModel.swift */,
 				C03E3E442C5A148200EC8F2A /* AuthViewModel.swift */,
 				C05563802C6BEB7800CA13AA /* ReminderViewModel.swift */,
+				C06B6D2B2C6D2961008C248A /* CalculateViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -278,6 +299,8 @@
 		C0D903112C4ED80A00D9AAE4 = {
 			isa = PBXGroup;
 			children = (
+				C02F2F1F2C6C7C00006D8741 /* Localizable.strings */,
+				C02F2F252C6C9956006D8741 /* InfoPlist.strings */,
 				C0D9031C2C4ED80A00D9AAE4 /* Finance Tracker */,
 				C0D3B8EC2C5E985D00F5D52C /* Finance TrackerUITests */,
 				C0D9031B2C4ED80A00D9AAE4 /* Products */,
@@ -298,6 +321,8 @@
 		C0D9031C2C4ED80A00D9AAE4 /* Finance Tracker */ = {
 			isa = PBXGroup;
 			children = (
+				C02F2F2F2C6CB61B006D8741 /* Admob */,
+				C02F2F292C6C9AAE006D8741 /* Finance-Tracker-Info.plist */,
 				C0EBE7452C6BFAA000829ED0 /* Resources */,
 				C0A441B02C6660E300005E18 /* Services */,
 				C0B08BDD2C58ED130066CE3B /* GoogleService-Info.plist */,
@@ -349,7 +374,6 @@
 			);
 			name = "Finance TrackerTests";
 			packageProductDependencies = (
-				C055637B2C6BE60000CA13AA /* FirebaseAnalytics */,
 			);
 			productName = "Finance TrackerTests";
 			productReference = C01383512C5EBA770008341A /* Finance TrackerTests.xctest */;
@@ -388,10 +412,8 @@
 			name = "Finance Tracker";
 			packageProductDependencies = (
 				C04E52882C541B0400566111 /* Alamofire */,
-				C02323332C58D45A00943FEF /* FirebaseAnalytics */,
-				C02323352C58D46600943FEF /* FirebaseAuth */,
-				C02323372C58D46900943FEF /* FirebaseFirestore */,
 				C0EBE7432C6BF93200829ED0 /* Lottie */,
+				C02F2F2B2C6CB4F2006D8741 /* GoogleMobileAds */,
 			);
 			productName = "Finance Tracker";
 			productReference = C0D9031A2C4ED80A00D9AAE4 /* Finance Tracker.app */;
@@ -427,12 +449,13 @@
 			knownRegions = (
 				en,
 				Base,
+				tr,
 			);
 			mainGroup = C0D903112C4ED80A00D9AAE4;
 			packageReferences = (
 				C04E52872C541B0400566111 /* XCRemoteSwiftPackageReference "Alamofire" */,
-				C02323312C58D44400943FEF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				C0EBE7402C6BF8C800829ED0 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				C02F2F2A2C6CB179006D8741 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */,
 			);
 			productRefGroup = C0D9031B2C4ED80A00D9AAE4 /* Products */;
 			projectDirPath = "";
@@ -464,6 +487,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C02F2F212C6C7C00006D8741 /* Localizable.strings in Resources */,
+				C02F2F272C6C9956006D8741 /* InfoPlist.strings in Resources */,
 				C0D903252C4ED80B00D9AAE4 /* Preview Assets.xcassets in Resources */,
 				C0D903222C4ED80B00D9AAE4 /* Assets.xcassets in Resources */,
 				C0EBE7472C6BFAB500829ED0 /* notfound.json in Resources */,
@@ -514,8 +539,10 @@
 				C0D903342C4EDE5000D9AAE4 /* GroupedFinances.swift in Sources */,
 				C055637E2C6BE72500CA13AA /* Reminder.swift in Sources */,
 				C0B08BE22C594A220066CE3B /* SignInViewModel.swift in Sources */,
+				C06B6D2C2C6D2961008C248A /* CalculateViewModel.swift in Sources */,
 				C08100122C56BD3000A47939 /* OrView.swift in Sources */,
 				C0A2EAAE2C4FD33500DB9A14 /* SearchBar.swift in Sources */,
+				C084E1802C6E775C00A421E4 /* GraphicView.swift in Sources */,
 				C0B08BE02C58EDB10066CE3B /* SignUpViewModel.swift in Sources */,
 				C0A2EA812C4FC34900DB9A14 /* Number+Extension.swift in Sources */,
 				C0D9031E2C4ED80A00D9AAE4 /* Finance_TrackerApp.swift in Sources */,
@@ -527,11 +554,13 @@
 				C0A2EA852C4FC38900DB9A14 /* Color+Extension.swift in Sources */,
 				C03E3E472C5A14BD00EC8F2A /* AuthCheckView.swift in Sources */,
 				C04E52922C542E8700566111 /* NavigationAppearance.swift in Sources */,
+				C092008E2C6CE1680053331C /* AdCoordinator.swift in Sources */,
 				C03E3E452C5A148200EC8F2A /* AuthViewModel.swift in Sources */,
 				C0217D9F2C57D90F00DD15F6 /* SignUpView.swift in Sources */,
 				C0EBE74A2C6C03E200829ED0 /* AddReminderView.swift in Sources */,
 				C0A2EAB02C4FD41900DB9A14 /* String+Extension.swift in Sources */,
 				C04E52862C541A7D00566111 /* Coin.swift in Sources */,
+				C0CCC0762C6DE3DF00F03AA3 /* BannerView.swift in Sources */,
 				C0D903382C4EE97B00D9AAE4 /* FinanceCardView.swift in Sources */,
 				C06263512C5AA8C1001090CB /* TabItem.swift in Sources */,
 				C0A441B42C66621F00005E18 /* Constants.swift in Sources */,
@@ -552,6 +581,27 @@
 			targetProxy = C0D3B8F12C5E985D00F5D52C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C02F2F1F2C6C7C00006D8741 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C02F2F202C6C7C00006D8741 /* en */,
+				C02F2F242C6C8AD0006D8741 /* tr */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		C02F2F252C6C9956006D8741 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C02F2F262C6C9956006D8741 /* en */,
+				C02F2F282C6C9964006D8741 /* tr */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		C01383572C5EBA770008341A /* Debug */ = {
@@ -756,22 +806,27 @@
 				DEVELOPMENT_TEAM = PQ82KF7KP4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Finance-Tracker-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Finance Tracker";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "This identifier will be used to deliver personalized ads to you.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.batuhanberkertekin.Finance-Tracker";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.batuhanberkertekin.Finance-Trackerr";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -786,22 +841,27 @@
 				DEVELOPMENT_TEAM = PQ82KF7KP4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Finance-Tracker-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Finance Tracker";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "This identifier will be used to deliver personalized ads to you.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.batuhanberkertekin.Finance-Tracker";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.batuhanberkertekin.Finance-Trackerr";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -847,12 +907,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		C02323312C58D44400943FEF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+		C02F2F2A2C6CB179006D8741 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			repositoryURL = "https://github.com/googleads/swift-package-manager-google-mobile-ads.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 10.29.0;
+				minimumVersion = 11.8.0;
 			};
 		};
 		C04E52872C541B0400566111 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
@@ -874,30 +934,15 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		C02323332C58D45A00943FEF /* FirebaseAnalytics */ = {
+		C02F2F2B2C6CB4F2006D8741 /* GoogleMobileAds */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = C02323312C58D44400943FEF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalytics;
-		};
-		C02323352C58D46600943FEF /* FirebaseAuth */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C02323312C58D44400943FEF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAuth;
-		};
-		C02323372C58D46900943FEF /* FirebaseFirestore */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C02323312C58D44400943FEF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseFirestore;
+			package = C02F2F2A2C6CB179006D8741 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */;
+			productName = GoogleMobileAds;
 		};
 		C04E52882C541B0400566111 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = C04E52872C541B0400566111 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
-		};
-		C055637B2C6BE60000CA13AA /* FirebaseAnalytics */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C02323312C58D44400943FEF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalytics;
 		};
 		C0EBE7432C6BF93200829ED0 /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;

@@ -1,0 +1,92 @@
+/* 
+  Localizable.strings
+  Finance Tracker
+
+  Created by Batuhan Berk Ertekin on 14.08.2024.
+  
+*/
+
+
+"TAB_REMINDERS" = "Reminders";
+"TAB_HOME" = "Home";
+"TAB_COINS" = "Coins";
+"TAB_CATEGORIES" = "Categories";
+"TAB_REMINDERS_TITLE" = "Reminders";
+"TAB_HOME_TITLE" = "Home";
+"TAB_COINS_TITLE" = "Coins";
+"TAB_CATEGORIES_TITLE" = "Categories";
+
+"CONVERSION_TEXT_FIELD_PLACEHOLDER" = "E-mail" ;
+"CONVERSION_PASSWORD" = "Password";
+"CONVERSION_SIGNIN" =  "Sign In" ;
+"CONVERSION_SIGIN_BUTTON"= "Sign In";
+"Today" = "Today";
+"Yesterday" = "Yesterday";
+
+
+"CONVERSATION_NOINCOME" = "No Income" ;
+
+"CONVERSION_ACCOUNT" = "Don't have an account ?" ;
+"CONVERSITION_SIGNUP" = "Sign Up";
+
+"CONVERSATION_TEXT_SIGNUP" = "Sign Up";
+"CONVERSATION_ALREADY" = "Already have an account?";
+"CONVERSATION_TOTAL" = "Total";
+"CONVERSATION_EXPENSES" = "Expenses";
+"CONVERSATION_INCOME" = "Income";
+"CONVERSATION_WELCOME_TITLE" = "Welcome" ;
+"CONVERSATION_NOEXPENSES" = "No expenses" ;
+"CONVERSATION_NOFINANCE" = "No finance" ;
+"CONVERSATION_CATEGORIES" = "Categories";
+"CONVERSATION_NOCATEGORIES" = "No categories";
+"CONVERSION_LOGOUT_BUTTON" = "Log Out" ;
+"CONVERSION_CATEGORYNAME" = "Category Name" ;
+"CANCEL_BUTTON" = "Cancel" ;
+"ADD_BUTTON" = "Add";
+"ALERT" = "If you delete a category, all the associated finances will be deleted too." ;
+"DELETE_BUTTON" = "Delete";
+
+"SEARCH_TITLE" = "Search" ;
+
+"REMINDERS_TEXT" = "Not reminders yet" ;
+"DELETE_TRASH" = "Delete" ;
+"REMINDERS_TITLE" = "My Reminders" ;
+"SECTION_TITLE" = "Title" ;
+"SECTION_DESCRIPTION" = "Description";
+"SECTION_AMOUNT" = "Amount" ;
+"SECTION_TYPESECTION" = "Type Selection" ;
+"SECTION_DATE" = "Date";
+"SECTION_CATEGORY" = "Category";
+"CATEGORY_TEXT" = "Category";
+"NONE_BUTTON" = "None";
+"NONE_TEXT" = "None" ;
+"ADDFINANCE" = "Add Finance" ;
+"CANCEL_BUTTON" = "Cancel";
+"ADD_BUTTON" = "Add" ;
+"TOPGAINERS" = "Top Gainers";
+"TOPLOSERS" = "Top Losers";
+"ALLCOINS" = "All Coins";
+"LIVEPRICES" = "Live Prices";
+"REMINDER_DETAILS" = "Reminder Details";
+"REMINDER_TITLE" = "Title";
+"REMINDER_NOTES" = "Notes";
+"REMINDER_SAVE" = "Save";
+"REMINDER_CANCEL" = "Cancel";
+"REMINDER_ADDREMINDER" = "Add Reminder";
+"REMINDER_DATE" = "Date - Hour";
+"FINANCE_TYPE_EXPENSE" = "Expense" ;
+"FINANCE_TYPE_INCOME" = "Income" ;
+"ENTER_TITLE" = "Enter title here " ;
+"ENTER_DESCRIPTION" = "Enter description here" ;
+"ENTER_AMOUNT" = "Enter amount here" ;
+
+"AMOUNT_ICON" = "$";
+
+"CATEGORY_TITLE" = "Title";
+"CATEGORY_GENERAL" = "General";
+
+
+
+
+
+

@@ -9,33 +9,37 @@ import SwiftUI
 import UserNotifications
 
 struct AddReminderView: View {
+    
     @State private var title = ""
     @State private var date = Date()
     @State private var notes = ""
+    @State private var isNotificationRequested = false // Bildirim yetkisi kontrolü
+    
     @Environment(\.presentationMode) private var presentationMode
     @Environment(\.modelContext) private var modelContext
     @ObservedObject var viewModel = ReminderViewModel()
     
     var body: some View {
         NavigationStack {
-            Form {
-                Section(header: Text("Reminder Details")) {
-                    TextField("Title", text: $title)
-                    DatePicker("Date", selection: $date, displayedComponents: [.date, .hourAndMinute])
-                    TextField("Notes", text: $notes)
-                }
-                
-                VStack {
-                    HStack {
+            VStack {
+                Form {
+                    Section(header: Text("REMINDER_DETAILS")) {
+                        TextField("REMINDER_TITLE", text: $title)
+                        DatePicker("REMINDER_DATE", selection: $date, displayedComponents: [.date, .hourAndMinute])
+                        TextField("REMINDER_NOTES", text: $notes).padding()
+                    }
+                    
+                    VStack {
                         Button(action: {
                             viewModel.saveReminder(title: title, date: date, notes: notes, context: modelContext) { success in
                                 if success {
-                                    presentationMode.wrappedValue.dismiss()
+                                   presentationMode.wrappedValue.dismiss()
                                 } else {
+                                
                                 }
                             }
                         }) {
-                            Text("Save")
+                            Text("REMINDER_SAVE")
                                 .frame(maxWidth: .infinity)
                                 .padding()
                                 .background(Color.blue)
@@ -43,30 +47,19 @@ struct AddReminderView: View {
                                 .cornerRadius(10)
                                 .font(.headline)
                         }
-                        .padding(.top)
-                        
-                        Button(action: {
-                            presentationMode.wrappedValue.dismiss()
-                        }) {
-                            Text("Cancel")
-                                .frame(maxWidth: .infinity)
-                                .padding()
-                                .background(Color.gray.opacity(0.3))
-                                .foregroundColor(.black)
-                                .cornerRadius(10)
-                                .font(.headline)
-                        }
-                        .padding(.top)
+                        .padding()
                     }
-                    .padding()
                 }
             }
-            .navigationTitle("Add Reminder")
+            .navigationTitle("REMINDER_ADDREMINDER")
             .navigationBarTitleDisplayMode(.large)
         }
         .onAppear {
-            viewModel.requestNotificationAuthorization()
+            
+            if !isNotificationRequested {
+                viewModel.requestNotificationAuthorization()
+                isNotificationRequested = true
+            }
         }
     }
 }
-

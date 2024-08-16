@@ -8,7 +8,6 @@
 import Foundation
 import UserNotifications
 
-
 class NotificationManager: NSObject, UNUserNotificationCenterDelegate {
     
     static let shared = NotificationManager()
@@ -37,6 +36,6 @@ class NotificationManager: NSObject, UNUserNotificationCenterDelegate {
     }
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-        completionHandler([.alert, .sound])
+        completionHandler([.banner, .list, .sound])
     }
 }

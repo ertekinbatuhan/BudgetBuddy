@@ -18,22 +18,22 @@ struct AddFinanceView: View {
     var body: some View {
         NavigationStack {
             List {
-                Section("Title") {
-                    TextField("Enter title here", text: $viewModel.title)
+                Section("SECTION_TITLE") {
+                    TextField("ENTER_TITLE", text: $viewModel.title)
                 }
-                Section("Description") {
-                    TextField("Enter description here", text: $viewModel.subTitle)
+                Section("SECTION_DESCRIPTION") {
+                    TextField("ENTER_DESCRIPTION", text: $viewModel.subTitle)
                 }
                 
-                Section("Amount") {
+                Section("SECTION_AMOUNT") {
                     HStack {
-                        Text("₺").fontWeight(.semibold)
-                        TextField("Write amount", value: $viewModel.amount, formatter: NumberFormatter.decimalFormatter)
+                        Text("AMOUNT_ICON").fontWeight(.semibold)
+                        TextField("ENTER_AMOUNT", value: $viewModel.amount, formatter: NumberFormatter.decimalFormatter)
                             .keyboardType(.numberPad)
                     }
                 }
                 
-                Section("Type Selection") {
+                Section("SECTION_TYPESECTION") {
                     HStack {
                         ForEach(FinanceType.allCases) { type in
                             Button(action: {
@@ -42,7 +42,7 @@ struct AddFinanceView: View {
                                 HStack {
                                     Image(systemName: viewModel.selectedType == type ? "checkmark.circle.fill" : "circle")
                                         .foregroundColor(viewModel.selectedType == type ? .blue : .gray)
-                                    Text(type.rawValue)
+                                    Text(type.localizedTitle)
                                         .foregroundColor(.primary)
                                 }
                                 .padding()
@@ -52,16 +52,16 @@ struct AddFinanceView: View {
                     }
                 }
                 
-                Section("Date") {
+                Section("SECTION_DATE") {
                     DatePicker("", selection: $viewModel.date, displayedComponents: [.date])
                         .datePickerStyle(.graphical)
                         .labelsHidden()
                 }
                 
                 if !allCategories.isEmpty {
-                    Section("Category") {
+                    Section("SECTION_CATEGORY") {
                         HStack {
-                            Text("Category")
+                            Text("CATEGORY_TEXT")
                             Spacer()
                             Menu {
                                 ForEach(allCategories) { category in
@@ -69,31 +69,31 @@ struct AddFinanceView: View {
                                         viewModel.category = category
                                     }
                                 }
-                                Button("None") {
+                                Button("NONE_BUTTON") {
                                     viewModel.category = nil
                                 }
                             } label: {
                                 if let categoryName = viewModel.category?.categoryName {
                                     Text(categoryName)
                                 } else {
-                                    Text("None")
+                                    Text("NONE_TEXT")
                                 }
                             }
                         }
                     }
                 }
             }
-            .navigationTitle("Add Finance")
+            .navigationTitle("ADDFINANCE")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
-                    Button("Cancel") {
+                    Button("CANCEL_BUTTON") {
                         dismiss()
                     }
                     .tint(.red)
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    Button("Add", action: {
+                    Button("ADD_BUTTON", action: {
                         viewModel.addFinance(context: context)
                         dismiss()
                     })

@@ -1,0 +1,33 @@
+/* 
+  Localizable.strings
+  Finance Tracker
+
+  Created by Batuhan Berk Ertekin on 14.08.2024.
+  
+*/
+
+
+"TAB_REMINDERS" = "Reminders";
+"TAB_HOME" = "Home";
+"TAB_COINS" = "Coins";
+"TAB_CATEGORIES" = "Categories";
+"TAB_REMINDERS_TITLE" = "Reminders";
+"TAB_HOME_TITLE" = "Home";
+"TAB_COINS_TITLE" = "Coins";
+"TAB_CATEGORIES_TITLE" = "Categories";
+
+"CONVERSION_TEXT_FIELD_PLACEHOLDER" = "E-mail" ;
+"CONVERSION_PASSWORD" = "Password";
+"CONVERSION_SIGNIN" =  "Sign In" ;
+"CONVERSION_SIGIN_BUTTON"= "Sign In";
+"CONVERSION_OR" = "or" ;
+"CONVERSION_ACCOUNT" = "Don't have an account ?" ;
+"CONVERSITION_SIGNUP" = "Sign Up";
+
+"CONVERSATION_TEXT_SIGNUP" = "Sign Up";
+"CONVERSATION_ALREADY" = "Already have an account?";
+"CONVERSATION_TOTAL" = "Total";
+"CONVERSATION_EXPENSES" = "Expenses";
+"CONVERSATION_INCOME" = "Income";
+"CONVERSATION_WELCOME_TITLE" = "Welcome" ;
+"CONVERSATION_NOEXPENSES" = "No expenses" ;

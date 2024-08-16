@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import AppTrackingTransparency
 
 struct TabBar: View {
     
@@ -32,8 +33,11 @@ struct TabBar: View {
             CategoriesView().tag(TabItem.categories).tabItem {
                 Image(systemName: TabItem.categories.imageName)
                 Text(TabItem.categories.title)
+    
             }
-        }
+        }.onReceive(NotificationCenter.default.publisher(for: UIApplication.didBecomeActiveNotification)) { _ in
+            ATTrackingManager.requestTrackingAuthorization(completionHandler: { status in })
+        }  
     }
 }
 

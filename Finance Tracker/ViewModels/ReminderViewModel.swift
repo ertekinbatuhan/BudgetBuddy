@@ -11,15 +11,15 @@ import UserNotifications
 
 protocol ReminderViewModelProtocol {
     var searchText: String { get set }
-    func saveReminder(title: String, date: Date, notes: String, context: ModelContext, completion: @escaping (Bool) -> Void)
-    func deleteReminder(_ reminder: Reminder, context : ModelContext)
+    func saveReminder(title: String?, date: Date?, notes: String?, context: ModelContext, completion: @escaping (Bool) -> Void)
+    func deleteReminder(_ reminder: Reminder?, context: ModelContext)
     func filteredReminders(_ reminders: [Reminder]) -> [Reminder]
     func requestNotificationAuthorization()
 }
 
 class ReminderViewModel: ObservableObject, ReminderViewModelProtocol {
     
-   @Published var searchText = ""
+    @Published var searchText = ""
 
     func filteredReminders(_ reminders: [Reminder]) -> [Reminder] {
         if searchText.isEmpty {
@@ -32,7 +32,15 @@ class ReminderViewModel: ObservableObject, ReminderViewModelProtocol {
         }
     }
     
-    func saveReminder(title: String, date: Date, notes: String, context: ModelContext, completion: @escaping (Bool) -> Void) {
+    func saveReminder(title: String?, date: Date?, notes: String?, context: ModelContext, completion: @escaping (Bool) -> Void) {
+        // Null kontrolü yap
+        guard let title = title, !title.isEmpty,
+              let date = date,
+              let notes = notes, !notes.isEmpty else {
+            completion(false)
+            return
+        }
+        
         let newReminder = Reminder(title: title, date: date, notes: notes)
         
         do {
@@ -48,7 +56,13 @@ class ReminderViewModel: ObservableObject, ReminderViewModelProtocol {
         }
     }
     
-    func deleteReminder(_ reminder: Reminder, context: ModelContext) {
+    func deleteReminder(_ reminder: Reminder?, context: ModelContext) {
+        // Null kontrolü yap
+        guard let reminder = reminder else {
+            print("Reminder is nil, cannot delete.")
+            return
+        }
+        
         context.delete(reminder)
         do {
             try context.save()
@@ -57,7 +71,13 @@ class ReminderViewModel: ObservableObject, ReminderViewModelProtocol {
         }
     }
     
-    private func scheduleNotification(for reminder: Reminder) {
+    private func scheduleNotification(for reminder: Reminder?) {
+        // Null kontrolü yap
+        guard let reminder = reminder else {
+            print("Reminder is nil, cannot schedule notification.")
+            return
+        }
+        
         let content = UNMutableNotificationContent()
         content.title = reminder.title
         content.body = reminder.notes
