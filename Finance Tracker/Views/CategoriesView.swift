@@ -14,45 +14,44 @@ struct CategoriesView: View {
     @ObservedObject var viewModel: CategoriesViewModel = CategoriesViewModel()
     @Query(animation: .snappy) private var allCategories: [Category]
     @Environment(\.modelContext) private var context
-  //  @ObservedObject private var authViewModel = AuthViewModel()
-  //  @State private var showSignInView = false
-    
-    private  let adCoordinator = AdCoordinator.shared
-    @State private var  calculateViewModel = CalculateViewModel()
+    private let adCoordinator = AdCoordinator.shared
+    @State private var calculateViewModel = CalculateViewModel()
     
     var body: some View {
         NavigationStack {
             List {
-                // bu çözüldü
                 Section(header: Text("")) {
-                    
                     ForEach(viewModel.allCategories) { category in
-                        DisclosureGroup {
-                            if let expenses = category.finances, !expenses.isEmpty {
-                                ForEach(expenses) { expense in
-                                    FinanceCardView(finance: expense, displayTag: false)
+                        DisclosureGroup(
+                            content: {
+                                if let expenses = category.finances, !expenses.isEmpty {
+                                    ForEach(expenses) { expense in
+                                        FinanceCardView(finance: expense, displayTag: false)
+                                    }
+                                } else {
+                                    ContentUnavailableView {
+                                        Label("CONVERSATION_NOFINANCE", systemImage: "tray.fill")
+                                    }
                                 }
-                            } else {
-                                ContentUnavailableView {
-                                    Label("CONVERSATION_NOFINANCE", systemImage: "tray.fill")
+                            },
+                            label: {
+                                HStack {
+                                    Text(category.categoryName)
+                                        .font(.headline)
+                                    Spacer()
+                                    Button(action: {
+                                        viewModel.requestDeleteCategory(category)
+                                    }) {
+                                        Image(systemName: "trash")
+                                            .foregroundColor(.red)
+                                    }
+                                    .buttonStyle(PlainButtonStyle()) // Bu butonu daha az etkileşimli hale getirir.
                                 }
                             }
-                        } label: {
-                            Text(category.categoryName)
-                        }
-                        .swipeActions(edge: .trailing, allowsFullSwipe: false) {
-                            Button {
-                                viewModel.requestDeleteCategory(category)
-                            } label: {
-                                Image(systemName: "trash")
-                            }
-                            .tint(.red)
-                        }
+                        )
                     }
                 }
             }
-            
-          
             .navigationTitle("CONVERSATION_CATEGORIES")
             .overlay {
                 if viewModel.allCategories.isEmpty {
@@ -61,29 +60,16 @@ struct CategoriesView: View {
                     }
                 }
             }
-         
-            BannerView() .frame(width: GADAdSizeBanner.size.width,
-                       height: GADAdSizeBanner.size.height)
+            BannerView()
+                .frame(width: GADAdSizeBanner.size.width, height: GADAdSizeBanner.size.height)
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
-                     
                         viewModel.addCategory.toggle()
                     } label: {
                         Image(systemName: "plus.circle.fill").font(.title)
                     }
                 }
-                
-              /*  ToolbarItem(placement: .topBarLeading) {
-                    Button {
-                        authViewModel.signOut()
-                        showSignInView = true
-                    } label: {
-                        Text("CONVERSION_LOGOUT_BUTTON")
-                    }
-                }
-               
-               */
             }
             .sheet(isPresented: $viewModel.addCategory) {
                 viewModel.categoryName = ""
@@ -106,7 +92,6 @@ struct CategoriesView: View {
                         ToolbarItem(placement: .topBarTrailing) {
                             Button("ADD_BUTTON") {
                                 viewModel.addNewCategory(context: context)
-                              
                             }
                             .disabled(viewModel.categoryName.isEmpty)
                         }
@@ -116,21 +101,14 @@ struct CategoriesView: View {
                 .presentationCornerRadius(20)
                 .interactiveDismissDisabled()
             }
-           // .fullScreenCover(isPresented: $showSignInView) {
-             //   SignInView().navigationBarBackButtonHidden(true)
-           // }
-            //If you delete a category, all the associated expenses will be deleted too.
         }
         .alert("ALERT", isPresented: $viewModel.deleteRequest) {
             Button(role: .destructive) {
                 viewModel.deleteCategory(context: context)
-                
                 if calculateViewModel.calculateCount % 3 == 0 {
                     adCoordinator.presentAd()
                 }
                 calculateViewModel.calculateCount += 1
-                
-                
             } label: {
                 Text("DELETE_BUTTON")
             }
@@ -145,8 +123,6 @@ struct CategoriesView: View {
         }
         .onChange(of: allCategories) {
             viewModel.fetchCategories(categories: allCategories)
-            
-           
         }
     }
 }

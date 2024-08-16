@@ -55,4 +55,13 @@ class CategoriesViewModel: ObservableObject, CategoriesViewModelProtocol {
             self.requestedCategory = nil
         }
     }
+    
+    func deleteFinance(_ finance: Finance, context: ModelContext) {
+           context.delete(finance)
+           do {
+               try context.save()
+           } catch {
+               print("Error saving context after deleting finance: \(error)")
+           }
+       }
 }
