@@ -62,6 +62,7 @@ struct FinanceView: View {
                 .onChange(of: selectedType) {
                     viewModel.selectedType = selectedType
                     viewModel.resetFilters()
+                    viewModel.createGroupedFinances(allFinances)
                 }
                 
                 List {
