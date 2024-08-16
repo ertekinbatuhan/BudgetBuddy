@@ -47,7 +47,7 @@ struct AddFinanceView: View {
                                 }
                                 .padding()
                             }
-                            .buttonStyle(PlainButtonStyle()) 
+                            .buttonStyle(PlainButtonStyle())
                         }
                     }
                 }
@@ -93,14 +93,15 @@ struct AddFinanceView: View {
                     .tint(.red)
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    Button("ADD_BUTTON", action: {
-                        viewModel.addFinance(context: context)
-                        dismiss()
-                    })
-                    .disabled(viewModel.isAddButtonDisabled)
+                    Button("ADD_BUTTON") {
+                        if let category = viewModel.category {
+                            viewModel.addFinance(context: context)
+                            dismiss()
+                        }
+                    }
+                    .disabled(viewModel.category == nil || viewModel.isAddButtonDisabled)
                 }
             }
         }
     }
 }
-
