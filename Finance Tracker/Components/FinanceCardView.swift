@@ -22,11 +22,13 @@ struct FinanceCardView: View {
                 
                 if let categoryName = finance.category?.categoryName ,displayTag {
                     Text(categoryName).font(.caption2).foregroundStyle(.white).padding(.horizontal,10).padding(.vertical,4)
-                        .background(.red.gradient, in: .capsule)
+                        .background(.blue.gradient, in: .capsule)
                 }
+                
+                //red.graident unutma
                     
             }
-            .lineLimit(1)
+            .lineLimit(3)
             
             Spacer(minLength: 5)
            

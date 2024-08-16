@@ -7,12 +7,10 @@
 
 import SwiftUI
 
+
 struct CoinsView: View {
     @ObservedObject private var coinViewModel = CoinViewModel()
-
-    init() {
-        NavigationAppearance.configure()
-    }
+    @Environment(\.colorScheme) var colorScheme
 
     var body: some View {
         NavigationStack {
@@ -22,7 +20,7 @@ struct CoinsView: View {
                         .font(.title2)
                         .fontWeight(.bold)
                         .padding(.horizontal)
-                        .foregroundColor(.blue)
+                        .foregroundColor(colorScheme == .dark ? .white : .black)
                         .frame(maxWidth: .infinity, alignment: .leading)
 
                     if !coinViewModel.topGainers.isEmpty {
@@ -84,7 +82,7 @@ struct CoinsView: View {
                         .font(.title2)
                         .fontWeight(.bold)
                         .padding(.horizontal)
-                        .foregroundColor(.blue)
+                        .foregroundColor(colorScheme == .dark ? .white : .black)
                         .frame(maxWidth: .infinity, alignment: .leading)
 
                     if !coinViewModel.topLosers.isEmpty {
@@ -129,7 +127,7 @@ struct CoinsView: View {
                                     }
                                     .padding(.vertical, 8)
                                     .padding(.horizontal, 12)
-                                    .frame(width: 100) 
+                                    .frame(width: 100)
                                     .background(Color.gray.opacity(0.1))
                                     .cornerRadius(10)
                                 }
@@ -146,7 +144,7 @@ struct CoinsView: View {
                         .font(.title2)
                         .fontWeight(.bold)
                         .padding(.horizontal)
-                        .foregroundColor(.blue)
+                        .foregroundColor(colorScheme == .dark ? .white : .black)
                         .frame(maxWidth: .infinity, alignment: .leading)
 
                     if coinViewModel.coin.isEmpty {
@@ -213,6 +211,8 @@ struct CoinsView: View {
             .navigationTitle("LIVEPRICES")
             .navigationBarTitleDisplayMode(.inline)
             .onAppear {
+                // Dinamik olarak renkleri ayarla
+           
                 coinViewModel.fetchCoins()
             }
         }
@@ -222,4 +222,3 @@ struct CoinsView: View {
 #Preview {
     CoinsView()
 }
-

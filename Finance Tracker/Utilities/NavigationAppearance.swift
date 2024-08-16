@@ -5,16 +5,16 @@
 //  Created by Batuhan Berk Ertekin on 26.07.2024.
 //
 
-import Foundation
 import SwiftUI
 
 struct NavigationAppearance {
+    
     static func configure() {
         let appearance = UINavigationBarAppearance()
         appearance.configureWithOpaqueBackground()
         appearance.backgroundColor = .systemBackground
-        appearance.titleTextAttributes = [.foregroundColor: UIColor.systemBlue]
-        appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.systemBlue]
+        appearance.titleTextAttributes = [.foregroundColor: UIColor.systemBackground]
+        appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.systemBackground]
         appearance.shadowColor = nil
 
         UINavigationBar.appearance().standardAppearance = appearance
@@ -22,3 +22,4 @@ struct NavigationAppearance {
         UINavigationBar.appearance().compactAppearance = appearance
     }
 }
+

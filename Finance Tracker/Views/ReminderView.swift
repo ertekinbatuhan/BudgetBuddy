@@ -15,7 +15,7 @@ struct ReminderView: View {
     @Environment(\.modelContext) private var context: ModelContext
     @State private var showAddReminder = false
     @ObservedObject private var viewModel = ReminderViewModel()
-    
+    @Environment(\.colorScheme) var colorScheme
     private  let adCoordinator = AdCoordinator.shared
     @State private var  calculateViewModel = CalculateViewModel()
     
@@ -104,9 +104,9 @@ struct ReminderView: View {
                     .background(Color(UIColor.systemGray6))
                 }
             }
-           BannerView()
-               .frame(width: GADAdSizeBanner.size.width,
-                       height: GADAdSizeBanner.size.height)
+          BannerView()
+          .frame(width: GADAdSizeBanner.size.width,
+                     height: GADAdSizeBanner.size.height)
          
             
             .navigationTitle("REMINDERS_TITLE")
@@ -121,10 +121,12 @@ struct ReminderView: View {
                             .foregroundColor(.blue)
                     }
                 }
+                
             }
             .sheet(isPresented: $showAddReminder) {
                 AddReminderView()
             }
+            
         }
     }
 }

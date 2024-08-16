@@ -7,6 +7,7 @@
 
 import SwiftUI
 import UserNotifications
+import GoogleMobileAds
 
 struct AddReminderView: View {
     
@@ -51,6 +52,10 @@ struct AddReminderView: View {
                     }
                 }
             }
+            BannerView()
+            .frame(width: GADAdSizeBanner.size.width,
+                       height: GADAdSizeBanner.size.height)
+           
             .navigationTitle("REMINDER_ADDREMINDER")
             .navigationBarTitleDisplayMode(.large)
         }

@@ -24,7 +24,7 @@ struct Finance_TrackerApp: App {
   //  @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
 
     init() {
-
+       
         GADMobileAds.sharedInstance().start(completionHandler: nil)
         
        }

@@ -16,6 +16,7 @@ struct CategoriesView: View {
     @Environment(\.modelContext) private var context
     private let adCoordinator = AdCoordinator.shared
     @State private var calculateViewModel = CalculateViewModel()
+    @Environment(\.colorScheme) var colorScheme
     
     var body: some View {
         NavigationStack {
@@ -60,7 +61,7 @@ struct CategoriesView: View {
                     }
                 }
             }
-            BannerView()
+           BannerView()
                 .frame(width: GADAdSizeBanner.size.width, height: GADAdSizeBanner.size.height)
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
@@ -100,6 +101,7 @@ struct CategoriesView: View {
                 .presentationDetents([.height(180)])
                 .presentationCornerRadius(20)
                 .interactiveDismissDisabled()
+                
             }
         }
         .alert("ALERT", isPresented: $viewModel.deleteRequest) {
@@ -120,6 +122,8 @@ struct CategoriesView: View {
         }
         .onAppear {
             viewModel.fetchCategories(categories: allCategories)
+           
+            
         }
         .onChange(of: allCategories) {
             viewModel.fetchCategories(categories: allCategories)
