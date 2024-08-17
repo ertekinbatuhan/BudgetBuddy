@@ -25,7 +25,6 @@ struct FinanceCardView: View {
                         .background(.blue.gradient, in: .capsule)
                 }
                 
-                //red.graident unutma
                     
             }
             .lineLimit(3)

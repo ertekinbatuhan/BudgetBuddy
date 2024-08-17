@@ -21,15 +21,21 @@ struct TabBar: View {
                 
             }
             
+            SummaryView().tag(TabItem.calendar).tabItem{
+                Image(systemName: TabItem.calendar.imageName)
+                Text(TabItem.calendar.title)
+            }
+            
+            
             ReminderView().tag(TabItem.home).tabItem {
                 Image(systemName: TabItem.reminders.imageName)
                 Text(TabItem.reminders.title)
             }
             
-            CoinsView().tag(TabItem.coins).tabItem {
-                Image(systemName: TabItem.coins.imageName)
-                Text(TabItem.coins.title)
-            }
+       //     CoinsView().tag(TabItem.coins).tabItem {
+         //       Image(systemName: TabItem.coins.imageName)
+           //     Text(TabItem.coins.title)
+           // }
             CategoriesView().tag(TabItem.categories).tabItem {
                 Image(systemName: TabItem.categories.imageName)
                 Text(TabItem.categories.title)

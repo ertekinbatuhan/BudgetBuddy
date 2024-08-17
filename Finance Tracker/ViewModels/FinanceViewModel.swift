@@ -42,7 +42,8 @@ class FinanceViewModel: FinanceViewModelProtocol, ObservableObject {
             categoryColors = generateCategoryColors(for: incomeCategories)
         }
     }
-
+    
+   
     // Compute categories for the selected type
     var expenseCategories: [Category] {
         allCategories.filter { category in

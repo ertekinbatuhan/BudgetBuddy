@@ -29,7 +29,7 @@
 "CONVERSATION_TOTAL" = "Toplam";
 "CONVERSATION_EXPENSES" = "Giderler";
 "CONVERSATION_INCOME" = "Gelirler";
-"CONVERSATION_WELCOME_TITLE" = "Hoşgeldiniz" ;
+"CONVERSATION_WELCOME_TITLE" = "Bütçe Yönetimi" ;
 "CONVERSATION_NOEXPENSES" = "Henüz bir gelir yok" ;
 "CONVERSATION_NOFINANCE" = "Henüz bir finansman eklenmemiş" ;
 "CONVERSATION_CATEGORIES" = "Kategoriler";

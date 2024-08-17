@@ -62,7 +62,7 @@ struct CategoriesView: View {
                 }
             }
            BannerView()
-                .frame(width: GADAdSizeBanner.size.width, height: GADAdSizeBanner.size.height)
+            .frame(width: GADAdSizeBanner.size.width, height: GADAdSizeBanner.size.height)
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {

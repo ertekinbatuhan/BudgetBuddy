@@ -4,7 +4,7 @@
 //
 //  Created by Batuhan Berk Ertekin on 26.07.2024.
 //
-
+/*
 import Foundation
 
 enum CoinError: Error {
@@ -23,3 +23,5 @@ enum CoinError: Error {
         }
     }
 }
+
+*/

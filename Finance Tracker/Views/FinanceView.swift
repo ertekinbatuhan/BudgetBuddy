@@ -109,12 +109,12 @@ struct FinanceView: View {
                 .onChange(of: allCategories) { 
                     viewModel.allCategories = allCategories
                 }
-                .onChange(of: viewModel.searchText) { newValue in
-                    if newValue.isEmpty {
+                .onChange(of: viewModel.searchText) {
+                    if viewModel.searchText.isEmpty {
                         viewModel.resetFilters()
                         viewModel.createGroupedFinances(allFinances)
                     } else {
-                        viewModel.filterFinances(newValue)
+                        viewModel.filterFinances(viewModel.searchText)
                     }
                 }
                 

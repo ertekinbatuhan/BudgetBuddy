@@ -105,7 +105,7 @@ struct ReminderView: View {
                 }
             }
           BannerView()
-          .frame(width: GADAdSizeBanner.size.width,
+         .frame(width: GADAdSizeBanner.size.width,
                      height: GADAdSizeBanner.size.height)
          
             

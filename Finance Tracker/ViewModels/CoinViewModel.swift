@@ -5,6 +5,8 @@
 //  Created by Batuhan Berk Ertekin on 26.07.2024.
 //
 
+
+/*
 import Foundation
 import Alamofire
 
@@ -44,3 +46,5 @@ class CoinViewModel: CoinViewModelProtocol,ObservableObject {
         }
     }
 }
+
+*/

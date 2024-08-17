@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C01130342C70B6FA00D316E9 /* SummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01130332C70B6FA00D316E9 /* SummaryView.swift */; };
 		C018047E2C5D38430025BD03 /* FinanceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C018047D2C5D38420025BD03 /* FinanceType.swift */; };
-		C0217D9F2C57D90F00DD15F6 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0217D9E2C57D90F00DD15F6 /* SignUpView.swift */; };
 		C02F2F212C6C7C00006D8741 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C02F2F1F2C6C7C00006D8741 /* Localizable.strings */; };
 		C02F2F272C6C9956006D8741 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C02F2F252C6C9956006D8741 /* InfoPlist.strings */; };
 		C02F2F2C2C6CB4F2006D8741 /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = C02F2F2B2C6CB4F2006D8741 /* GoogleMobileAds */; };
@@ -24,7 +24,6 @@
 		C05563812C6BEB7800CA13AA /* ReminderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05563802C6BEB7800CA13AA /* ReminderViewModel.swift */; };
 		C06263512C5AA8C1001090CB /* TabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06263502C5AA8C1001090CB /* TabItem.swift */; };
 		C06B6D2C2C6D2961008C248A /* CalculateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06B6D2B2C6D2961008C248A /* CalculateViewModel.swift */; };
-		C081000E2C56AF0200A47939 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C081000D2C56AF0200A47939 /* SignInView.swift */; };
 		C08100102C56BD0300A47939 /* SocialLoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C081000F2C56BD0300A47939 /* SocialLoginButton.swift */; };
 		C08100122C56BD3000A47939 /* OrView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08100112C56BD3000A47939 /* OrView.swift */; };
 		C092008E2C6CE1680053331C /* AdCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C092008D2C6CE1680053331C /* AdCoordinator.swift */; };
@@ -32,12 +31,10 @@
 		C0A2EA812C4FC34900DB9A14 /* Number+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A2EA802C4FC34900DB9A14 /* Number+Extension.swift */; };
 		C0A2EA832C4FC35600DB9A14 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A2EA822C4FC35600DB9A14 /* Date+Extension.swift */; };
 		C0A2EA852C4FC38900DB9A14 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A2EA842C4FC38900DB9A14 /* Color+Extension.swift */; };
-		C0A2EAAE2C4FD33500DB9A14 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A2EAAD2C4FD33500DB9A14 /* SearchBar.swift */; };
 		C0A2EAB02C4FD41900DB9A14 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A2EAAF2C4FD41900DB9A14 /* String+Extension.swift */; };
 		C0A441B22C6660EE00005E18 /* CoinService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A441B12C6660EE00005E18 /* CoinService.swift */; };
 		C0A441B42C66621F00005E18 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A441B32C66621F00005E18 /* Constants.swift */; };
 		C0A81BC42C501E9B005AF972 /* CategoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A81BC32C501E9B005AF972 /* CategoriesViewModel.swift */; };
-		C0B08BDE2C58ED130066CE3B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C0B08BDD2C58ED130066CE3B /* GoogleService-Info.plist */; };
 		C0CCC0762C6DE3DF00F03AA3 /* BannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CCC0752C6DE3DF00F03AA3 /* BannerView.swift */; };
 		C0D3B8EE2C5E985D00F5D52C /* Finance_TrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D3B8ED2C5E985D00F5D52C /* Finance_TrackerUITests.swift */; };
 		C0D3B8F02C5E985D00F5D52C /* Finance_TrackerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D3B8EF2C5E985D00F5D52C /* Finance_TrackerUITestsLaunchTests.swift */; };
@@ -78,9 +75,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C01130332C70B6FA00D316E9 /* SummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryView.swift; sourceTree = "<group>"; };
 		C01383512C5EBA770008341A /* Finance TrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Finance TrackerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C018047D2C5D38420025BD03 /* FinanceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceType.swift; sourceTree = "<group>"; };
-		C0217D9E2C57D90F00DD15F6 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		C02F2F202C6C7C00006D8741 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C02F2F242C6C8AD0006D8741 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C02F2F262C6C9956006D8741 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -97,7 +94,6 @@
 		C05563802C6BEB7800CA13AA /* ReminderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderViewModel.swift; sourceTree = "<group>"; };
 		C06263502C5AA8C1001090CB /* TabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItem.swift; sourceTree = "<group>"; };
 		C06B6D2B2C6D2961008C248A /* CalculateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateViewModel.swift; sourceTree = "<group>"; };
-		C081000D2C56AF0200A47939 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		C081000F2C56BD0300A47939 /* SocialLoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialLoginButton.swift; sourceTree = "<group>"; };
 		C08100112C56BD3000A47939 /* OrView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrView.swift; sourceTree = "<group>"; };
 		C092008D2C6CE1680053331C /* AdCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdCoordinator.swift; sourceTree = "<group>"; };
@@ -105,12 +101,10 @@
 		C0A2EA802C4FC34900DB9A14 /* Number+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Number+Extension.swift"; sourceTree = "<group>"; };
 		C0A2EA822C4FC35600DB9A14 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		C0A2EA842C4FC38900DB9A14 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
-		C0A2EAAD2C4FD33500DB9A14 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		C0A2EAAF2C4FD41900DB9A14 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		C0A441B12C6660EE00005E18 /* CoinService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinService.swift; sourceTree = "<group>"; };
 		C0A441B32C66621F00005E18 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C0A81BC32C501E9B005AF972 /* CategoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewModel.swift; sourceTree = "<group>"; };
-		C0B08BDD2C58ED130066CE3B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C0CCC0752C6DE3DF00F03AA3 /* BannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerView.swift; sourceTree = "<group>"; };
 		C0D3B8EB2C5E985D00F5D52C /* Finance TrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Finance TrackerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0D3B8ED2C5E985D00F5D52C /* Finance_TrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Finance_TrackerUITests.swift; sourceTree = "<group>"; };
@@ -176,11 +170,10 @@
 				C0D903312C4EDC2C00D9AAE4 /* CategoriesView.swift */,
 				C0D9032F2C4EDBBA00D9AAE4 /* FinanceView.swift */,
 				C04E52802C541A2A00566111 /* CoinsView.swift */,
-				C081000D2C56AF0200A47939 /* SignInView.swift */,
-				C0217D9E2C57D90F00DD15F6 /* SignUpView.swift */,
 				C0EBE7412C6BF8F400829ED0 /* ReminderView.swift */,
 				C0EBE7492C6C03E200829ED0 /* AddReminderView.swift */,
 				C0CCC0752C6DE3DF00F03AA3 /* BannerView.swift */,
+				C01130332C70B6FA00D316E9 /* SummaryView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -243,7 +236,6 @@
 				C0D903372C4EE97B00D9AAE4 /* FinanceCardView.swift */,
 				C0A2EA742C4FA77900DB9A14 /* CircularProgressView.swift */,
 				C0D9031F2C4ED80A00D9AAE4 /* TabBar.swift */,
-				C0A2EAAD2C4FD33500DB9A14 /* SearchBar.swift */,
 				C081000F2C56BD0300A47939 /* SocialLoginButton.swift */,
 				C08100112C56BD3000A47939 /* OrView.swift */,
 			);
@@ -310,7 +302,6 @@
 				C02F2F292C6C9AAE006D8741 /* Finance-Tracker-Info.plist */,
 				C0EBE7452C6BFAA000829ED0 /* Resources */,
 				C0A441B02C6660E300005E18 /* Services */,
-				C0B08BDD2C58ED130066CE3B /* GoogleService-Info.plist */,
 				C0A2EA862C4FC70C00DB9A14 /* Components */,
 				C04E52962C5433FE00566111 /* Utilities */,
 				C04E52932C5430EA00566111 /* Enums */,
@@ -477,7 +468,6 @@
 				C0D903252C4ED80B00D9AAE4 /* Preview Assets.xcassets in Resources */,
 				C0D903222C4ED80B00D9AAE4 /* Assets.xcassets in Resources */,
 				C0EBE7472C6BFAB500829ED0 /* notfound.json in Resources */,
-				C0B08BDE2C58ED130066CE3B /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -516,7 +506,7 @@
 				C055637A2C6BDB0700CA13AA /* NotificationManager.swift in Sources */,
 				C0A2EA752C4FA77900DB9A14 /* CircularProgressView.swift in Sources */,
 				C04E52812C541A2A00566111 /* CoinsView.swift in Sources */,
-				C081000E2C56AF0200A47939 /* SignInView.swift in Sources */,
+				C01130342C70B6FA00D316E9 /* SummaryView.swift in Sources */,
 				C0D903362C4EE0A500D9AAE4 /* AddFinanceView.swift in Sources */,
 				C0A441B22C6660EE00005E18 /* CoinService.swift in Sources */,
 				C04E528D2C541B3F00566111 /* CoinViewModel.swift in Sources */,
@@ -525,7 +515,6 @@
 				C055637E2C6BE72500CA13AA /* Reminder.swift in Sources */,
 				C06B6D2C2C6D2961008C248A /* CalculateViewModel.swift in Sources */,
 				C08100122C56BD3000A47939 /* OrView.swift in Sources */,
-				C0A2EAAE2C4FD33500DB9A14 /* SearchBar.swift in Sources */,
 				C0A2EA812C4FC34900DB9A14 /* Number+Extension.swift in Sources */,
 				C0D9031E2C4ED80A00D9AAE4 /* Finance_TrackerApp.swift in Sources */,
 				C05563812C6BEB7800CA13AA /* ReminderViewModel.swift in Sources */,
@@ -536,7 +525,6 @@
 				C0A2EA852C4FC38900DB9A14 /* Color+Extension.swift in Sources */,
 				C04E52922C542E8700566111 /* NavigationAppearance.swift in Sources */,
 				C092008E2C6CE1680053331C /* AdCoordinator.swift in Sources */,
-				C0217D9F2C57D90F00DD15F6 /* SignUpView.swift in Sources */,
 				C0EBE74A2C6C03E200829ED0 /* AddReminderView.swift in Sources */,
 				C0A2EAB02C4FD41900DB9A14 /* String+Extension.swift in Sources */,
 				C04E52862C541A7D00566111 /* Coin.swift in Sources */,
@@ -787,7 +775,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Finance-Tracker-Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Finance Tracker";
+				INFOPLIST_KEY_CFBundleDisplayName = "BütçeDostu";
 				INFOPLIST_KEY_NSUserTrackingUsageDescription = "This identifier will be used to deliver personalized ads to you.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -822,7 +810,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Finance-Tracker-Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Finance Tracker";
+				INFOPLIST_KEY_CFBundleDisplayName = "BütçeDostu";
 				INFOPLIST_KEY_NSUserTrackingUsageDescription = "This identifier will be used to deliver personalized ads to you.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
