@@ -26,6 +26,11 @@ struct TabBar: View {
                 Text(TabItem.calendar.title)
             }
             
+            CalendarView().tag(TabItem.calendarSummary).tabItem{
+                Image(systemName: TabItem.calendarSummary.imageName)
+                Text("Tarihsel Bakış")
+            }
+            
             
             ReminderView().tag(TabItem.home).tabItem {
                 Image(systemName: TabItem.reminders.imageName)

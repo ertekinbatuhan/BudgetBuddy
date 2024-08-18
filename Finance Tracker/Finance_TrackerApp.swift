@@ -20,7 +20,7 @@ struct Finance_TrackerApp: App {
     
     var body: some Scene {
         WindowGroup {
-          TabBar()
+         TabBar()
     
         }
         .modelContainer(for: [Finance.self, Reminder.self , Category.self])

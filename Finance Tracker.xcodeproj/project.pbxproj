@@ -55,6 +55,7 @@
 		C0EBE7442C6BF93200829ED0 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = C0EBE7432C6BF93200829ED0 /* Lottie */; };
 		C0EBE7472C6BFAB500829ED0 /* notfound.json in Resources */ = {isa = PBXBuildFile; fileRef = C0EBE7462C6BFAB500829ED0 /* notfound.json */; };
 		C0EBE74A2C6C03E200829ED0 /* AddReminderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0EBE7492C6C03E200829ED0 /* AddReminderView.swift */; };
+		C0F34BE22C71E261004D31C4 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F34BE12C71E261004D31C4 /* CalendarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,6 +127,7 @@
 		C0EBE7412C6BF8F400829ED0 /* ReminderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderView.swift; sourceTree = "<group>"; };
 		C0EBE7462C6BFAB500829ED0 /* notfound.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = notfound.json; sourceTree = "<group>"; };
 		C0EBE7492C6C03E200829ED0 /* AddReminderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReminderView.swift; sourceTree = "<group>"; };
+		C0F34BE12C71E261004D31C4 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +176,7 @@
 				C0EBE7492C6C03E200829ED0 /* AddReminderView.swift */,
 				C0CCC0752C6DE3DF00F03AA3 /* BannerView.swift */,
 				C01130332C70B6FA00D316E9 /* SummaryView.swift */,
+				C0F34BE12C71E261004D31C4 /* CalendarView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -526,6 +529,7 @@
 				C04E52922C542E8700566111 /* NavigationAppearance.swift in Sources */,
 				C092008E2C6CE1680053331C /* AdCoordinator.swift in Sources */,
 				C0EBE74A2C6C03E200829ED0 /* AddReminderView.swift in Sources */,
+				C0F34BE22C71E261004D31C4 /* CalendarView.swift in Sources */,
 				C0A2EAB02C4FD41900DB9A14 /* String+Extension.swift in Sources */,
 				C04E52862C541A7D00566111 /* Coin.swift in Sources */,
 				C0CCC0762C6DE3DF00F03AA3 /* BannerView.swift in Sources */,

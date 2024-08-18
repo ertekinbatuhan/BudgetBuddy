@@ -104,9 +104,9 @@ struct ReminderView: View {
                     .background(Color(UIColor.systemGray6))
                 }
             }
-          BannerView()
+         BannerView()
          .frame(width: GADAdSizeBanner.size.width,
-                     height: GADAdSizeBanner.size.height)
+                    height: GADAdSizeBanner.size.height)
          
             
             .navigationTitle("REMINDERS_TITLE")
