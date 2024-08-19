@@ -3,8 +3,7 @@
 //  Finance Tracker
 //
 //  Created by Batuhan Berk Ertekin on 14.08.2024.
-//ca-app-pub-7770161043131301/8451197166
-
+//
 //
 
 import Foundation
