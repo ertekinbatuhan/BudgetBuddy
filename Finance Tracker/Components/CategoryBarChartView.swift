@@ -18,15 +18,15 @@ struct CategoryBarChartView: View {
             ForEach(categories, id: \.self) { category in
               
                 BarMark(
-                    x: .value("Kategori", category.categoryName),
-                    y: .value("Gelir", totalAmount(for: .income, in: category))
+                    x: .value("SECTION_CATEGORY", category.categoryName),
+                    y: .value("FINANCE_TYPE_INCOME", totalAmount(for: .income, in: category))
                 )
                 .foregroundStyle(.green)
                 
                
                 BarMark(
-                    x: .value("Kategori", category.categoryName),
-                    y: .value("Gider", totalAmount(for: .expense, in: category))
+                    x: .value("SECTION_CATEGORY", category.categoryName),
+                    y: .value("FINANCE_TYPE_EXPENSE", totalAmount(for: .expense, in: category))
                 )
                 .foregroundStyle(.red)
             }
