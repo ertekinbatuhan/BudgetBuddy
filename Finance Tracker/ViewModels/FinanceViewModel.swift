@@ -23,17 +23,15 @@ class FinanceViewModel: FinanceViewModelProtocol, ObservableObject {
     @Published var searchText: String = ""
     @Published var addFinance: Bool = false
     @Published var selectedType: FinanceType = .expense
-    @Published var categoryColors: [Category: Color] = [:]  // Category colors stored here
+    @Published var categoryColors: [Category: Color] = [:]
 
     var allFinances: [Finance] = []
     var allCategories: [Category] = []
 
-    // Function to generate random colors for categories
     private func generateCategoryColors(for categories: [Category]) -> [Category: Color] {
         return Dictionary(uniqueKeysWithValues: categories.map { ($0, .randomColor()) })
     }
 
-    // Call this function to update colors based on the selected type
     func updateCategoryColors() {
         switch selectedType {
         case .expense:
@@ -43,8 +41,6 @@ class FinanceViewModel: FinanceViewModelProtocol, ObservableObject {
         }
     }
     
-   
-    // Compute categories for the selected type
     var expenseCategories: [Category] {
         allCategories.filter { category in
             allFinances.contains { $0.financeType == .expense && $0.category == category }

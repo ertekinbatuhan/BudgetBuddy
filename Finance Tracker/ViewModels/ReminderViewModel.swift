@@ -33,7 +33,7 @@ class ReminderViewModel: ObservableObject, ReminderViewModelProtocol {
     }
     
     func saveReminder(title: String?, date: Date?, notes: String?, context: ModelContext, completion: @escaping (Bool) -> Void) {
-        // Null kontrolü yap
+        
         guard let title = title, !title.isEmpty,
               let date = date,
               let notes = notes, !notes.isEmpty else {
@@ -57,7 +57,6 @@ class ReminderViewModel: ObservableObject, ReminderViewModelProtocol {
     }
     
     func deleteReminder(_ reminder: Reminder?, context: ModelContext) {
-        // Null kontrolü yap
         guard let reminder = reminder else {
             print("Reminder is nil, cannot delete.")
             return
@@ -72,7 +71,6 @@ class ReminderViewModel: ObservableObject, ReminderViewModelProtocol {
     }
     
     private func scheduleNotification(for reminder: Reminder?) {
-        // Null kontrolü yap
         guard let reminder = reminder else {
             print("Reminder is nil, cannot schedule notification.")
             return

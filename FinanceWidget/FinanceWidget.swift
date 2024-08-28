@@ -24,8 +24,8 @@ struct Provider: TimelineProvider {
             totalIncome: finances.filter { $0.financeType == .income }.reduce(0) { $0 + $1.amount },
             totalExpense: finances.filter { $0.financeType == .expense }.reduce(0) { $0 + $1.amount }
         )
-        
-        let timeline = Timeline(entries: [entry], policy: .after(Date().addingTimeInterval(60*5)))
+        let nextUpdateDate = Calendar.current.date(byAdding: .minute, value: 1, to: Date())!
+        let timeline = Timeline(entries: [entry], policy: .after(nextUpdateDate))
         completion(timeline)
     }
 
@@ -54,38 +54,40 @@ struct FinanceWidgetEntryView : View {
     var entry: Provider.Entry
 
     var body: some View {
-        VStack {
+        VStack(alignment: .leading) {
             VStack {
                 Text("Toplam")
                     .font(.headline)
                 Text("\(entry.total, format: .currency(code: "TRY"))")
                     .font(.largeTitle)
                     .bold()
+                    .lineLimit(1)
+                    .truncationMode(.tail) 
             }
             .frame(maxWidth: .infinity)
             .padding(.bottom, 10)
             
             HStack {
-                HStack {
-                    Image(systemName: "arrow.up.circle.fill") // Gelir ikonu
+                VStack {
+                    Image(systemName: "arrow.up.circle.fill")
                         .foregroundColor(.green)
-                    VStack(alignment: .leading) {
-                        Text("Gelir")
-                            .font(.headline)
-                        Text("\(entry.totalIncome, format: .currency(code: "TRY"))")
-                            .font(.title2)
-                    }
+                    Text("Gelir")
+                        .font(.headline)
+                    Text("\(entry.totalIncome, format: .currency(code: "TRY"))")
+                        .font(.title2)
+                        .lineLimit(1)
+                        .truncationMode(.tail)
                 }
                 Spacer()
-                HStack {
-                    Image(systemName: "arrow.down.circle.fill") // Gider ikonu
+                VStack {
+                    Image(systemName: "arrow.down.circle.fill")
                         .foregroundColor(.red)
-                    VStack(alignment: .leading) {
-                        Text("Gider")
-                            .font(.headline)
-                        Text("\(entry.totalExpense, format: .currency(code: "TRY"))")
-                            .font(.title2)
-                    }
+                    Text("Gider")
+                        .font(.headline)
+                    Text("\(entry.totalExpense, format: .currency(code: "TRY"))")
+                        .font(.title2)
+                        .lineLimit(1)
+                        .truncationMode(.tail)
                 }
             }
             .padding(.horizontal)
@@ -95,7 +97,7 @@ struct FinanceWidgetEntryView : View {
 }
 
 struct FinanceWidget: Widget {
-    let kind: String = "FinanceWidget"
+    let kind: String = "BütçeDostuWidget"
 
     var body: some WidgetConfiguration {
         StaticConfiguration(kind: kind, provider: Provider()) { entry in
@@ -108,8 +110,8 @@ struct FinanceWidget: Widget {
                     .background(Color(UIColor.systemBackground))
             }
         }
-        .configurationDisplayName("Finance Tracker Widget")
-        .description("Shows total income and expenses.")
+        .configurationDisplayName("BütçeDostu Widget")
+        .description("Toplam gelir ve giderleri gösterir.")
     }
 }
 
