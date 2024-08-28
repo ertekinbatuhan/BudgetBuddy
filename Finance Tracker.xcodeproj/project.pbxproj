@@ -9,10 +9,15 @@
 /* Begin PBXBuildFile section */
 		C01130342C70B6FA00D316E9 /* SummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01130332C70B6FA00D316E9 /* SummaryView.swift */; };
 		C018047E2C5D38430025BD03 /* FinanceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C018047D2C5D38420025BD03 /* FinanceType.swift */; };
+		C01F66EF2C74929C0090ADF3 /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01F66EE2C74929C0090ADF3 /* OnBoardingView.swift */; };
+		C01F66F12C7492D60090ADF3 /* UIOnboardingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01F66F02C7492D60090ADF3 /* UIOnboardingHelper.swift */; };
+		C01F66F32C74930D0090ADF3 /* UIOnboarding in Frameworks */ = {isa = PBXBuildFile; productRef = C01F66F22C74930D0090ADF3 /* UIOnboarding */; };
+		C0264D892C7F95DE00CDFD0E /* CategoryBarChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0264D882C7F95DE00CDFD0E /* CategoryBarChartView.swift */; };
+		C0264D8B2C7F961100CDFD0E /* InfoCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0264D8A2C7F961100CDFD0E /* InfoCardView.swift */; };
+		C0264D8D2C7F964700CDFD0E /* DatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0264D8C2C7F964700CDFD0E /* DatePickerView.swift */; };
 		C02F2F212C6C7C00006D8741 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C02F2F1F2C6C7C00006D8741 /* Localizable.strings */; };
 		C02F2F272C6C9956006D8741 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C02F2F252C6C9956006D8741 /* InfoPlist.strings */; };
 		C02F2F2C2C6CB4F2006D8741 /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = C02F2F2B2C6CB4F2006D8741 /* GoogleMobileAds */; };
-		C04E52812C541A2A00566111 /* CoinsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04E52802C541A2A00566111 /* CoinsView.swift */; };
 		C04E528F2C541F7200566111 /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04E528E2C541F7200566111 /* Double+Extension.swift */; };
 		C04E52922C542E8700566111 /* NavigationAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04E52912C542E8700566111 /* NavigationAppearance.swift */; };
 		C055637A2C6BDB0700CA13AA /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05563792C6BDB0700CA13AA /* NotificationManager.swift */; };
@@ -101,12 +106,16 @@
 		C01130332C70B6FA00D316E9 /* SummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryView.swift; sourceTree = "<group>"; };
 		C01383512C5EBA770008341A /* Finance TrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Finance TrackerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C018047D2C5D38420025BD03 /* FinanceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceType.swift; sourceTree = "<group>"; };
+		C01F66EE2C74929C0090ADF3 /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
+		C01F66F02C7492D60090ADF3 /* UIOnboardingHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIOnboardingHelper.swift; sourceTree = "<group>"; };
+		C0264D882C7F95DE00CDFD0E /* CategoryBarChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryBarChartView.swift; sourceTree = "<group>"; };
+		C0264D8A2C7F961100CDFD0E /* InfoCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCardView.swift; sourceTree = "<group>"; };
+		C0264D8C2C7F964700CDFD0E /* DatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerView.swift; sourceTree = "<group>"; };
 		C02F2F202C6C7C00006D8741 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C02F2F242C6C8AD0006D8741 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C02F2F262C6C9956006D8741 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C02F2F282C6C9964006D8741 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C02F2F292C6C9AAE006D8741 /* Finance-Tracker-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Finance-Tracker-Info.plist"; sourceTree = SOURCE_ROOT; };
-		C04E52802C541A2A00566111 /* CoinsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinsView.swift; sourceTree = "<group>"; };
 		C04E528E2C541F7200566111 /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
 		C04E52912C542E8700566111 /* NavigationAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationAppearance.swift; sourceTree = "<group>"; };
 		C05563792C6BDB0700CA13AA /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
@@ -183,6 +192,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C02F2F2C2C6CB4F2006D8741 /* GoogleMobileAds in Frameworks */,
+				C01F66F32C74930D0090ADF3 /* UIOnboarding in Frameworks */,
 				C0EBE7442C6BF93200829ED0 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -190,6 +200,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C01F66ED2C74928D0090ADF3 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				C01F66EE2C74929C0090ADF3 /* OnBoardingView.swift */,
+				C01F66F02C7492D60090ADF3 /* UIOnboardingHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		C02323322C58D45A00943FEF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -205,7 +224,6 @@
 				C0D903352C4EE0A500D9AAE4 /* AddFinanceView.swift */,
 				C0D903312C4EDC2C00D9AAE4 /* CategoriesView.swift */,
 				C0D9032F2C4EDBBA00D9AAE4 /* FinanceView.swift */,
-				C04E52802C541A2A00566111 /* CoinsView.swift */,
 				C0EBE7412C6BF8F400829ED0 /* ReminderView.swift */,
 				C0EBE7492C6C03E200829ED0 /* AddReminderView.swift */,
 				C0CCC0752C6DE3DF00F03AA3 /* BannerView.swift */,
@@ -270,6 +288,9 @@
 				C0D903372C4EE97B00D9AAE4 /* FinanceCardView.swift */,
 				C0A2EA742C4FA77900DB9A14 /* CircularProgressView.swift */,
 				C0D9031F2C4ED80A00D9AAE4 /* TabBar.swift */,
+				C0264D882C7F95DE00CDFD0E /* CategoryBarChartView.swift */,
+				C0264D8A2C7F961100CDFD0E /* InfoCardView.swift */,
+				C0264D8C2C7F964700CDFD0E /* DatePickerView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -317,6 +338,7 @@
 		C0D903112C4ED80A00D9AAE4 = {
 			isa = PBXGroup;
 			children = (
+				C01F66ED2C74928D0090ADF3 /* Helpers */,
 				C0D0D93B2C733B2C00E28C4D /* FinanceWidgetExtension.entitlements */,
 				C02F2F1F2C6C7C00006D8741 /* Localizable.strings */,
 				C02F2F252C6C9956006D8741 /* InfoPlist.strings */,
@@ -453,6 +475,7 @@
 			packageProductDependencies = (
 				C0EBE7432C6BF93200829ED0 /* Lottie */,
 				C02F2F2B2C6CB4F2006D8741 /* GoogleMobileAds */,
+				C01F66F22C74930D0090ADF3 /* UIOnboarding */,
 			);
 			productName = "Finance Tracker";
 			productReference = C0D9031A2C4ED80A00D9AAE4 /* Finance Tracker.app */;
@@ -497,6 +520,7 @@
 			packageReferences = (
 				C0EBE7402C6BF8C800829ED0 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 				C02F2F2A2C6CB179006D8741 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */,
+				C01F66EC2C7492410090ADF3 /* XCRemoteSwiftPackageReference "UIOnboarding" */,
 			);
 			productRefGroup = C0D9031B2C4ED80A00D9AAE4 /* Products */;
 			projectDirPath = "";
@@ -583,6 +607,8 @@
 				C0E1074A2C515BEB009AE8D1 /* AddFinanceViewModel.swift in Sources */,
 				C0E1074C2C515F53009AE8D1 /* FinanceViewModel.swift in Sources */,
 				C018047E2C5D38430025BD03 /* FinanceType.swift in Sources */,
+				C0264D8B2C7F961100CDFD0E /* InfoCardView.swift in Sources */,
+				C0264D892C7F95DE00CDFD0E /* CategoryBarChartView.swift in Sources */,
 				C0A2EA832C4FC35600DB9A14 /* Date+Extension.swift in Sources */,
 				C0D9032C2C4ED95B00D9AAE4 /* Finance.swift in Sources */,
 				C0D903202C4ED80A00D9AAE4 /* TabBar.swift in Sources */,
@@ -590,10 +616,10 @@
 				C0D903322C4EDC2C00D9AAE4 /* CategoriesView.swift in Sources */,
 				C055637A2C6BDB0700CA13AA /* NotificationManager.swift in Sources */,
 				C0A2EA752C4FA77900DB9A14 /* CircularProgressView.swift in Sources */,
-				C04E52812C541A2A00566111 /* CoinsView.swift in Sources */,
 				C01130342C70B6FA00D316E9 /* SummaryView.swift in Sources */,
 				C0D903362C4EE0A500D9AAE4 /* AddFinanceView.swift in Sources */,
 				C0A81BC42C501E9B005AF972 /* CategoriesViewModel.swift in Sources */,
+				C01F66EF2C74929C0090ADF3 /* OnBoardingView.swift in Sources */,
 				C0D903342C4EDE5000D9AAE4 /* GroupedFinances.swift in Sources */,
 				C055637E2C6BE72500CA13AA /* Reminder.swift in Sources */,
 				C06B6D2C2C6D2961008C248A /* CalculateViewModel.swift in Sources */,
@@ -608,8 +634,10 @@
 				C092008E2C6CE1680053331C /* AdCoordinator.swift in Sources */,
 				C0EBE74A2C6C03E200829ED0 /* AddReminderView.swift in Sources */,
 				C0F34BE22C71E261004D31C4 /* CalendarView.swift in Sources */,
+				C0264D8D2C7F964700CDFD0E /* DatePickerView.swift in Sources */,
 				C0A2EAB02C4FD41900DB9A14 /* String+Extension.swift in Sources */,
 				C0CCC0762C6DE3DF00F03AA3 /* BannerView.swift in Sources */,
+				C01F66F12C7492D60090ADF3 /* UIOnboardingHelper.swift in Sources */,
 				C0D903382C4EE97B00D9AAE4 /* FinanceCardView.swift in Sources */,
 				C06263512C5AA8C1001090CB /* TabItem.swift in Sources */,
 			);
@@ -714,7 +742,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.batuhanberkertekin.Finance-Trackerr.FinanceWidget";
+				PRODUCT_BUNDLE_IDENTIFIER = com.batuhanberkertekin.finansdostubutcedostu.FinanceWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -742,7 +770,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.batuhanberkertekin.Finance-Trackerr.FinanceWidget";
+				PRODUCT_BUNDLE_IDENTIFIER = com.batuhanberkertekin.finansdostubutcedostu.FinanceWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -837,7 +865,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -894,7 +922,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -932,13 +960,13 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.batuhanberkertekin.Finance-Trackerr";
+				PRODUCT_BUNDLE_IDENTIFIER = com.batuhanberkertekin.finansdostubutcedostu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -970,13 +998,13 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.batuhanberkertekin.Finance-Trackerr";
+				PRODUCT_BUNDLE_IDENTIFIER = com.batuhanberkertekin.finansdostubutcedostu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -1031,6 +1059,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		C01F66EC2C7492410090ADF3 /* XCRemoteSwiftPackageReference "UIOnboarding" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/lascic/UIOnboarding.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.3;
+			};
+		};
 		C02F2F2A2C6CB179006D8741 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/googleads/swift-package-manager-google-mobile-ads.git";
@@ -1050,6 +1086,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		C01F66F22C74930D0090ADF3 /* UIOnboarding */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C01F66EC2C7492410090ADF3 /* XCRemoteSwiftPackageReference "UIOnboarding" */;
+			productName = UIOnboarding;
+		};
 		C02F2F2B2C6CB4F2006D8741 /* GoogleMobileAds */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = C02F2F2A2C6CB179006D8741 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */;

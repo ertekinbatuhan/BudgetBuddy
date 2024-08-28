@@ -1,9 +1,8 @@
-/* 
+/*
   Localizable.strings
   Finance Tracker
 
   Created by Batuhan Berk Ertekin on 14.08.2024.
-  
 */
 
 
@@ -11,82 +10,74 @@
 "TAB_HOME" = "Ana Sayfa";
 "TAB_COINS" = "Coinler";
 "TAB_CATEGORIES" = "Kategoriler";
+
 "TAB_REMINDERS_TITLE" = "Hatırlatıcılar";
 "TAB_HOME_TITLE" = "Ana Sayfa";
 "TAB_COINS_TITLE" = "Coinler";
 "TAB_CATEGORIES_TITLE" = "Kategoriler";
 
-"CONVERSION_TEXT_FIELD_PLACEHOLDER" = "E-mail" ;
-"CONVERSION_PASSWORD" = "Şifre";
-"CONVERSION_SIGNIN" =  "Giriş Yapın" ;
-"CONVERSION_SIGIN_BUTTON"= "Giriş Yapın";
+"LOGIN_EMAIL_PLACEHOLDER" = "E-mail";
+"LOGIN_PASSWORD_PLACEHOLDER" = "Şifre";
+"LOGIN_SIGNIN_BUTTON" = "Giriş Yapın";
+"LOGIN_NO_ACCOUNT" = "Bir hesabınız yok mu?";
+"LOGIN_SIGNUP_BUTTON" = "Kayıt Olun";
 
-"CONVERSION_ACCOUNT" = "Bir hesabınız yok mu?" ;
-"CONVERSITION_SIGNUP" = "Kayıt Olun";
+"SIGNUP_TEXT" = "Kayıt Olun";
+"SIGNUP_ALREADY_HAVE_ACCOUNT" = "Zaten bir hesabınız var mı?";
 
-"CONVERSATION_TEXT_SIGNUP" = "Kayıt Olun";
-"CONVERSATION_ALREADY" = "Zaten bir hesabınız var mı?";
-"CONVERSATION_TOTAL" = "Toplam";
-"CONVERSATION_EXPENSES" = "Giderler";
-"CONVERSATION_INCOME" = "Gelirler";
-"CONVERSATION_WELCOME_TITLE" = "Bütçe Yönetimi" ;
-"CONVERSATION_NOEXPENSES" = "Henüz bir gelir yok" ;
-"CONVERSATION_NOFINANCE" = "Henüz bir finansman eklenmemiş" ;
-"CONVERSATION_CATEGORIES" = "Kategoriler";
-"CONVERSATION_NOCATEGORIES" = "Henüz bir kategori yok";
-"CONVERSION_LOGOUT_BUTTON" = "Çıkış Yap" ;
-"CONVERSION_CATEGORYNAME" = "Kategori İsmi" ;
-"CANCEL_BUTTON" = "İptal" ;
-"ADD_BUTTON" = "Ekle";
-"ALERT" = "Bir kategoriyi silerseniz, ilişkili tüm finansmanlar da silinecektir." ;
-"DELETE_BUTTON" = "Sil";
-"EXPENSE" = "Gider" ;
-"INCOME" = "Gelir" ;
-"FINANCE_TYPE_EXPENSE" = "Gider" ;
-"FINANCE_TYPE_INCOME" = "Gelir" ;
-"AMOUNT_ICON" = "₺";
-"CONVERSATION_NOINCOME" = "Henüz bir gider yok" ;
-"Today" = "Bugün";
-"Yesterday" = "Dün";
-"SEARCH_TITLE" = "Arayın" ;
+"GENERAL_TOTAL" = "Toplam";
+"GENERAL_EXPENSES" = "Giderler";
+"GENERAL_INCOME" = "Gelirler";
+"GENERAL_WELCOME_TITLE" = "Bütçe Yönetimi";
+"GENERAL_NO_EXPENSES" = "Henüz bir gelir yok";
+"GENERAL_NO_FINANCE" = "Henüz bir finansman eklenmemiş";
+"GENERAL_CATEGORIES" = "Kategoriler";
+"GENERAL_NO_CATEGORIES" = "Henüz bir kategori yok";
+"GENERAL_LOGOUT_BUTTON" = "Çıkış Yap";
+"GENERAL_CATEGORY_NAME" = "Kategori İsmi";
+"GENERAL_CANCEL_BUTTON" = "İptal";
+"GENERAL_ADD_BUTTON" = "Ekle";
+"GENERAL_DELETE_BUTTON" = "Sil";
+"GENERAL_SEARCH_TITLE" = "Arayın";
+"GENERAL_NONE_BUTTON" = "Yok";
+"GENERAL_NONE_TEXT" = "Yok";
+"GENERAL_NO_INCOME" = "Henüz bir gider yok";
+"GENERAL_TODAY" = "Bugün";
+"GENERAL_YESTERDAY" = "Dün";
+"GENERAL_AMOUNT_ICON" = "₺";
 
-"ENTER_TITLE" = "Başlığı buraya girin " ;
-"ENTER_DESCRIPTION" = "Açıklamayı buraya girin" ;
-"ENTER_AMOUNT" = "Miktarı buraya girin" ;
+"ALERT_DELETE_CATEGORY" = "Bir kategoriyi silerseniz, ilişkili tüm finansmanlar da silinecektir.";
 
-
-"REMINDERS_TEXT" = "Henüz bir hatırlatıcı yok" ;
-"DELETE_TRASH" = "Sil" ;
-"REMINDERS_TITLE" = "Hatırlatıcılarım" ;
-"SECTION_TITLE" = "Başlık" ;
-"SECTION_DESCRIPTION" = "Açıklama";
-"SECTION_AMOUNT" = "Miktar" ;
-"SECTION_TYPESECTION" = "Gider - Gelir Tipi" ;
-"SECTION_DATE" = "Tarih";
-"SECTION_CATEGORY" = "Kategori";
-"CATEGORY_TEXT" = "Kategoriler";
-"NONE_BUTTON" = "Yok";
-"NONE_TEXT" = "Yok" ;
-"ADDFINANCE" = "Finansman Ekle" ;
-"CANCEL_BUTTON" = "İptal";
-"ADD_BUTTON" = "Ekle" ;
-
-"TOPGAINERS" = "Çok Yükselenler";
-"TOPLOSERS" = "Çok Düşenler";
-"ALLCOINS" = "Tüm Coinler";
-"LIVEPRICES" = "Gecikmeli Fiyatlar";
-"REMINDER_DETAILS" = "Hatırlatıcı Detayları";
-"REMINDER_TITLE" = "Başlık";
-"REMINDER_NOTES" = "Notlar";
-"REMINDER_SAVE" = "Kaydet";
-"REMINDER_CANCEL" = "İptal";
-"REMINDER_ADDREMINDER" = "Hatırlatıcı Ekle";
-"REMINDER_DATE" = "Tarih - Saat";
+"FINANCE_ADD" = "Finansman Ekle";
+"FINANCE_TYPE_EXPENSE" = "Gider";
+"FINANCE_TYPE_INCOME" = "Gelir";
+"FINANCE_ENTER_TITLE" = "Başlığı buraya girin";
+"FINANCE_ENTER_DESCRIPTION" = "Açıklamayı buraya girin";
+"FINANCE_ENTER_AMOUNT" = "Miktarı buraya girin";
 
 "CATEGORY_TITLE" = "Başlık";
 "CATEGORY_GENERAL" = "Genel";
 
+"REMINDERS_NO_REMINDERS" = "Henüz bir hatırlatıcı yok";
+"REMINDERS_DETAILS" = "Hatırlatıcı Detayları";
+"REMINDERS_TITLE" = "Hatırlatıcılarım";
+"REMINDERS_SAVE_BUTTON" = "Kaydet";
+"REMINDERS_CANCEL_BUTTON" = "İptal";
+"REMINDERS_ADD_BUTTON" = "Hatırlatıcı Ekle";
+"REMINDERS_DATE_HOUR" = "Tarih - Saat";
+"REMINDERS_NOTES" = "Notlar";
 
+"SECTION_TITLE" = "Başlık";
+"SECTION_DESCRIPTION" = "Açıklama";
+"SECTION_AMOUNT" = "Miktar";
+"SECTION_TYPE_SELECTION" = "Gider - Gelir Tipi";
+"SECTION_DATE" = "Tarih";
+"SECTION_CATEGORY" = "Kategori";
+
+"COINS_TOP_GAINERS" = "Çok Yükselenler";
+"COINS_TOP_LOSERS" = "Çok Düşenler";
+"COINS_ALL_COINS" = "Tüm Coinler";
+"COINS_LIVE_PRICES" = "Gecikmeli Fiyatlar";
 
 
 

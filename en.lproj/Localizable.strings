@@ -11,82 +11,69 @@
 "TAB_HOME" = "Home";
 "TAB_COINS" = "Coins";
 "TAB_CATEGORIES" = "Categories";
+
 "TAB_REMINDERS_TITLE" = "Reminders";
 "TAB_HOME_TITLE" = "Home";
 "TAB_COINS_TITLE" = "Coins";
 "TAB_CATEGORIES_TITLE" = "Categories";
 
-"CONVERSION_TEXT_FIELD_PLACEHOLDER" = "E-mail" ;
-"CONVERSION_PASSWORD" = "Password";
-"CONVERSION_SIGNIN" =  "Sign In" ;
-"CONVERSION_SIGIN_BUTTON"= "Sign In";
-"Today" = "Today";
-"Yesterday" = "Yesterday";
+"LOGIN_EMAIL_PLACEHOLDER" = "E-mail";
+"LOGIN_PASSWORD_PLACEHOLDER" = "Password";
+"LOGIN_SIGNIN_BUTTON" = "Sign In";
+"LOGIN_NO_ACCOUNT" = "Don't have an account?";
+"LOGIN_SIGNUP_BUTTON" = "Sign Up";
+"LOGIN_ALREADY_HAVE_ACCOUNT" = "Already have an account?";
 
+"GENERAL_TODAY" = "Today";
+"GENERAL_YESTERDAY" = "Yesterday";
+"GENERAL_NO_INCOME" = "No Income";
+"GENERAL_TOTAL" = "Total";
+"GENERAL_EXPENSES" = "Expenses";
+"GENERAL_INCOME" = "Income";
+"GENERAL_WELCOME_TITLE" = "Welcome";
+"GENERAL_NO_EXPENSES" = "No expenses";
+"GENERAL_NO_FINANCE" = "No finance";
+"GENERAL_CATEGORIES" = "Categories";
+"GENERAL_NO_CATEGORIES" = "No categories";
+"GENERAL_LOGOUT_BUTTON" = "Log Out";
+"GENERAL_CATEGORY_NAME" = "Category Name";
+"GENERAL_CANCEL_BUTTON" = "Cancel";
+"GENERAL_ADD_BUTTON" = "Add";
+"GENERAL_DELETE_BUTTON" = "Delete";
+"GENERAL_SEARCH_TITLE" = "Search";
+"GENERAL_NONE_BUTTON" = "None";
+"GENERAL_NONE_TEXT" = "None";
+"GENERAL_AMOUNT_ICON" = "$";
 
-"CONVERSATION_NOINCOME" = "No Income" ;
+"ALERT_DELETE_CATEGORY" = "If you delete a category, all the associated finances will be deleted too.";
 
-"CONVERSION_ACCOUNT" = "Don't have an account ?" ;
-"CONVERSITION_SIGNUP" = "Sign Up";
-
-"CONVERSATION_TEXT_SIGNUP" = "Sign Up";
-"CONVERSATION_ALREADY" = "Already have an account?";
-"CONVERSATION_TOTAL" = "Total";
-"CONVERSATION_EXPENSES" = "Expenses";
-"CONVERSATION_INCOME" = "Income";
-"CONVERSATION_WELCOME_TITLE" = "Welcome" ;
-"CONVERSATION_NOEXPENSES" = "No expenses" ;
-"CONVERSATION_NOFINANCE" = "No finance" ;
-"CONVERSATION_CATEGORIES" = "Categories";
-"CONVERSATION_NOCATEGORIES" = "No categories";
-"CONVERSION_LOGOUT_BUTTON" = "Log Out" ;
-"CONVERSION_CATEGORYNAME" = "Category Name" ;
-"CANCEL_BUTTON" = "Cancel" ;
-"ADD_BUTTON" = "Add";
-"ALERT" = "If you delete a category, all the associated finances will be deleted too." ;
-"DELETE_BUTTON" = "Delete";
-
-"SEARCH_TITLE" = "Search" ;
-
-"REMINDERS_TEXT" = "Not reminders yet" ;
-"DELETE_TRASH" = "Delete" ;
-"REMINDERS_TITLE" = "My Reminders" ;
-"SECTION_TITLE" = "Title" ;
-"SECTION_DESCRIPTION" = "Description";
-"SECTION_AMOUNT" = "Amount" ;
-"SECTION_TYPESECTION" = "Type Selection" ;
-"SECTION_DATE" = "Date";
-"SECTION_CATEGORY" = "Category";
-"CATEGORY_TEXT" = "Category";
-"NONE_BUTTON" = "None";
-"NONE_TEXT" = "None" ;
-"ADDFINANCE" = "Add Finance" ;
-"CANCEL_BUTTON" = "Cancel";
-"ADD_BUTTON" = "Add" ;
-"TOPGAINERS" = "Top Gainers";
-"TOPLOSERS" = "Top Losers";
-"ALLCOINS" = "All Coins";
-"LIVEPRICES" = "Daily Prices";
-"REMINDER_DETAILS" = "Reminder Details";
-"REMINDER_TITLE" = "Title";
-"REMINDER_NOTES" = "Notes";
-"REMINDER_SAVE" = "Save";
-"REMINDER_CANCEL" = "Cancel";
-"REMINDER_ADDREMINDER" = "Add Reminder";
-"REMINDER_DATE" = "Date - Hour";
-"FINANCE_TYPE_EXPENSE" = "Expense" ;
-"FINANCE_TYPE_INCOME" = "Income" ;
-"ENTER_TITLE" = "Enter title here " ;
-"ENTER_DESCRIPTION" = "Enter description here" ;
-"ENTER_AMOUNT" = "Enter amount here" ;
-
-"AMOUNT_ICON" = "$";
+"FINANCE_ADD" = "Add Finance";
+"FINANCE_TYPE_EXPENSE" = "Expense";
+"FINANCE_TYPE_INCOME" = "Income";
+"FINANCE_ENTER_TITLE" = "Enter title here";
+"FINANCE_ENTER_DESCRIPTION" = "Enter description here";
+"FINANCE_ENTER_AMOUNT" = "Enter amount here";
 
 "CATEGORY_TITLE" = "Title";
 "CATEGORY_GENERAL" = "General";
 
+"REMINDERS_NO_REMINDERS" = "No reminders yet";
+"REMINDERS_DETAILS" = "Reminder Details";
+"REMINDERS_TITLE" = "My Reminders";
+"REMINDERS_SAVE_BUTTON" = "Save";
+"REMINDERS_CANCEL_BUTTON" = "Cancel";
+"REMINDERS_ADD_BUTTON" = "Add Reminder";
+"REMINDERS_DATE_HOUR" = "Date - Hour";
+"REMINDERS_NOTES" = "Notes";
 
+"SECTION_TITLE" = "Title";
+"SECTION_DESCRIPTION" = "Description";
+"SECTION_AMOUNT" = "Amount";
+"SECTION_TYPE_SELECTION" = "Type Selection";
+"SECTION_DATE" = "Date";
+"SECTION_CATEGORY" = "Category";
 
-
-
-
+"COINS_TOP_GAINERS" = "Top Gainers";
+"COINS_TOP_LOSERS" = "Top Losers";
+"COINS_ALL_COINS" = "All Coins";
+"COINS_LIVE_PRICES" = "Daily Prices";

@@ -11,17 +11,16 @@ import GoogleMobileAds
 
 @main
 struct Finance_TrackerApp: App {
-
+    
     init() {
-       
-        GADMobileAds.sharedInstance().start(completionHandler: nil)
         
-       }
+        GADMobileAds.sharedInstance().start(completionHandler: nil)
+    }
     
     var body: some Scene {
         WindowGroup {
-         TabBar()
-    
+            TabBar()
+            
         }
         .modelContainer(for: [Finance.self, Reminder.self , Category.self])
     }

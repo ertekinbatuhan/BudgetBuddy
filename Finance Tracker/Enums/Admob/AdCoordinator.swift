@@ -23,10 +23,8 @@ class AdCoordinator: NSObject,GADFullScreenContentDelegate {
         let request = GADRequest()
         request.scene = UIApplication.shared.connectedScenes.first as? UIWindowScene
         
-        // ca-app-pub-7770161043131301/8451197166
-        
         GADInterstitialAd.load(
-            withAdUnitID: "ca-app-pub-7770161043131301/8451197166", request: request
+            withAdUnitID: "", request: request
         ) { ad, error in
             if let error = error {
                 return print("Failed to load ad with error: \(error.localizedDescription)")
@@ -43,7 +41,6 @@ class AdCoordinator: NSObject,GADFullScreenContentDelegate {
             return print("Ad wasn't ready")
         }
         
-        // View controller is an optional parameter. Pass in nil.
         fullScreenAd.present(fromRootViewController: nil)
     }
     
