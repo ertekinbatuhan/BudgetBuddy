@@ -11,6 +11,7 @@ import AppTrackingTransparency
 struct TabBar: View {
     
     @State private var selectedTab: TabItem = .home
+    @AppStorage("$ShowingOnBoarding") private var showingOnBoarding = true
     
     var body: some View {
         TabView(selection: $selectedTab) {
@@ -31,24 +32,24 @@ struct TabBar: View {
                 Text("Tarihsel Bakış")
             }
             
-            
             ReminderView().tag(TabItem.home).tabItem {
                 Image(systemName: TabItem.reminders.imageName)
                 Text(TabItem.reminders.title)
             }
             
-       //     CoinsView().tag(TabItem.coins).tabItem {
-         //       Image(systemName: TabItem.coins.imageName)
-           //     Text(TabItem.coins.title)
-           // }
             CategoriesView().tag(TabItem.categories).tabItem {
                 Image(systemName: TabItem.categories.imageName)
                 Text(TabItem.categories.title)
-    
             }
-        }.onReceive(NotificationCenter.default.publisher(for: UIApplication.didBecomeActiveNotification)) { _ in
-            ATTrackingManager.requestTrackingAuthorization(completionHandler: { status in })
-        }  
+        }
+        .fullScreenCover(isPresented: $showingOnBoarding, content: {
+            OnboardingView.init()
+                .edgesIgnoringSafeArea(.all)
+                .onDisappear{
+                    showingOnBoarding = false
+                    ATTrackingManager.requestTrackingAuthorization(completionHandler: { status in })
+                }
+        })
     }
 }
 
