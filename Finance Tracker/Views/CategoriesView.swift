@@ -77,11 +77,11 @@ struct CategoriesView: View {
             } content: {
                 NavigationStack {
                     List {
-                        Section("GENERAL_CATEGORIES") {
+                        Section("GENERAL_CATEGORY_NAME") {
                             TextField("CATEGORY_GENERAL", text: $viewModel.categoryName)
                         }
                     }
-                    .navigationTitle("GENERAL_CATEGORY_NAME")
+                    .navigationTitle("SECTION_CATEGORY")
                     .navigationBarTitleDisplayMode(.inline)
                     .toolbar {
                         ToolbarItem(placement: .topBarLeading) {
@@ -104,7 +104,7 @@ struct CategoriesView: View {
                 
             }
         }
-        .alert("ALERT", isPresented: $viewModel.deleteRequest) {
+        .alert("ALERT_DELETE_CATEGORY", isPresented: $viewModel.deleteRequest) {
             Button(role: .destructive) {
                 viewModel.deleteCategory(context: context)
                 if calculateViewModel.calculateCount % 3 == 0 {

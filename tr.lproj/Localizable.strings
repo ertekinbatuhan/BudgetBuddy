@@ -10,12 +10,15 @@
 "TAB_HOME" = "Ana Sayfa";
 "TAB_COINS" = "Coinler";
 "TAB_CATEGORIES" = "Kategoriler";
+"TAB_OVERVIEW" = "Finansal Durum";
 
 "TAB_REMINDERS_TITLE" = "Hatırlatıcılar";
 "TAB_HOME_TITLE" = "Ana Sayfa";
 "TAB_COINS_TITLE" = "Coinler";
 "TAB_CATEGORIES_TITLE" = "Kategoriler";
-
+"TAB_CALENDAR_TITLE" = "Tarihsel Bakış";
+"TAB_OVERVIEW_TITLE" = "Genel Bakış";
+ 
 "LOGIN_EMAIL_PLACEHOLDER" = "E-mail";
 "LOGIN_PASSWORD_PLACEHOLDER" = "Şifre";
 "LOGIN_SIGNIN_BUTTON" = "Giriş Yapın";

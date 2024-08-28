@@ -19,16 +19,16 @@ struct AddFinanceView: View {
         NavigationStack {
             List {
                 Section("SECTION_TITLE") {
-                    TextField("ENTER_TITLE", text: $viewModel.title)
+                    TextField("FINANCE_ENTER_TITLE", text: $viewModel.title)
                 }
                 Section("SECTION_DESCRIPTION") {
-                    TextField("ENTER_DESCRIPTION", text: $viewModel.subTitle)
+                    TextField("FINANCE_ENTER_DESCRIPTION", text: $viewModel.subTitle)
                 }
                 
                 Section("SECTION_AMOUNT") {
                     HStack {
-                        Text("AMOUNT_ICON").fontWeight(.semibold)
-                        TextField("ENTER_AMOUNT", value: $viewModel.amount, formatter: NumberFormatter.decimalFormatter)
+                        Text("GENERAL_AMOUNT_ICON").fontWeight(.semibold)
+                        TextField("FINANCE_ENTER_AMOUNT", value: $viewModel.amount, formatter: NumberFormatter.decimalFormatter)
                             .keyboardType(.numberPad)
                     }
                 }
@@ -59,9 +59,9 @@ struct AddFinanceView: View {
                 }
                 
                 if !allCategories.isEmpty {
-                    Section("SECTION_CATEGORY") {
+                    Section("GENERAL_CATEGORIES") {
                         HStack {
-                            Text("CATEGORY_TEXT")
+                            Text("GENERAL_CATEGORIES")
                             Spacer()
                             Menu {
                                 ForEach(allCategories) { category in

@@ -22,14 +22,14 @@ struct TabBar: View {
                 
             }
             
-            SummaryView().tag(TabItem.calendar).tabItem{
-                Image(systemName: TabItem.calendar.imageName)
+            SummaryView().tag(TabItem.summary).tabItem{
+                Image(systemName: TabItem.summary.imageName)
                 Text(TabItem.calendar.title)
             }
             
-            CalendarView().tag(TabItem.calendarSummary).tabItem{
-                Image(systemName: TabItem.calendarSummary.imageName)
-                Text("Tarihsel Bakış")
+            CalendarView().tag(TabItem.calendar).tabItem{
+                Image(systemName: TabItem.calendar.imageName)
+                Text(TabItem.summary.title)
             }
             
             ReminderView().tag(TabItem.home).tabItem {
@@ -40,6 +40,7 @@ struct TabBar: View {
             CategoriesView().tag(TabItem.categories).tabItem {
                 Image(systemName: TabItem.categories.imageName)
                 Text(TabItem.categories.title)
+
             }
         }
         .fullScreenCover(isPresented: $showingOnBoarding, content: {

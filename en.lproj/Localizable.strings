@@ -11,11 +11,14 @@
 "TAB_HOME" = "Home";
 "TAB_COINS" = "Coins";
 "TAB_CATEGORIES" = "Categories";
+"TAB_OVERVIEW" = "Finance Status";
 
 "TAB_REMINDERS_TITLE" = "Reminders";
 "TAB_HOME_TITLE" = "Home";
 "TAB_COINS_TITLE" = "Coins";
 "TAB_CATEGORIES_TITLE" = "Categories";
+"TAB_CALENDAR_TITLE" = "Historical View";
+"TAB_OVERVIEW_TITLE" = "Summary View";
 
 "LOGIN_EMAIL_PLACEHOLDER" = "E-mail";
 "LOGIN_PASSWORD_PLACEHOLDER" = "Password";
