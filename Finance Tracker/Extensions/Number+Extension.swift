@@ -13,25 +13,18 @@ extension NumberFormatter {
         formatter.numberStyle = .currency
         formatter.maximumFractionDigits = 2
         
-        if Locale.current.language.languageCode?.identifier == "en" {
-            
-            formatter.currencySymbol = "$"
-        } else if Locale.current.language.languageCode?.identifier == "tr" {
-            
-            formatter.currencySymbol = "₺"
-        } else {
-            
-            formatter.locale = Locale.current
-        }
+        // Set locale and currency symbol based on current locale
+        formatter.locale = Locale.current
         
-        return formatter
-    }
-    
-    static var dollarFormatter: NumberFormatter {
-        let formatter = NumberFormatter()
-        formatter.numberStyle = .currency
-        formatter.currencySymbol = "$"
-        formatter.maximumFractionDigits = 2
+        // Update currency symbol based on the locale
+        switch Locale.current.identifier {
+        case "en_US":
+            formatter.currencySymbol = "$"
+        case "tr_TR":
+            formatter.currencySymbol = "₺"
+        default:
+            formatter.currencySymbol = Locale.current.currencySymbol ?? ""
+        }
         
         return formatter
     }

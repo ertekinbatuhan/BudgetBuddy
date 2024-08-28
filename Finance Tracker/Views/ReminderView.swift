@@ -23,7 +23,7 @@ struct ReminderView: View {
     private var groupedReminders: [Date: [Reminder]] {
         Dictionary(grouping: viewModel.filteredReminders(reminders), by: { Calendar.current.startOfDay(for: $0.date) })
     }
-  
+    
     var body: some View {
         NavigationStack {
             VStack {
@@ -105,28 +105,27 @@ struct ReminderView: View {
                     .background(Color(UIColor.systemGray6))
                 }
             }
-         BannerView()
-         .frame(width: GADAdSizeBanner.size.width,
-                    height: GADAdSizeBanner.size.height)
-         
-            
-            .navigationTitle("REMINDERS_TITLE")
-            .searchable(text: $viewModel.searchText)
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button(action: {
-                        showAddReminder = true
-                    }) {
-                        Image(systemName: "plus.circle.fill")
-                            .font(.title)
-                            .foregroundColor(.blue)
+            BannerView()
+                .frame(width: GADAdSizeBanner.size.width,
+                       height: GADAdSizeBanner.size.height)
+    
+                .navigationTitle("REMINDERS_TITLE")
+                .searchable(text: $viewModel.searchText)
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        Button(action: {
+                            showAddReminder = true
+                        }) {
+                            Image(systemName: "plus.circle.fill")
+                                .font(.title)
+                                .foregroundColor(.blue)
+                        }
                     }
+                    
                 }
-                
-            }
-            .sheet(isPresented: $showAddReminder) {
-                AddReminderView()
-            }
+                .sheet(isPresented: $showAddReminder) {
+                    AddReminderView()
+                }
             
         }
     }

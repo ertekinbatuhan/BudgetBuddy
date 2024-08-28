@@ -9,7 +9,7 @@ import SwiftUI
 import SwiftData
 
 struct FinanceView: View {
-
+    
     @Query(sort: [SortDescriptor(\Finance.date, order: .reverse)], animation: .snappy) private var allFinances: [Finance]
     @Query(sort: [SortDescriptor(\Category.categoryName)], animation: .snappy) private var allCategories: [Category]
     @Environment(\.modelContext) private var context
@@ -19,15 +19,15 @@ struct FinanceView: View {
     @StateObject private var viewModel = FinanceViewModel()
     private let adCoordinator = AdCoordinator.shared
     @State private var calculateViewModel = CalculateViewModel()
-
+    
     var body: some View {
         NavigationStack {
             VStack {
                 ZStack {
                     CircularProgressView(categories: selectedType == .expense ? viewModel.expenseCategories : viewModel.incomeCategories,
                                          categoryColors: viewModel.categoryColors)
-                        .frame(width: 210, height: 210)
-                        .shadow(radius: 10)
+                    .frame(width: 210, height: 210)
+                    .shadow(radius: 10)
                     
                     VStack {
                         Text("GENERAL_TOTAL")
@@ -83,7 +83,7 @@ struct FinanceView: View {
                         }
                     }
                 }
-                    
+                
                 .navigationTitle("GENERAL_WELCOME_TITLE")
                 .toolbar {
                     ToolbarItem(placement: .navigationBarTrailing) {

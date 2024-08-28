@@ -21,11 +21,11 @@ struct AddReminderView: View {
                     VStack(spacing: 20) {
                         
                         VStack(alignment: .leading, spacing: 15) {
-                            Text("Hatırlatıcı Başlığı")
+                            Text("REMINDERS_TITLEE")
                                 .font(.headline)
                                 .foregroundColor(.primary)
                             
-                            TextField("Hatırlatıcı başlığını girin", text: $title)
+                            TextField("REMINDERS_ENTER_TITLE", text: $title)
                                 .padding()
                                 .background(Color(UIColor.systemBackground))
                                 .cornerRadius(8)
@@ -55,7 +55,7 @@ struct AddReminderView: View {
                             }
                             
                             HStack {
-                                Text("Tarih Seç")
+                                Text("REMINDERS_DATE_SELECT")
                                 Spacer()
                                 Text(date, style: .date)
                                 Text(date, style: .time)

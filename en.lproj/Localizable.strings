@@ -69,6 +69,8 @@
 "REMINDERS_DATE_HOUR" = "Date - Hour";
 "REMINDERS_NOTES" = "Notes";
 "REMINDERS_DATE_SELECT" = "Select Date";
+"REMINDERS_ENTER_TITLE" = "Enter reminder title";
+"REMINDERS_TITLEE" = "Reminder Title";
 
 "SECTION_TITLE" = "Title";
 "SECTION_DESCRIPTION" = "Description";

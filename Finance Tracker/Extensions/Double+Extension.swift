@@ -8,10 +8,11 @@
 import Foundation
 
 extension Double {
+    
     func toCurrency() -> String {
-        return NumberFormatter.dollarFormatter.string(from: NSNumber(value: self)) ?? "$0.00"
+        return NumberFormatter.currencyFormatter.string(from: NSNumber(value: self)) ?? NumberFormatter.currencyFormatter.currencySymbol! + "0.00"
     }
-
+    
     func toPercentage() -> String {
         return String(format: "%.2f%%", self)
     }

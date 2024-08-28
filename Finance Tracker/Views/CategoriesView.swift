@@ -61,48 +61,48 @@ struct CategoriesView: View {
                     }
                 }
             }
-           BannerView()
-            .frame(width: GADAdSizeBanner.size.width, height: GADAdSizeBanner.size.height)
-            .toolbar {
-                ToolbarItem(placement: .topBarTrailing) {
-                    Button {
-                        viewModel.addCategory.toggle()
-                    } label: {
-                        Image(systemName: "plus.circle.fill").font(.title)
-                    }
-                }
-            }
-            .sheet(isPresented: $viewModel.addCategory) {
-                viewModel.categoryName = ""
-            } content: {
-                NavigationStack {
-                    List {
-                        Section("GENERAL_CATEGORY_NAME") {
-                            TextField("CATEGORY_GENERAL", text: $viewModel.categoryName)
-                        }
-                    }
-                    .navigationTitle("SECTION_CATEGORY")
-                    .navigationBarTitleDisplayMode(.inline)
-                    .toolbar {
-                        ToolbarItem(placement: .topBarLeading) {
-                            Button("GENERAL_CANCEL_BUTTON") {
-                                viewModel.addCategory = false
-                            }
-                            .tint(.red)
-                        }
-                        ToolbarItem(placement: .topBarTrailing) {
-                            Button("GENERAL_ADD_BUTTON") {
-                                viewModel.addNewCategory(context: context)
-                            }
-                            .disabled(viewModel.categoryName.isEmpty)
+            BannerView()
+                .frame(width: GADAdSizeBanner.size.width, height: GADAdSizeBanner.size.height)
+                .toolbar {
+                    ToolbarItem(placement: .topBarTrailing) {
+                        Button {
+                            viewModel.addCategory.toggle()
+                        } label: {
+                            Image(systemName: "plus.circle.fill").font(.title)
                         }
                     }
                 }
-                .presentationDetents([.height(180)])
-                .presentationCornerRadius(20)
-                .interactiveDismissDisabled()
-                
-            }
+                .sheet(isPresented: $viewModel.addCategory) {
+                    viewModel.categoryName = ""
+                } content: {
+                    NavigationStack {
+                        List {
+                            Section("GENERAL_CATEGORY_NAME") {
+                                TextField("CATEGORY_GENERAL", text: $viewModel.categoryName)
+                            }
+                        }
+                        .navigationTitle("SECTION_CATEGORY")
+                        .navigationBarTitleDisplayMode(.inline)
+                        .toolbar {
+                            ToolbarItem(placement: .topBarLeading) {
+                                Button("GENERAL_CANCEL_BUTTON") {
+                                    viewModel.addCategory = false
+                                }
+                                .tint(.red)
+                            }
+                            ToolbarItem(placement: .topBarTrailing) {
+                                Button("GENERAL_ADD_BUTTON") {
+                                    viewModel.addNewCategory(context: context)
+                                }
+                                .disabled(viewModel.categoryName.isEmpty)
+                            }
+                        }
+                    }
+                    .presentationDetents([.height(180)])
+                    .presentationCornerRadius(20)
+                    .interactiveDismissDisabled()
+                    
+                }
         }
         .alert("ALERT_DELETE_CATEGORY", isPresented: $viewModel.deleteRequest) {
             Button(role: .destructive) {
@@ -122,7 +122,7 @@ struct CategoriesView: View {
         }
         .onAppear {
             viewModel.fetchCategories(categories: allCategories)
-           
+            
         }
         .onChange(of: allCategories) {
             viewModel.fetchCategories(categories: allCategories)
