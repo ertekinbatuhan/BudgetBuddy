@@ -13,6 +13,10 @@
 - Monitor your cryptocurrency holdings and track their performance.
 - Enjoy a user-friendly interface enhanced with smooth animations and dynamic visual elements.
 
+  
+ ## Localization Support
+- Available in both English and Turkish, providing a personalized experience in multiple languages.
+
 ## Screenshots
 ![0x0ss-6](https://github.com/user-attachments/assets/f06958d5-20d7-4b1a-a98c-042924183a50)
 
