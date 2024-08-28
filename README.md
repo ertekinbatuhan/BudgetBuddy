@@ -13,7 +13,6 @@
 - Monitor your cryptocurrency holdings and track their performance.
 - Enjoy a user-friendly interface enhanced with smooth animations and dynamic visual elements.
 
-  
  ## Localization Support
 - Available in both English and Turkish, providing a personalized experience in multiple languages.
 
@@ -31,9 +30,6 @@
 
 - **Alamofire**: 
   - A robust networking library for Swift, facilitating smooth and efficient handling of network requests and API interactions.
-
-- **Firebase**: 
-  - Integrated for real-time data synchronization, user authentication, and cloud storage, providing a scalable backend solution.
 
 - **Charts**: 
   - A powerful charting library for Swift, used to create various types of charts and graphs for visualizing financial data.
