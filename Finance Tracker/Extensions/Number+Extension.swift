@@ -12,11 +12,8 @@ extension NumberFormatter {
         let formatter = NumberFormatter()
         formatter.numberStyle = .currency
         formatter.maximumFractionDigits = 2
-        
-        // Set locale and currency symbol based on current locale
         formatter.locale = Locale.current
         
-        // Update currency symbol based on the locale
         switch Locale.current.identifier {
         case "en_US":
             formatter.currencySymbol = "$"

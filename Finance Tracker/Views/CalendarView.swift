@@ -10,7 +10,7 @@ struct CalendarView: View {
 
     var body: some View {
         VStack {
-            DatePicker("Bir Tarih Seçin", selection: $selectedDate, displayedComponents: [.date])
+            DatePicker("REMINDERS_DATE_SELECT", selection: $selectedDate, displayedComponents: [.date])
                 .datePickerStyle(GraphicalDatePickerStyle())
                 .padding()
 
@@ -18,7 +18,7 @@ struct CalendarView: View {
                 List {
                     ForEach(filteredFinances) { finance in
                         HStack {
-                            financeIcon(for: finance.financeType)
+                            FinanceIconView(type: finance.financeType)
                             Text(finance.category?.categoryName ?? "Bilinmiyor")
                             Spacer()
                             Text("\(finance.amount, specifier: "%.2f")")
@@ -28,7 +28,7 @@ struct CalendarView: View {
                 .listStyle(InsetGroupedListStyle())
                 
                 HStack {
-                    Text("Toplam:")
+                    Text("GENERAL_TOTAL")
                         .font(.headline)
                     Text("\(totalAmount, specifier: "%.2f") ₺")
                         .font(.title2)
@@ -40,19 +40,6 @@ struct CalendarView: View {
         }
     }
 
-    private func financeIcon(for type: FinanceType?) -> some View {
-        switch type {
-        case .income:
-            return Image(systemName: "arrow.up.circle.fill") 
-                .foregroundColor(.green)
-        case .expense:
-            return Image(systemName: "arrow.down.circle.fill")
-                .foregroundColor(.red)
-        default:
-            return Image(systemName: "questionmark.circle")
-                .foregroundColor(.gray)
-        }
-    }
     private var filteredFinances: [Finance] {
         allFinances.filter { finance in
             let date = finance.date
