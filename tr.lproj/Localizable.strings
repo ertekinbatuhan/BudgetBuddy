@@ -69,6 +69,7 @@
 "REMINDERS_ADD_BUTTON" = "Hatırlatıcı Ekle";
 "REMINDERS_DATE_HOUR" = "Tarih - Saat";
 "REMINDERS_NOTES" = "Notlar";
+"REMINDERS_DATE_SELECT" = "Tarih Seçin";
 
 "SECTION_TITLE" = "Başlık";
 "SECTION_DESCRIPTION" = "Açıklama";

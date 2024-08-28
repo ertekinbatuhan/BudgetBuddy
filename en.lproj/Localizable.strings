@@ -68,6 +68,7 @@
 "REMINDERS_ADD_BUTTON" = "Add Reminder";
 "REMINDERS_DATE_HOUR" = "Date - Hour";
 "REMINDERS_NOTES" = "Notes";
+"REMINDERS_DATE_SELECT" = "Select Date";
 
 "SECTION_TITLE" = "Title";
 "SECTION_DESCRIPTION" = "Description";

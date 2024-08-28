@@ -15,7 +15,7 @@ struct DatePickerView: View {
         NavigationView {
             VStack {
                 DatePicker(
-                    "Tarih Seç",
+                    "REMINDERS_DATE_SELECT",
                     selection: $selectedDate,
                     displayedComponents: [.date, .hourAndMinute]
                 )
@@ -33,7 +33,7 @@ struct DatePickerView: View {
                 .font(.headline)
                 .padding()
             }
-            .navigationTitle("Tarih Seç")
+            .navigationTitle("REMINDERS_DATE_SELECT")
             .navigationBarTitleDisplayMode(.inline)
         }
     }
