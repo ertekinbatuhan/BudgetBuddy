@@ -15,7 +15,7 @@ struct BannerView: UIViewControllerRepresentable {
     func makeUIViewController(context: Context) -> UIViewController {
         
         let viewController = UIViewController()
-        bannerView.adUnitID = "ca-app-pub-7770161043131301/3810912876"
+        bannerView.adUnitID = ""
         bannerView.rootViewController = viewController
         viewController.view.addSubview(bannerView)
         

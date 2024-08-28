@@ -30,7 +30,7 @@ struct FinanceView: View {
                         .shadow(radius: 10)
                     
                     VStack {
-                        Text("CONVERSATION_TOTAL")
+                        Text("GENERAL_TOTAL")
                             .font(.subheadline)
                             .foregroundColor(.gray)
                             .padding(.bottom, 5)
@@ -49,16 +49,13 @@ struct FinanceView: View {
                 .padding(.top, 15)
                 
                 Picker("Select Type", selection: $selectedType) {
-                    Text("CONVERSATION_EXPENSES").tag(FinanceType.expense)
-                    Text("CONVERSATION_INCOME").tag(FinanceType.income)
+                    Text("FINANCE_TYPE_EXPENSE").tag(FinanceType.expense)
+                    Text("FINANCE_TYPE_INCOME").tag(FinanceType.income)
                 }
                 .pickerStyle(SegmentedPickerStyle())
                 .padding(.horizontal)
                 .padding(.bottom)
-             //   .onChange(of: selectedType) { //bura komple iptal
-               //     viewModel.resetFilters()
-                //    viewModel.filterFinances(viewModel.searchText) //bunu eklemiş sadece
-              //  }
+                
                 .onChange(of: selectedType) {
                     viewModel.selectedType = selectedType
                     viewModel.resetFilters()
@@ -86,7 +83,8 @@ struct FinanceView: View {
                         }
                     }
                 }
-                .navigationTitle("CONVERSATION_WELCOME_TITLE")
+                    
+                .navigationTitle("GENERAL_WELCOME_TITLE")
                 .toolbar {
                     ToolbarItem(placement: .navigationBarTrailing) {
                         Button {
@@ -128,9 +126,9 @@ struct FinanceView: View {
                             ContentUnavailableView {
                                 VStack {
                                     if selectedType == .expense {
-                                        Label("CONVERSATION_NOEXPENSES", systemImage: "tray.fill")
+                                        Label("GENERAL_NO_EXPENSES", systemImage: "tray.fill")
                                     } else {
-                                        Label("CONVERSATION_NOINCOME", systemImage: "arrow.up.circle.fill")
+                                        Label("GENERAL_NO_FINANCE", systemImage: "arrow.up.circle.fill")
                                     }
                                 }
                             }

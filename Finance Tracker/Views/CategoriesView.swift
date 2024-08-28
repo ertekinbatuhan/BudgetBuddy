@@ -31,7 +31,7 @@ struct CategoriesView: View {
                                     }
                                 } else {
                                     ContentUnavailableView {
-                                        Label("CONVERSATION_NOFINANCE", systemImage: "tray.fill")
+                                        Label("GENERAL_NO_FINANCE", systemImage: "tray.fill")
                                     }
                                 }
                             },
@@ -46,18 +46,18 @@ struct CategoriesView: View {
                                         Image(systemName: "trash")
                                             .foregroundColor(.red)
                                     }
-                                    .buttonStyle(PlainButtonStyle()) // Bu butonu daha az etkileşimli hale getirir.
+                                    .buttonStyle(PlainButtonStyle()) 
                                 }
                             }
                         )
                     }
                 }
             }
-            .navigationTitle("CONVERSATION_CATEGORIES")
+            .navigationTitle("GENERAL_CATEGORIES")
             .overlay {
                 if viewModel.allCategories.isEmpty {
                     ContentUnavailableView {
-                        Label("CONVERSATION_NOCATEGORIES", systemImage: "tray.fill")
+                        Label("GENERAL_NO_CATEGORIES", systemImage: "tray.fill")
                     }
                 }
             }
@@ -77,21 +77,21 @@ struct CategoriesView: View {
             } content: {
                 NavigationStack {
                     List {
-                        Section("CATEGORY_TITLE") {
+                        Section("GENERAL_CATEGORIES") {
                             TextField("CATEGORY_GENERAL", text: $viewModel.categoryName)
                         }
                     }
-                    .navigationTitle("CONVERSION_CATEGORYNAME")
+                    .navigationTitle("GENERAL_CATEGORY_NAME")
                     .navigationBarTitleDisplayMode(.inline)
                     .toolbar {
                         ToolbarItem(placement: .topBarLeading) {
-                            Button("CANCEL_BUTTON") {
+                            Button("GENERAL_CANCEL_BUTTON") {
                                 viewModel.addCategory = false
                             }
                             .tint(.red)
                         }
                         ToolbarItem(placement: .topBarTrailing) {
-                            Button("ADD_BUTTON") {
+                            Button("GENERAL_ADD_BUTTON") {
                                 viewModel.addNewCategory(context: context)
                             }
                             .disabled(viewModel.categoryName.isEmpty)
@@ -112,18 +112,17 @@ struct CategoriesView: View {
                 }
                 calculateViewModel.calculateCount += 1
             } label: {
-                Text("DELETE_BUTTON")
+                Text("GENERAL_DELETE_BUTTON")
             }
             Button(role: .cancel) {
                 viewModel.requestedCategory = nil
             } label: {
-                Text("CANCEL_BUTTON")
+                Text("GENERAL_CANCEL_BUTTON")
             }
         }
         .onAppear {
             viewModel.fetchCategories(categories: allCategories)
            
-            
         }
         .onChange(of: allCategories) {
             viewModel.fetchCategories(categories: allCategories)

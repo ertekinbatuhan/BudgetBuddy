@@ -9,6 +9,7 @@ import SwiftUI
 import SwiftData
 import Lottie
 import GoogleMobileAds
+
 struct ReminderView: View {
     
     @Query(sort: [SortDescriptor(\Reminder.date, order: .reverse)], animation: .snappy) private var reminders: [Reminder]
@@ -33,7 +34,7 @@ struct ReminderView: View {
                                 .frame(width: geometry.size.width * 0.8, height: geometry.size.width * 0.8)
                                 .shadow(radius: 10)
                             //No reminders yet
-                            Text("REMINDERS_TEXT")
+                            Text("REMINDERS_NO_REMINDERS")
                                 .font(.headline)
                                 .foregroundColor(.gray)
                                 .padding(.top, 10)
@@ -93,7 +94,7 @@ struct ReminderView: View {
                                             }
                                             calculateViewModel.calculateCount += 1
                                         } label: {
-                                            Label("DELETE_TRASH", systemImage: "trash")
+                                            Label("GENERAL_DELETE_BUTTON", systemImage: "trash")
                                         }
                                     }
                                 }

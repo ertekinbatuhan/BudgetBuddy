@@ -33,7 +33,7 @@ struct AddFinanceView: View {
                     }
                 }
                 
-                Section("SECTION_TYPESECTION") {
+                Section("SECTION_TYPE_SELECTION") {
                     HStack {
                         ForEach(FinanceType.allCases) { type in
                             Button(action: {
@@ -69,32 +69,32 @@ struct AddFinanceView: View {
                                         viewModel.category = category
                                     }
                                 }
-                                Button("NONE_BUTTON") {
+                                Button("GENERAL_NONE_BUTTON") {
                                     viewModel.category = nil
                                 }
                             } label: {
                                 if let categoryName = viewModel.category?.categoryName {
                                     Text(categoryName)
                                 } else {
-                                    Text("NONE_TEXT")
+                                    Text("GENERAL_NONE_TEXT")
                                 }
                             }
                         }
                     }
                 }
             }
-            .navigationTitle("ADDFINANCE")
+            .navigationTitle("FINANCE_ADD")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
-                    Button("CANCEL_BUTTON") {
+                    Button("GENERAL_CANCEL_BUTTON") {
                         dismiss()
                     }
                     .tint(.red)
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    Button("ADD_BUTTON") {
-                        if let category = viewModel.category {
+                    Button("GENERAL_ADD_BUTTON") {
+                        if viewModel.category != nil {
                             viewModel.addFinance(context: context)
                             dismiss()
                         }
