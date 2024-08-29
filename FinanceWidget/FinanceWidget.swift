@@ -2,7 +2,6 @@ import WidgetKit
 import SwiftUI
 import SwiftData
 
-
 //MARK: - Provider
 struct Provider: TimelineProvider {
     @MainActor func placeholder(in context: Context) -> SimpleEntry {
@@ -52,8 +51,6 @@ struct SimpleEntry: TimelineEntry {
         return totalIncome + totalExpense
     }
 }
-
-
 
 // MARK: - FinanceWidget
 struct FinanceWidget: Widget {
