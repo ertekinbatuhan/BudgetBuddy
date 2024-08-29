@@ -6,6 +6,22 @@
   
 */
 
+"WELCOME_TEXT" = "Welcome";
+"APP_NAME" = "BudgetBuddy";
+
+"FEATURE_INCOME_EXPENSE_TRACKING_TITLE" = "Income and Expense Tracking";
+"FEATURE_INCOME_EXPENSE_TRACKING_DESCRIPTION" = "Track all your financial transactions and keep them under control.";
+
+"FEATURE_CATEGORY_ANALYSIS_TITLE" = "Category-Based Analysis";
+"FEATURE_CATEGORY_ANALYSIS_DESCRIPTION" = "Analyze your expenses by category and optimize your budget.";
+
+"FEATURE_GRAPH_VISUALIZATION_TITLE" = "Visualize with Graphs";
+"FEATURE_GRAPH_VISUALIZATION_DESCRIPTION" = "Understand your financial situation better by visualizing it with graphs.";
+
+"NOTICE_TEXT" = "This app is designed to make personal finance management easier for you.";
+"NOTICE_LINK_TITLE" = "For any questions";
+
+"CONTINUE_BUTTON_TITLE" = "Continue";
 
 "TAB_REMINDERS" = "Reminders";
 "TAB_HOME" = "Home";

@@ -6,6 +6,23 @@
 */
 
 
+"WELCOME_TEXT" = "Hoş Geldiniz";
+"APP_NAME" = "BütçeDostu";
+
+"FEATURE_INCOME_EXPENSE_TRACKING_TITLE" = "Gelir ve Gider Takibi";
+"FEATURE_INCOME_EXPENSE_TRACKING_DESCRIPTION" = "Tüm finansal hareketlerinizi takip edin ve kontrol altında tutun.";
+
+"FEATURE_CATEGORY_ANALYSIS_TITLE" = "Kategorilere Göre Analiz";
+"FEATURE_CATEGORY_ANALYSIS_DESCRIPTION" = "Harcamalarınızı kategorilere göre analiz edin ve bütçenizi optimize edin.";
+
+"FEATURE_GRAPH_VISUALIZATION_TITLE" = "Grafikler ile Görselleştirin";
+"FEATURE_GRAPH_VISUALIZATION_DESCRIPTION" = "Finansal durumunuzu grafiklerle görselleştirerek daha iyi anlayın.";
+
+"NOTICE_TEXT" = "Bu uygulama, kişisel finans yönetiminizi daha kolay hale getirmek için tasarlandı.";
+"NOTICE_LINK_TITLE" = "Sorularınız için";
+
+"CONTINUE_BUTTON_TITLE" = "Devam Et";
+
 "TAB_REMINDERS" = "Hatırlatıcılar";
 "TAB_HOME" = "Ana Sayfa";
 "TAB_COINS" = "Coinler";
