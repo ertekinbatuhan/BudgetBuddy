@@ -23,6 +23,9 @@
 		C03DA92B2C80BD3B00E9E4DB /* FinanceWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D0D92A2C7334BB00E28C4D /* FinanceWidget.swift */; };
 		C03DA92D2C80BD5F00E9E4DB /* FinanceWidgetEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03DA92C2C80BD5F00E9E4DB /* FinanceWidgetEntryView.swift */; };
 		C03DA92F2C80BD6700E9E4DB /* FinanceWidgetEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03DA92C2C80BD5F00E9E4DB /* FinanceWidgetEntryView.swift */; };
+		C03DA9302C80C20500E9E4DB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C02F2F1F2C6C7C00006D8741 /* Localizable.strings */; };
+		C03DA9312C80C50100E9E4DB /* Number+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A2EA802C4FC34900DB9A14 /* Number+Extension.swift */; };
+		C03DA9322C80C50700E9E4DB /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A2EAAF2C4FD41900DB9A14 /* String+Extension.swift */; };
 		C04E528F2C541F7200566111 /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04E528E2C541F7200566111 /* Double+Extension.swift */; };
 		C04E52922C542E8700566111 /* NavigationAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04E52912C542E8700566111 /* NavigationAppearance.swift */; };
 		C055637A2C6BDB0700CA13AA /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05563792C6BDB0700CA13AA /* NotificationManager.swift */; };
@@ -559,6 +562,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C0D0D92D2C7334BC00E28C4D /* Assets.xcassets in Resources */,
+				C03DA9302C80C20500E9E4DB /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -595,12 +599,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C03DA9322C80C50700E9E4DB /* String+Extension.swift in Sources */,
 				C0D0D9382C7336F200E28C4D /* Finance.swift in Sources */,
 				C0D0D9392C73371100E28C4D /* Category.swift in Sources */,
 				C0D0D92B2C7334BB00E28C4D /* FinanceWidget.swift in Sources */,
 				C0D0D9372C73357500E28C4D /* FinanceType.swift in Sources */,
 				C03DA92F2C80BD6700E9E4DB /* FinanceWidgetEntryView.swift in Sources */,
 				C0D0D9292C7334BB00E28C4D /* FinanceWidgetBundle.swift in Sources */,
+				C03DA9312C80C50100E9E4DB /* Number+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

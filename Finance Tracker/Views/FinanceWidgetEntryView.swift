@@ -8,15 +8,15 @@
 import SwiftUI
 
 // MARK: - FinanceWidgetEntryView
-struct FinanceWidgetEntryView : View {
+struct FinanceWidgetEntryView: View {
     var entry: Provider.Entry
-
+    
     var body: some View {
         VStack(alignment: .leading) {
             VStack {
-                Text("Toplam")
+                Text(NSLocalizedString("GENERAL_TOTAL", comment: "Total amount"))
                     .font(.headline)
-                Text("\(entry.total, format: .currency(code: "TRY"))")
+                Text(NumberFormatter.currencyFormatter.string(from: NSNumber(value: entry.total)) ?? "\(entry.total)")
                     .font(.largeTitle)
                     .bold()
                     .lineLimit(1)
@@ -29,9 +29,9 @@ struct FinanceWidgetEntryView : View {
                 VStack {
                     Image(systemName: "arrow.up.circle.fill")
                         .foregroundColor(.green)
-                    Text("Gelir")
+                    Text(NSLocalizedString("FINANCE_TYPE_INCOME", comment: "Income"))
                         .font(.headline)
-                    Text("\(entry.totalIncome, format: .currency(code: "TRY"))")
+                    Text(NumberFormatter.currencyFormatter.string(from: NSNumber(value: entry.totalIncome)) ?? "\(entry.totalIncome)")
                         .font(.title2)
                         .lineLimit(1)
                         .truncationMode(.tail)
@@ -40,9 +40,9 @@ struct FinanceWidgetEntryView : View {
                 VStack {
                     Image(systemName: "arrow.down.circle.fill")
                         .foregroundColor(.red)
-                    Text("Gider")
+                    Text(NSLocalizedString("FINANCE_TYPE_EXPENSE", comment: "Expense"))
                         .font(.headline)
-                    Text("\(entry.totalExpense, format: .currency(code: "TRY"))")
+                    Text(NumberFormatter.currencyFormatter.string(from: NSNumber(value: entry.totalExpense)) ?? "\(entry.totalExpense)")
                         .font(.title2)
                         .lineLimit(1)
                         .truncationMode(.tail)
