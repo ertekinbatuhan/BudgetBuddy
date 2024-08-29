@@ -77,6 +77,11 @@
 "CATEGORY_TITLE" = "Title";
 "CATEGORY_GENERAL" = "General";
 
+
+"WIDGET_DISPLAY_NAME" = "BudgetBuddy Widget";
+"WIDGET_DESCRIPTION" = "Shows total income and expenses.";
+
+
 "REMINDERS_NO_REMINDERS" = "No reminders yet";
 "REMINDERS_DETAILS" = "Reminder Details";
 "REMINDERS_TITLE" = "My Reminders";

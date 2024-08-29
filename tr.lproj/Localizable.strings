@@ -78,6 +78,10 @@
 "CATEGORY_TITLE" = "Başlık";
 "CATEGORY_GENERAL" = "Genel";
 
+
+"WIDGET_DISPLAY_NAME" = "BütçeDostu Widget";
+"WIDGET_DESCRIPTION" = "Toplam gelir ve giderleri gösterir.";
+
 "REMINDERS_NO_REMINDERS" = "Henüz bir hatırlatıcı yok";
 "REMINDERS_DETAILS" = "Hatırlatıcı Detayları";
 "REMINDERS_TITLE" = "Hatırlatıcılarım";

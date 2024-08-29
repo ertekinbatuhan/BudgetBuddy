@@ -54,8 +54,8 @@ struct SimpleEntry: TimelineEntry {
 
 // MARK: - FinanceWidget
 struct FinanceWidget: Widget {
-    let kind: String = "BütçeDostuWidget"
-
+    let kind: String = "ButceDostuWidget"
+    
     var body: some WidgetConfiguration {
         StaticConfiguration(kind: kind, provider: Provider()) { entry in
             if #available(iOS 17.0, *) {
@@ -67,8 +67,8 @@ struct FinanceWidget: Widget {
                     .background(Color(UIColor.systemBackground))
             }
         }
-        .configurationDisplayName("BütçeDostu Widget")
-        .description("Toplam gelir ve giderleri gösterir.")
+        .configurationDisplayName(NSLocalizedString("WIDGET_DISPLAY_NAME", comment: "Display name for the widget"))
+        .description(NSLocalizedString("WIDGET_DESCRIPTION", comment: "Description for the widget"))
     }
 }
 
