@@ -1,7 +1,10 @@
-<h1 align="center">ButceDostu</h1>
+<div align="center" style="display: flex; flex-direction: column; align-items: center;">
+  <img src="https://github.com/user-attachments/assets/1041d199-3319-453f-a7e6-4f13bb786d86" alt="ButceDostu Icon" width="50" height="50">
+  <h1 style="margin-top: 10px; margin-bottom: 0;">ButceDostu</h1>
+</div>
 
 <p align="center">
-  A comprehensive finance tracking app to manage and visualize your expenses, income, and cryptocurrencies. Track categories like investments, salaries, shopping, debt payments, and monitor your cryptocurrency holdings.
+  ButceDostu is a comprehensive finance tracking app designed to manage and visualize your expenses, income, and cryptocurrencies. Track various categories such as investments, salaries, shopping, and debt payments, and monitor your     cryptocurrency holdings.
 </p>
 
 ## Features
