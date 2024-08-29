@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C009D2AD2C8057CD00549338 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C009D2AC2C8057CD00549338 /* Alamofire */; };
 		C01130342C70B6FA00D316E9 /* SummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01130332C70B6FA00D316E9 /* SummaryView.swift */; };
 		C018047E2C5D38430025BD03 /* FinanceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C018047D2C5D38420025BD03 /* FinanceType.swift */; };
 		C01F66EF2C74929C0090ADF3 /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01F66EE2C74929C0090ADF3 /* OnBoardingView.swift */; };
@@ -194,6 +195,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C02F2F2C2C6CB4F2006D8741 /* GoogleMobileAds in Frameworks */,
+				C009D2AD2C8057CD00549338 /* Alamofire in Frameworks */,
 				C01F66F32C74930D0090ADF3 /* UIOnboarding in Frameworks */,
 				C0EBE7442C6BF93200829ED0 /* Lottie in Frameworks */,
 			);
@@ -479,6 +481,7 @@
 				C0EBE7432C6BF93200829ED0 /* Lottie */,
 				C02F2F2B2C6CB4F2006D8741 /* GoogleMobileAds */,
 				C01F66F22C74930D0090ADF3 /* UIOnboarding */,
+				C009D2AC2C8057CD00549338 /* Alamofire */,
 			);
 			productName = "Finance Tracker";
 			productReference = C0D9031A2C4ED80A00D9AAE4 /* Finance Tracker.app */;
@@ -524,6 +527,7 @@
 				C0EBE7402C6BF8C800829ED0 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 				C02F2F2A2C6CB179006D8741 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */,
 				C01F66EC2C7492410090ADF3 /* XCRemoteSwiftPackageReference "UIOnboarding" */,
+				C009D2AB2C8057BA00549338 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = C0D9031B2C4ED80A00D9AAE4 /* Products */;
 			projectDirPath = "";
@@ -1063,6 +1067,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		C009D2AB2C8057BA00549338 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
+			};
+		};
 		C01F66EC2C7492410090ADF3 /* XCRemoteSwiftPackageReference "UIOnboarding" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/lascic/UIOnboarding.git";
@@ -1090,6 +1102,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		C009D2AC2C8057CD00549338 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C009D2AB2C8057BA00549338 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
 		C01F66F22C74930D0090ADF3 /* UIOnboarding */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = C01F66EC2C7492410090ADF3 /* XCRemoteSwiftPackageReference "UIOnboarding" */;

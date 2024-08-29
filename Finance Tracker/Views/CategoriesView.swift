@@ -11,12 +11,16 @@ import GoogleMobileAds
 
 struct CategoriesView: View {
     
-    @ObservedObject var viewModel: CategoriesViewModel = CategoriesViewModel()
-    @Query(animation: .snappy) private var allCategories: [Category]
+    // MARK: - Environment Variables
     @Environment(\.modelContext) private var context
-    private let adCoordinator = AdCoordinator.shared
-    @State private var calculateViewModel = CalculateViewModel()
     @Environment(\.colorScheme) var colorScheme
+    // MARK: - Queries
+    @Query(animation: .snappy) private var allCategories: [Category]
+    // MARK: - View Models
+    @ObservedObject var viewModel: CategoriesViewModel = CategoriesViewModel()
+    @State private var calculateViewModel = CalculateViewModel()
+    // MARK: - Ad Coordinator
+    private let adCoordinator = AdCoordinator.shared
     
     var body: some View {
         NavigationStack {

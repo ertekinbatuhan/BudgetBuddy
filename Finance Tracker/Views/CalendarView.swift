@@ -2,10 +2,13 @@ import SwiftUI
 import SwiftData
 
 struct CalendarView: View {
+    
+    // MARK: - Data Queries
     @Query(sort: [SortDescriptor(\Finance.date, order: .reverse)], animation: .snappy) private var allFinances: [Finance]
     @Query(sort: [SortDescriptor(\Category.categoryName)], animation: .snappy) private var allCategories: [Category]
+    // MARK: - Environment Variables
     @Environment(\.modelContext) private var context
-
+    // MARK: - UI State
     @State private var selectedDate = Date()
 
     var body: some View {
@@ -26,7 +29,6 @@ struct CalendarView: View {
                     }
                 }
                 .listStyle(InsetGroupedListStyle())
-                
                 HStack {
                     Text("GENERAL_TOTAL")
                         .font(.headline)

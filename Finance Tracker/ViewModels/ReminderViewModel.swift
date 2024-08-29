@@ -19,8 +19,10 @@ protocol ReminderViewModelProtocol {
 
 class ReminderViewModel: ObservableObject, ReminderViewModelProtocol {
     
+    // MARK: - Published Properties
     @Published var searchText = ""
-
+    
+    // MARK: - Filtering
     func filteredReminders(_ reminders: [Reminder]) -> [Reminder] {
         if searchText.isEmpty {
             return reminders
@@ -32,8 +34,8 @@ class ReminderViewModel: ObservableObject, ReminderViewModelProtocol {
         }
     }
     
+    // MARK: - Data Management
     func saveReminder(title: String?, date: Date?, notes: String?, context: ModelContext, completion: @escaping (Bool) -> Void) {
-        
         guard let title = title, !title.isEmpty,
               let date = date,
               let notes = notes, !notes.isEmpty else {
@@ -46,7 +48,7 @@ class ReminderViewModel: ObservableObject, ReminderViewModelProtocol {
         do {
             context.insert(newReminder)
             try context.save()
-          
+            
             scheduleNotification(for: newReminder)
             
             completion(true)
@@ -70,6 +72,7 @@ class ReminderViewModel: ObservableObject, ReminderViewModelProtocol {
         }
     }
     
+    // MARK: - Notification Management
     private func scheduleNotification(for reminder: Reminder?) {
         guard let reminder = reminder else {
             print("Reminder is nil, cannot schedule notification.")
@@ -80,10 +83,10 @@ class ReminderViewModel: ObservableObject, ReminderViewModelProtocol {
         content.title = reminder.title
         content.body = reminder.notes
         content.sound = .default
-           
+        
         let triggerDate = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute], from: reminder.date)
         let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDate, repeats: false)
-           
+        
         NotificationManager.shared.sendNotification(content: content, trigger: trigger)
     }
     

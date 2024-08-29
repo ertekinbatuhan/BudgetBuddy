@@ -9,10 +9,13 @@ import SwiftUI
 import SwiftData
 
 struct AddFinanceView: View {
-    
+
+    // MARK: - Environment Variables
     @Environment(\.dismiss) private var dismiss
     @Environment(\.modelContext) private var context
+    // MARK: - Observed Object
     @ObservedObject private var viewModel = AddFinanceViewModel()
+    // MARK: - Queries
     @Query(animation: .snappy) private var allCategories: [Category]
     
     var body: some View {

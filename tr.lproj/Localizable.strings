@@ -57,7 +57,7 @@
 "FINANCE_ENTER_TITLE" = "Başlığı buraya girin";
 "FINANCE_ENTER_DESCRIPTION" = "Açıklamayı buraya girin";
 "FINANCE_ENTER_AMOUNT" = "Miktarı buraya girin";
-
+"FINANCE_STATUS" = "Finansal Durum";
 "CATEGORY_TITLE" = "Başlık";
 "CATEGORY_GENERAL" = "Genel";
 

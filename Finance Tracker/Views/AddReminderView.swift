@@ -4,14 +4,16 @@ import GoogleMobileAds
 
 struct AddReminderView: View {
     
+    // MARK: - State Variables
     @State private var title = ""
     @State private var date = Date()
     @State private var notes = ""
     @State private var isNotificationRequested = false
     @State private var showDatePicker = false
-    
+    // MARK: - Environment Variables
     @Environment(\.presentationMode) private var presentationMode
     @Environment(\.modelContext) private var modelContext
+    // MARK: - View Models
     @ObservedObject var viewModel = ReminderViewModel()
     
     var body: some View {

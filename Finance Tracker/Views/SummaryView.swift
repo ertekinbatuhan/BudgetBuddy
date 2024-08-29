@@ -4,8 +4,11 @@ import SwiftData
 
 struct SummaryView: View {
     
+    // MARK: - Data Queries
     @Query(sort: [SortDescriptor(\Finance.date, order: .reverse)], animation: .snappy) private var allFinances: [Finance]
     @Query(sort: [SortDescriptor(\Category.categoryName)], animation: .snappy) private var allCategories: [Category]
+    
+    // MARK: - Environment Variables
     @Environment(\.modelContext) private var context
     @Environment(\.colorScheme) private var colorScheme
     
@@ -29,7 +32,7 @@ struct SummaryView: View {
                 
                 Spacer()
             }
-            .navigationTitle("Finansal Durum")
+            .navigationTitle("FINANCE_STATUS")
             .background(colorScheme == .dark ? Color.black : Color.white)
             .padding()
         }

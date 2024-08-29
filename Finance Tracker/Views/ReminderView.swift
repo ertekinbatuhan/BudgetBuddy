@@ -12,14 +12,19 @@ import GoogleMobileAds
 
 struct ReminderView: View {
     
-    @Query(sort: [SortDescriptor(\Reminder.date, order: .reverse)], animation: .snappy) private var reminders: [Reminder]
+    // MARK: - Environment Variables
     @Environment(\.modelContext) private var context: ModelContext
-    @State private var showAddReminder = false
-    @ObservedObject private var viewModel = ReminderViewModel()
     @Environment(\.colorScheme) var colorScheme
-    private  let adCoordinator = AdCoordinator.shared
-    @State private var  calculateViewModel = CalculateViewModel()
-    
+    // MARK: - Queries
+    @Query(sort: [SortDescriptor(\Reminder.date, order: .reverse)], animation: .snappy) private var reminders: [Reminder]
+    // MARK: - State Variables
+    @State private var showAddReminder = false
+    @State private var calculateViewModel = CalculateViewModel()
+    // MARK: - Observed Objects
+    @ObservedObject private var viewModel = ReminderViewModel()
+    // MARK: - Other Properties
+    private let adCoordinator = AdCoordinator.shared
+    // MARK: - Computed Properties
     private var groupedReminders: [Date: [Reminder]] {
         Dictionary(grouping: viewModel.filteredReminders(reminders), by: { Calendar.current.startOfDay(for: $0.date) })
     }

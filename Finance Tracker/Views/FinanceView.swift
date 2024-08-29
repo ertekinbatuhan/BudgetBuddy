@@ -10,15 +10,20 @@ import SwiftData
 
 struct FinanceView: View {
     
-    @Query(sort: [SortDescriptor(\Finance.date, order: .reverse)], animation: .snappy) private var allFinances: [Finance]
-    @Query(sort: [SortDescriptor(\Category.categoryName)], animation: .snappy) private var allCategories: [Category]
+    // MARK: - Environment Variables
     @Environment(\.modelContext) private var context
     @Environment(\.colorScheme) var colorScheme
+    // MARK: - Data Queries
+    @Query(sort: [SortDescriptor(\Finance.date, order: .reverse)], animation: .snappy) private var allFinances: [Finance]
+    @Query(sort: [SortDescriptor(\Category.categoryName)], animation: .snappy) private var allCategories: [Category]
+    // MARK: - UI State
     @Binding var currentTab: TabItem
     @State private var selectedType: FinanceType = .expense
+    // MARK: - View Models
     @StateObject private var viewModel = FinanceViewModel()
-    private let adCoordinator = AdCoordinator.shared
     @State private var calculateViewModel = CalculateViewModel()
+    // MARK: - Ad Coordinator
+    private let adCoordinator = AdCoordinator.shared
     
     var body: some View {
         NavigationStack {
@@ -61,7 +66,6 @@ struct FinanceView: View {
                     viewModel.resetFilters()
                     viewModel.createGroupedFinances(allFinances)
                 }
-                
                 List {
                     ForEach(viewModel.groupedFinances) { group in
                         Section(header: Text(group.groupTitle).font(.headline).foregroundColor(.primary)) {
@@ -83,7 +87,6 @@ struct FinanceView: View {
                         }
                     }
                 }
-                
                 .navigationTitle("GENERAL_WELCOME_TITLE")
                 .toolbar {
                     ToolbarItem(placement: .navigationBarTrailing) {
@@ -104,7 +107,7 @@ struct FinanceView: View {
                     viewModel.allFinances = allFinances
                     viewModel.createGroupedFinances(allFinances)
                 }
-                .onChange(of: allCategories) { 
+                .onChange(of: allCategories) {
                     viewModel.allCategories = allCategories
                 }
                 .onChange(of: viewModel.searchText) {
@@ -115,7 +118,6 @@ struct FinanceView: View {
                         viewModel.filterFinances(viewModel.searchText)
                     }
                 }
-                
                 .sheet(isPresented: $viewModel.addFinance) {
                     AddFinanceView().interactiveDismissDisabled()
                 }
