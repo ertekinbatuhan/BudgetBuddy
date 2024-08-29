@@ -20,6 +20,9 @@
 		C02F2F212C6C7C00006D8741 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C02F2F1F2C6C7C00006D8741 /* Localizable.strings */; };
 		C02F2F272C6C9956006D8741 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C02F2F252C6C9956006D8741 /* InfoPlist.strings */; };
 		C02F2F2C2C6CB4F2006D8741 /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = C02F2F2B2C6CB4F2006D8741 /* GoogleMobileAds */; };
+		C03DA92B2C80BD3B00E9E4DB /* FinanceWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D0D92A2C7334BB00E28C4D /* FinanceWidget.swift */; };
+		C03DA92D2C80BD5F00E9E4DB /* FinanceWidgetEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03DA92C2C80BD5F00E9E4DB /* FinanceWidgetEntryView.swift */; };
+		C03DA92F2C80BD6700E9E4DB /* FinanceWidgetEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03DA92C2C80BD5F00E9E4DB /* FinanceWidgetEntryView.swift */; };
 		C04E528F2C541F7200566111 /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04E528E2C541F7200566111 /* Double+Extension.swift */; };
 		C04E52922C542E8700566111 /* NavigationAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04E52912C542E8700566111 /* NavigationAppearance.swift */; };
 		C055637A2C6BDB0700CA13AA /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05563792C6BDB0700CA13AA /* NotificationManager.swift */; };
@@ -119,6 +122,7 @@
 		C02F2F262C6C9956006D8741 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C02F2F282C6C9964006D8741 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C02F2F292C6C9AAE006D8741 /* Finance-Tracker-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Finance-Tracker-Info.plist"; sourceTree = SOURCE_ROOT; };
+		C03DA92C2C80BD5F00E9E4DB /* FinanceWidgetEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceWidgetEntryView.swift; sourceTree = "<group>"; };
 		C04E528E2C541F7200566111 /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
 		C04E52912C542E8700566111 /* NavigationAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationAppearance.swift; sourceTree = "<group>"; };
 		C05563792C6BDB0700CA13AA /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
@@ -233,6 +237,7 @@
 				C0CCC0752C6DE3DF00F03AA3 /* BannerView.swift */,
 				C01130332C70B6FA00D316E9 /* SummaryView.swift */,
 				C0F34BE12C71E261004D31C4 /* CalendarView.swift */,
+				C03DA92C2C80BD5F00E9E4DB /* FinanceWidgetEntryView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -594,6 +599,7 @@
 				C0D0D9392C73371100E28C4D /* Category.swift in Sources */,
 				C0D0D92B2C7334BB00E28C4D /* FinanceWidget.swift in Sources */,
 				C0D0D9372C73357500E28C4D /* FinanceType.swift in Sources */,
+				C03DA92F2C80BD6700E9E4DB /* FinanceWidgetEntryView.swift in Sources */,
 				C0D0D9292C7334BB00E28C4D /* FinanceWidgetBundle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -624,6 +630,7 @@
 				C055637A2C6BDB0700CA13AA /* NotificationManager.swift in Sources */,
 				C0A2EA752C4FA77900DB9A14 /* CircularProgressView.swift in Sources */,
 				C01130342C70B6FA00D316E9 /* SummaryView.swift in Sources */,
+				C03DA92D2C80BD5F00E9E4DB /* FinanceWidgetEntryView.swift in Sources */,
 				C0264D912C7FA6CD00CDFD0E /* FinanceIconView.swift in Sources */,
 				C0D903362C4EE0A500D9AAE4 /* AddFinanceView.swift in Sources */,
 				C0A81BC42C501E9B005AF972 /* CategoriesViewModel.swift in Sources */,
@@ -647,6 +654,7 @@
 				C0CCC0762C6DE3DF00F03AA3 /* BannerView.swift in Sources */,
 				C01F66F12C7492D60090ADF3 /* UIOnboardingHelper.swift in Sources */,
 				C0D903382C4EE97B00D9AAE4 /* FinanceCardView.swift in Sources */,
+				C03DA92B2C80BD3B00E9E4DB /* FinanceWidget.swift in Sources */,
 				C06263512C5AA8C1001090CB /* TabItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

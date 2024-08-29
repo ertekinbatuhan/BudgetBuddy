@@ -2,6 +2,8 @@ import WidgetKit
 import SwiftUI
 import SwiftData
 
+
+//MARK: - Provider
 struct Provider: TimelineProvider {
     @MainActor func placeholder(in context: Context) -> SimpleEntry {
         SimpleEntry(date: Date(), totalIncome: 0.0, totalExpense: 0.0)
@@ -40,6 +42,7 @@ struct Provider: TimelineProvider {
     }
 }
 
+// MARK: - SimpleEntry
 struct SimpleEntry: TimelineEntry {
     let date: Date
     let totalIncome: Double
@@ -50,52 +53,9 @@ struct SimpleEntry: TimelineEntry {
     }
 }
 
-struct FinanceWidgetEntryView : View {
-    var entry: Provider.Entry
 
-    var body: some View {
-        VStack(alignment: .leading) {
-            VStack {
-                Text("Toplam")
-                    .font(.headline)
-                Text("\(entry.total, format: .currency(code: "TRY"))")
-                    .font(.largeTitle)
-                    .bold()
-                    .lineLimit(1)
-                    .truncationMode(.tail) 
-            }
-            .frame(maxWidth: .infinity)
-            .padding(.bottom, 10)
-            
-            HStack {
-                VStack {
-                    Image(systemName: "arrow.up.circle.fill")
-                        .foregroundColor(.green)
-                    Text("Gelir")
-                        .font(.headline)
-                    Text("\(entry.totalIncome, format: .currency(code: "TRY"))")
-                        .font(.title2)
-                        .lineLimit(1)
-                        .truncationMode(.tail)
-                }
-                Spacer()
-                VStack {
-                    Image(systemName: "arrow.down.circle.fill")
-                        .foregroundColor(.red)
-                    Text("Gider")
-                        .font(.headline)
-                    Text("\(entry.totalExpense, format: .currency(code: "TRY"))")
-                        .font(.title2)
-                        .lineLimit(1)
-                        .truncationMode(.tail)
-                }
-            }
-            .padding(.horizontal)
-        }
-        .padding()
-    }
-}
 
+// MARK: - FinanceWidget
 struct FinanceWidget: Widget {
     let kind: String = "BütçeDostuWidget"
 
@@ -115,6 +75,7 @@ struct FinanceWidget: Widget {
     }
 }
 
+// MARK: - Preview
 #Preview(as: .systemSmall) {
     FinanceWidget()
 } timeline: {
