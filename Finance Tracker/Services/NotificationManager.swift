@@ -8,8 +8,10 @@
 import Foundation
 import UserNotifications
 
+// MARK: - NotificationManager Class
 class NotificationManager: NSObject, UNUserNotificationCenterDelegate {
     
+    // MARK: - Shared Instance
     static let shared = NotificationManager()
     
     private override init() {
@@ -23,6 +25,7 @@ class NotificationManager: NSObject, UNUserNotificationCenterDelegate {
         }
     }
     
+    // MARK: - Notification Methods
     func sendNotification(content: UNMutableNotificationContent, trigger: UNNotificationTrigger) {
         let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
         
@@ -35,6 +38,7 @@ class NotificationManager: NSObject, UNUserNotificationCenterDelegate {
         }
     }
     
+    // MARK: - UNUserNotificationCenterDelegate
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
         completionHandler([.banner, .list, .sound])
     }

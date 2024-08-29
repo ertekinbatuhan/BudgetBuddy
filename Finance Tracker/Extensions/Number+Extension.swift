@@ -8,6 +8,9 @@
 import Foundation
 
 extension NumberFormatter {
+    
+    // MARK: - Currency Formatting
+    /// A `NumberFormatter` instance configured to format numbers as currency.
     static var currencyFormatter: NumberFormatter {
         let formatter = NumberFormatter()
         formatter.numberStyle = .currency
@@ -26,6 +29,8 @@ extension NumberFormatter {
         return formatter
     }
     
+    // MARK: - Decimal Formatting
+    /// A `NumberFormatter` instance configured to format numbers as decimal values.
     static var decimalFormatter: NumberFormatter {
         let formatter = NumberFormatter()
         formatter.numberStyle = .decimal

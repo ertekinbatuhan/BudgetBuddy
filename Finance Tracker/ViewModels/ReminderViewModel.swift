@@ -9,6 +9,7 @@ import SwiftUI
 import SwiftData
 import UserNotifications
 
+// MARK: - Protocol
 protocol ReminderViewModelProtocol {
     var searchText: String { get set }
     func saveReminder(title: String?, date: Date?, notes: String?, context: ModelContext, completion: @escaping (Bool) -> Void)

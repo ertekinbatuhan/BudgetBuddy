@@ -2,6 +2,7 @@ import Foundation
 import SwiftUI
 import SwiftData
 
+//MARK: - Protocol
 protocol AddFinanceViewModelProtocol {
     func addFinance(context: ModelContext)
 }

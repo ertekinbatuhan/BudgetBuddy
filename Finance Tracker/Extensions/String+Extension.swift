@@ -9,12 +9,14 @@ import SwiftData
 import SwiftUI
 
 extension Finance {
+    
+    // MARK: - Currency String Formatter
     @Transient
     var currencyString: String {
         let formatter = NumberFormatter()
         formatter.numberStyle = .currency
         formatter.currencySymbol = Locale.current.identifier == "tr_TR" ? "₺" : "$"
-
+        
         return formatter.string(for: amount) ?? ""
     }
 }

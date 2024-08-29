@@ -8,6 +8,7 @@
 import SwiftUI
 import SwiftData
 
+// MARK: - Protocol
 protocol FinanceViewModelProtocol {
     func totalAmount(for type: FinanceType) -> Double
     func filterFinances(_ text: String)

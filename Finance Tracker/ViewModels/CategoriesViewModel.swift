@@ -8,6 +8,7 @@
 import SwiftUI
 import SwiftData
 
+// MARK: - Protocol
 protocol CategoriesViewModelProtocol {
     func fetchCategories(categories: [Category])
     func addNewCategory(context: ModelContext)
