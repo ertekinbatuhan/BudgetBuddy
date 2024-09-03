@@ -1,11 +1,13 @@
 import SwiftUI
 
+// MARK: - FinanceCardView
+// A view displaying detailed information about a financial record.
 struct FinanceCardView: View {
     
     @Bindable var finance: Finance
-    
     var displayTag: Bool = true
     
+    // MARK: - Body
     var body: some View {
         HStack {
             VStack(alignment: .leading) {
@@ -18,7 +20,7 @@ struct FinanceCardView: View {
                 if let categoryName = finance.category?.categoryName, displayTag {
                     Text(categoryName)
                         .font(.caption2)
-                        .foregroundColor(.white) 
+                        .foregroundColor(.white)
                         .padding(.horizontal, 10)
                         .padding(.vertical, 4)
                         .background(
@@ -30,7 +32,6 @@ struct FinanceCardView: View {
                             .clipShape(RoundedRectangle(cornerRadius: 8))
                         )
                 }
-                
             }
             .lineLimit(3)
             
@@ -41,4 +42,3 @@ struct FinanceCardView: View {
         }
     }
 }
-

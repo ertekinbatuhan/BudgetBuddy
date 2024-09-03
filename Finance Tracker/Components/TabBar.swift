@@ -5,14 +5,19 @@
 //  Created by Batuhan Berk Ertekin on 22.07.2024.
 //
 
+
 import SwiftUI
 import AppTrackingTransparency
 
+// MARK: - TabBar
+// Main tab bar view containing different tabs for the app.
 struct TabBar: View {
     
+    // MARK: - Properties
     @State private var selectedTab: TabItem = .home
     @AppStorage("$ShowingOnBoarding") private var showingOnBoarding = true
     
+    // MARK: - Body
     var body: some View {
         TabView(selection: $selectedTab) {
             
@@ -24,15 +29,15 @@ struct TabBar: View {
             
             SummaryView().tag(TabItem.summary).tabItem{
                 Image(systemName: TabItem.summary.imageName)
-                Text(TabItem.calendar.title)
-            }
-            
-            CalendarView().tag(TabItem.calendar).tabItem{
-                Image(systemName: TabItem.calendar.imageName)
                 Text(TabItem.summary.title)
             }
             
-            ReminderView().tag(TabItem.home).tabItem {
+            CoinsView().tag(TabItem.coins).tabItem{
+                Image(systemName: TabItem.coins.imageName)
+                Text(TabItem.coins.title)
+            }
+            
+            ReminderView().tag(TabItem.reminders).tabItem {
                 Image(systemName: TabItem.reminders.imageName)
                 Text(TabItem.reminders.title)
             }
@@ -40,7 +45,6 @@ struct TabBar: View {
             CategoriesView().tag(TabItem.categories).tabItem {
                 Image(systemName: TabItem.categories.imageName)
                 Text(TabItem.categories.title)
-
             }
         }
         .fullScreenCover(isPresented: $showingOnBoarding, content: {

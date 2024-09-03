@@ -7,9 +7,13 @@
 
 import SwiftUI
 
+// MARK: - FinanceIconView
+// A view that displays an icon representing the type of financial transaction.
 struct FinanceIconView: View {
+    // MARK: - Properties
     let type: FinanceType?
-
+    
+    // MARK: - Body
     var body: some View {
         switch type {
         case .income:

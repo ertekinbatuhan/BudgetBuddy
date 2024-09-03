@@ -7,10 +7,14 @@
 
 import SwiftUI
 
+// MARK: - DatePickerView
+// A view for selecting a date and time.
 struct DatePickerView: View {
+    // MARK: - Binding Properties
     @Binding var selectedDate: Date
     @Binding var isPresented: Bool
     
+    // MARK: - Body
     var body: some View {
         NavigationView {
             VStack {

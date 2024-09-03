@@ -7,12 +7,16 @@
 
 import SwiftUI
 
+// MARK: - InfoCardView
+// A view displaying a card with a title and an amount.
 struct InfoCardView: View {
+    // MARK: - Properties
     let title: LocalizedStringKey
     let amount: Double
     let color: Color
     @Environment(\.colorScheme) private var colorScheme
     
+    // MARK: - Body
     var body: some View {
         VStack {
             Text(title)
