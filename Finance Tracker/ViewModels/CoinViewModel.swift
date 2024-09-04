@@ -31,7 +31,7 @@ class CoinViewModel: ObservableObject, CoinViewModelProtocol{
     
     // MARK: - Initialization
     // Initialization logic and setup here.
-    init(coinService: CoinServiceProtocol = CoinService()) {
+    init(coinService: CoinServiceProtocol = CoinService.shared) {
         self.coinService = coinService
         fetchCoins()
     }

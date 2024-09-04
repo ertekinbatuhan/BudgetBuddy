@@ -15,7 +15,13 @@ protocol CoinServiceProtocol {
 
 // MARK: - CoinService
 // Implements CoinServiceProtocol to fetch coin data.
-class CoinService : CoinServiceProtocol{
+class CoinService : CoinServiceProtocol {
+    
+    // MARK: - Singleton Instance
+    static let shared = CoinService()
+    
+    // Private initializer to prevent multiple instances.
+    private init() {}
     
     // MARK: - fetchCoins
     // Fetches coin data from the API and handles the response.
