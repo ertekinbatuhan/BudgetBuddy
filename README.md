@@ -1,16 +1,18 @@
 <div align="center" style="display: flex; flex-direction: column; align-items: center;">
   <img src="https://github.com/user-attachments/assets/1041d199-3319-453f-a7e6-4f13bb786d86" alt="ButceDostu Icon" width="50" height="50">
-  <h1 style="margin-top: 10px; margin-bottom: 0;">ButceDostu</h1>
+  <h1 style="margin-top: 10px; margin-bottom: 0;">BütçeDostu</h1>
 </div>
 
 <p align="center">
-  ButceDostu is a comprehensive finance tracking app designed to manage and visualize your expenses, income, and cryptocurrencies. Track various categories such as investments, salaries, shopping, and debt payments, and monitor your     cryptocurrency holdings.
+  BütçeDostu is a comprehensive finance tracking app designed to manage and visualize your expenses, income, and cryptocurrencies. Track various categories such as investments, salaries, shopping, and debt payments, and monitor your cryptocurrency holdings. Plus, leverage advanced AI features to gain insights and recommendations on your financial habits.
 </p>
+
 
 ## Features
 
 - Track and visualize your expenses and income with detailed charts and graphs.
 - Monitor and manage different financial categories such as investments, salaries, shopping, and debt payments.
+- Utilize integrated AI features to receive personalized insights and recommendations on your financial management.
 - View detailed summaries of your financial status, including total income, expenses, and balance.
 - Analyze trends over time with historical data views and interactive charts.
 - Monitor your cryptocurrency holdings and track their performance.
@@ -32,12 +34,20 @@
 
 - **Alamofire**: 
   - A robust networking library for Swift, facilitating smooth and efficient handling of network requests and API interactions.
+ 
+- **Google Generative AI**: 
+  - Used for advanced AI-driven insights and recommendations, enhancing financial management with personalized feedback and analysis.
 
 - **Charts**: 
   - A powerful charting library for Swift, used to create various types of charts and graphs for visualizing financial data.
 
 - **Lottie**: 
   - Integrated for smooth animations, providing an engaging and visually appealing user experience.
+    
+
+  
+  
+
 
 ## Architecture Used 
 The ButceDostu app is built using the MVVM (Model-View-ViewModel) architectural pattern. This architecture helps to separate the business logic and data handling from the user interface, making the app more modular, testable, and maintainable.
