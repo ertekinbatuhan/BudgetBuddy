@@ -20,8 +20,7 @@
 - Available in both English and Turkish, providing a personalized experience in multiple languages.
 
 ## Screenshots
-![0x0ss-6](https://github.com/user-attachments/assets/f06958d5-20d7-4b1a-a98c-042924183a50)
-
+![Apple iPhone 11 Pro Max Presentation (1)](https://github.com/user-attachments/assets/3810cdd1-170f-46c1-aa39-226fbae0fa90)
 
 ## Technologies Used
 
