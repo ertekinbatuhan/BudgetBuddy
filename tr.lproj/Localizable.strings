@@ -7,7 +7,7 @@
 
 
 "WELCOME_TEXT" = "Hoş Geldiniz";
-"APP_NAME" = "BütçeDostu";
+"APP_NAME" = "BütçeRehberi";
 
 "FEATURE_INCOME_EXPENSE_TRACKING_TITLE" = "Gelir ve Gider Takibi";
 "FEATURE_INCOME_EXPENSE_TRACKING_DESCRIPTION" = "Tüm finansal hareketlerinizi takip edin ve kontrol altında tutun.";
@@ -31,9 +31,10 @@
 
 "TAB_REMINDERS_TITLE" = "Hatırlatıcılar";
 "TAB_HOME_TITLE" = "Ana Sayfa";
-"TAB_COINS_TITLE" = "Coinler";
+"TAB_COINS_TITLE" = "Coin";
 "TAB_CATEGORIES_TITLE" = "Kategoriler";
 "TAB_CALENDAR_TITLE" = "Tarihsel Bakış";
+"TAB_SUMMARY_TITLE" = "Finansal Özet";
 "TAB_OVERVIEW_TITLE" = "Genel Bakış";
  
 "LOGIN_EMAIL_PLACEHOLDER" = "E-mail";
@@ -79,7 +80,7 @@
 "CATEGORY_GENERAL" = "Genel";
 
 
-"WIDGET_DISPLAY_NAME" = "BütçeDostu Widget";
+"WIDGET_DISPLAY_NAME" = "BütçeRehberi Widget";
 "WIDGET_DESCRIPTION" = "Toplam gelir ve giderleri gösterir.";
 
 "REMINDERS_NO_REMINDERS" = "Henüz bir hatırlatıcı yok";
@@ -105,6 +106,12 @@
 "COINS_TOP_LOSERS" = "Çok Düşenler";
 "COINS_ALL_COINS" = "Tüm Coinler";
 "COINS_LIVE_PRICES" = "Gecikmeli Fiyatlar";
+
+"WELCOME_MESSAGE_AI" = "BütçeDostu AI Hoşgeldiniz";
+"PROMPT_PLACEHOLDER_AI" = "Sorunuzu buraya yazın";
+"LOADING_MESSAGE_AI" = "Nasıl yardımcı olabilirim ?";
+"ERROR_MESSAGE_AI" = "Bir şeyler yanlış gitti";
+"NO_RESULT_MESSAGE_AI" = "Sonuç bulunamadı";
 
 
 

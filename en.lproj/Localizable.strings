@@ -25,7 +25,7 @@
 
 "TAB_REMINDERS" = "Reminders";
 "TAB_HOME" = "Home";
-"TAB_COINS" = "Coins";
+"TAB_COINS" = "Coin";
 "TAB_CATEGORIES" = "Categories";
 "TAB_OVERVIEW" = "Finance Status";
 
@@ -105,3 +105,9 @@
 "COINS_TOP_LOSERS" = "Top Losers";
 "COINS_ALL_COINS" = "All Coins";
 "COINS_LIVE_PRICES" = "Daily Prices";
+
+"WELCOME_MESSAGE_AI" = "Welcome to BudgetBuddy AI";
+"PROMPT_PLACEHOLDER_AI" = "You can ask anything";
+"LOADING_MESSAGE_AI" = "How can I assist you?";
+"ERROR_MESSAGE_AI" = "Something went wrong";
+"NO_RESULT_MESSAGE_AI" = "No result found";
