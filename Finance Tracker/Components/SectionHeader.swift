@@ -11,7 +11,7 @@ import SwiftUI
 // A view that displays a section header with a title.
 struct SectionHeader: View {
     // MARK: - Properties
-    let title: String
+    let title: LocalizedStringKey
     
     // MARK: - Environment
     @Environment(\.colorScheme) var colorScheme
