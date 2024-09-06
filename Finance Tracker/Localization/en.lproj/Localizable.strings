@@ -1,0 +1,113 @@
+/* 
+  Localizable.strings
+  Finance Tracker
+
+  Created by Batuhan Berk Ertekin on 14.08.2024.
+  
+*/
+
+"WELCOME_TEXT" = "Welcome";
+"APP_NAME" = "BudgetBuddy";
+
+"FEATURE_INCOME_EXPENSE_TRACKING_TITLE" = "Income and Expense Tracking";
+"FEATURE_INCOME_EXPENSE_TRACKING_DESCRIPTION" = "Track all your financial transactions and keep them under control.";
+
+"FEATURE_CATEGORY_ANALYSIS_TITLE" = "Category-Based Analysis";
+"FEATURE_CATEGORY_ANALYSIS_DESCRIPTION" = "Analyze your expenses by category and optimize your budget.";
+
+"FEATURE_GRAPH_VISUALIZATION_TITLE" = "Visualize with Graphs";
+"FEATURE_GRAPH_VISUALIZATION_DESCRIPTION" = "Understand your financial situation better by visualizing it with graphs.";
+
+"NOTICE_TEXT" = "This app is designed to make personal finance management easier for you.";
+"NOTICE_LINK_TITLE" = "For any questions";
+
+"CONTINUE_BUTTON_TITLE" = "Continue";
+
+"TAB_REMINDERS" = "Reminders";
+"TAB_HOME" = "Home";
+"TAB_COINS" = "Coin";
+"TAB_CATEGORIES" = "Categories";
+"TAB_OVERVIEW" = "Finance Status";
+
+"TAB_REMINDERS_TITLE" = "Reminders";
+"TAB_HOME_TITLE" = "Home";
+"TAB_COINS_TITLE" = "Coins";
+"TAB_CATEGORIES_TITLE" = "Categories";
+"TAB_CALENDAR_TITLE" = "Historical View";
+"TAB_OVERVIEW_TITLE" = "Summary View";
+
+"LOGIN_EMAIL_PLACEHOLDER" = "E-mail";
+"LOGIN_PASSWORD_PLACEHOLDER" = "Password";
+"LOGIN_SIGNIN_BUTTON" = "Sign In";
+"LOGIN_NO_ACCOUNT" = "Don't have an account?";
+"LOGIN_SIGNUP_BUTTON" = "Sign Up";
+"LOGIN_ALREADY_HAVE_ACCOUNT" = "Already have an account?";
+
+"GENERAL_TODAY" = "Today";
+"GENERAL_YESTERDAY" = "Yesterday";
+"GENERAL_NO_INCOME" = "No Income";
+"GENERAL_TOTAL" = "Total";
+"GENERAL_EXPENSES" = "Expenses";
+"GENERAL_INCOME" = "Income";
+"GENERAL_WELCOME_TITLE" = "Welcome";
+"GENERAL_NO_EXPENSES" = "No expenses";
+"GENERAL_NO_FINANCE" = "No finance";
+"GENERAL_CATEGORIES" = "Categories";
+"GENERAL_NO_CATEGORIES" = "No categories";
+"GENERAL_LOGOUT_BUTTON" = "Log Out";
+"GENERAL_CATEGORY_NAME" = "Category Name";
+"GENERAL_CANCEL_BUTTON" = "Cancel";
+"GENERAL_ADD_BUTTON" = "Add";
+"GENERAL_DELETE_BUTTON" = "Delete";
+"GENERAL_SEARCH_TITLE" = "Search";
+"GENERAL_NONE_BUTTON" = "None";
+"GENERAL_NONE_TEXT" = "None";
+"GENERAL_AMOUNT_ICON" = "$";
+
+"ALERT_DELETE_CATEGORY" = "If you delete a category, all the associated finances will be deleted too.";
+
+"FINANCE_ADD" = "Add Finance";
+"FINANCE_TYPE_EXPENSE" = "Expense";
+"FINANCE_TYPE_INCOME" = "Income";
+"FINANCE_ENTER_TITLE" = "Enter title here";
+"FINANCE_ENTER_DESCRIPTION" = "Enter description here";
+"FINANCE_ENTER_AMOUNT" = "Enter amount here";
+"FINANCE_STATUS" = "Finance Status";
+
+"CATEGORY_TITLE" = "Title";
+"CATEGORY_GENERAL" = "General";
+
+
+"WIDGET_DISPLAY_NAME" = "BudgetBuddy Widget";
+"WIDGET_DESCRIPTION" = "Shows total income and expenses.";
+
+
+"REMINDERS_NO_REMINDERS" = "No reminders yet";
+"REMINDERS_DETAILS" = "Reminder Details";
+"REMINDERS_TITLE" = "My Reminders";
+"REMINDERS_SAVE_BUTTON" = "Save";
+"REMINDERS_CANCEL_BUTTON" = "Cancel";
+"REMINDERS_ADD_BUTTON" = "Add Reminder";
+"REMINDERS_DATE_HOUR" = "Date - Hour";
+"REMINDERS_NOTES" = "Notes";
+"REMINDERS_DATE_SELECT" = "Select Date";
+"REMINDERS_ENTER_TITLE" = "Enter reminder title";
+"REMINDERS_TITLEE" = "Reminder Title";
+
+"SECTION_TITLE" = "Title";
+"SECTION_DESCRIPTION" = "Description";
+"SECTION_AMOUNT" = "Amount";
+"SECTION_TYPE_SELECTION" = "Type Selection";
+"SECTION_DATE" = "Date";
+"SECTION_CATEGORY" = "Category";
+
+"COINS_TOP_GAINERS" = "Top Gainers";
+"COINS_TOP_LOSERS" = "Top Losers";
+"COINS_ALL_COINS" = "All Coins";
+"COINS_LIVE_PRICES" = "Daily Prices";
+
+"WELCOME_MESSAGE_AI" = "Welcome to BudgetBuddy AI";
+"PROMPT_PLACEHOLDER_AI" = "You can ask anything";
+"LOADING_MESSAGE_AI" = "How can I assist you?";
+"ERROR_MESSAGE_AI" = "Something went wrong";
+"NO_RESULT_MESSAGE_AI" = "No result found";
