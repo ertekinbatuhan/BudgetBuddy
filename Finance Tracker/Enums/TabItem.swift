@@ -13,8 +13,7 @@ enum TabItem: String {
     case coins = "TAB_COINS"
     case categories = "TAB_CATEGORIES"
     case summary = "TAB_OVERVIEW"
-    case calendar = "TAB_CALENDAR"
-
+    
     var imageName: String {
         switch self {
         case .reminders:
@@ -27,8 +26,7 @@ enum TabItem: String {
             return "bitcoinsign.circle"
         case .categories:
             return "list.clipboard.fill"
-        case .calendar:
-            return "paperplane.fill"
+      
         }
     
     }
@@ -40,15 +38,12 @@ enum TabItem: String {
         case .home:
             return NSLocalizedString("TAB_HOME_TITLE", comment: "")
         case .summary:
-            return NSLocalizedString("TAB_CALENDAR_TITLE", comment: "")
+            return NSLocalizedString("TAB_SUMMARY_TITLE", comment: "")
         case .coins:
             return NSLocalizedString("TAB_COINS_TITLE", comment: "")
         case .categories:
             return NSLocalizedString("TAB_CATEGORIES_TITLE", comment: "")
-        case .calendar:
-            return NSLocalizedString("TAB_OVERVIEW_TITLE", comment: "")
         }
     }
-
 }
 
