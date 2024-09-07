@@ -2,12 +2,12 @@
   <table>
     <tr>
       <td><img src="https://github.com/user-attachments/assets/1041d199-3319-453f-a7e6-4f13bb786d86" alt="ButceDostu Icon" width="50" height="50"></td>
-      <td><h1>BütçeDostu</h1></td>
+      <td><h1>Budget Buddy</h1></td>
     </tr>
   </table>
 </div>
 <p align="center">
-  BütçeDostu is a comprehensive finance tracking app designed to manage and visualize your expenses, income, and cryptocurrencies. Track various categories such as investments, salaries, shopping, and debt payments, and monitor your cryptocurrency holdings. Plus, leverage advanced AI features to gain insights and recommendations on your financial habits.
+  Budget Buddy is a comprehensive finance tracking app designed to manage and visualize your expenses, income, and cryptocurrencies. Track various categories such as investments, salaries, shopping, and debt payments, and monitor your cryptocurrency holdings. Plus, leverage advanced AI features to gain insights and recommendations on your financial habits.
 </p>
 
 
