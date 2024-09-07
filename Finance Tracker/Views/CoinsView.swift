@@ -51,7 +51,6 @@ struct CoinsView: View {
     }
 }
 
-
 #Preview {
     CoinsView()
 }

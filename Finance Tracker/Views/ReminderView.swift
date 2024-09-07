@@ -131,7 +131,6 @@ struct ReminderView: View {
                 .sheet(isPresented: $showAddReminder) {
                     AddReminderView()
                 }
-            
         }
     }
 }

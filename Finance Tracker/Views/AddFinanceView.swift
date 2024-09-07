@@ -9,7 +9,7 @@ import SwiftUI
 import SwiftData
 
 struct AddFinanceView: View {
-
+    
     // MARK: - Environment Variables
     @Environment(\.dismiss) private var dismiss
     @Environment(\.modelContext) private var context

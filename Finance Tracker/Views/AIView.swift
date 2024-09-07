@@ -56,10 +56,6 @@ struct AIView: View {
     }
 }
 
-
-
-
-
 #Preview {
     AIView()
 }
