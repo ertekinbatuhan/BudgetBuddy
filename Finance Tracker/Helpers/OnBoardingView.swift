@@ -2,7 +2,7 @@
 //  OnBoardingView.swift
 //  Finance Tracker
 //
-//  Created by Batuhan Berk Ertekin on 20.08.2024.
+//  Created by Batuhan Berk Ertekin on 7.09.2024.
 //
 
 import SwiftUI

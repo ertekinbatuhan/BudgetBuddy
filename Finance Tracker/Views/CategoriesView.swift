@@ -21,6 +21,7 @@ struct CategoriesView: View {
     @State private var calculateViewModel = CalculateViewModel()
     // MARK: - Ad Coordinator
     private let adCoordinator = AdCoordinator.shared
+    @State private var showAIView = false // State to handle AIView presentation
     
     var body: some View {
         NavigationStack {
@@ -50,7 +51,7 @@ struct CategoriesView: View {
                                         Image(systemName: "trash")
                                             .foregroundColor(.red)
                                     }
-                                    .buttonStyle(PlainButtonStyle()) 
+                                    .buttonStyle(PlainButtonStyle())
                                 }
                             }
                         )
@@ -75,6 +76,17 @@ struct CategoriesView: View {
                             Image(systemName: "plus.circle.fill").font(.title)
                         }
                     }
+                    ToolbarItem(placement: .navigationBarLeading) {
+                        Button(action: {
+                            showAIView.toggle()
+                        }) {
+                            Image(systemName: "brain.head.profile")
+                                .font(.title)
+                        }
+                    }
+                }
+                .sheet(isPresented: $showAIView) {
+                    AIView()
                 }
                 .sheet(isPresented: $viewModel.addCategory) {
                     viewModel.categoryName = ""
@@ -105,7 +117,6 @@ struct CategoriesView: View {
                     .presentationDetents([.height(180)])
                     .presentationCornerRadius(20)
                     .interactiveDismissDisabled()
-                    
                 }
         }
         .alert("ALERT_DELETE_CATEGORY", isPresented: $viewModel.deleteRequest) {
@@ -126,7 +137,6 @@ struct CategoriesView: View {
         }
         .onAppear {
             viewModel.fetchCategories(categories: allCategories)
-            
         }
         .onChange(of: allCategories) {
             viewModel.fetchCategories(categories: allCategories)
