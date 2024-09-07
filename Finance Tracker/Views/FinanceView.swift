@@ -130,7 +130,7 @@ struct FinanceView: View {
                                     if selectedType == .expense {
                                         Label("GENERAL_NO_EXPENSES", systemImage: "tray.fill")
                                     } else {
-                                        Label("GENERAL_NO_FINANCE", systemImage: "arrow.up.circle.fill")
+                                        Label("GENERAL_NO_INCOME", systemImage: "arrow.up.circle.fill")
                                     }
                                 }
                             }
