@@ -35,6 +35,7 @@
 "TAB_CATEGORIES_TITLE" = "Categories";
 "TAB_CALENDAR_TITLE" = "Historical View";
 "TAB_OVERVIEW_TITLE" = "Summary View";
+"TAB_SUMMARY_TITLE" = "Financial Summary";
 
 "LOGIN_EMAIL_PLACEHOLDER" = "E-mail";
 "LOGIN_PASSWORD_PLACEHOLDER" = "Password";
