@@ -14,12 +14,12 @@
 ## Features
 
 - Track and visualize your expenses and income with detailed charts and graphs.
-- Monitor and manage different financial categories such as investments, salaries, shopping, and debt payments.
-- Utilize integrated AI features to receive personalized insights and recommendations on your financial management.
-- View detailed summaries of your financial status, including total income, expenses, and balance.
-- Analyze trends over time with historical data views and interactive charts.
+- Manage various financial categories such as investments, salaries, shopping, and debt payments.
+- Get personalized insights and recommendations using integrated AI features to improve your financial management.
+- View comprehensive summaries of your financial status, including total income, expenses, and balance.  
+- Analyze trends over time with interactive charts and historical data views.
 - Monitor your cryptocurrency holdings and track their performance.
-- Enjoy a user-friendly interface enhanced with smooth animations and dynamic visual elements.
+- Experience a seamless user interface with smooth animations and dynamic visuals.
 
  ## Localization Support
 - Available in both English and Turkish, providing a personalized experience in multiple languages.
@@ -30,13 +30,13 @@
 ## Technologies Used
 
 - **SwiftUI**: 
-  - Leverages Apple's modern UI framework for creating user interfaces with a declarative Swift syntax, enabling dynamic and interactive layouts.
+  - Apple’s modern UI framework, used to create dynamic and interactive user interfaces with declarative Swift syntax.
 
 - **SwiftData**: 
-  - Utilized for efficient data management and persistence, handling complex data operations and storage seamlessly.
+  - Efficiently manages and persists data, handling complex data operations and storage seamlessly.
 
 - **Alamofire**: 
-  - A robust networking library for Swift, facilitating smooth and efficient handling of network requests and API interactions.
+  - A robust networking library for Swift, used to handle network requests and API interactions efficiently.
  
 - **Google Generative AI**: 
   - Used for advanced AI-driven insights and recommendations, enhancing financial management with personalized feedback and analysis.
@@ -53,7 +53,7 @@
 
 
 ## Architecture Used 
-The ButceDostu app is built using the MVVM (Model-View-ViewModel) architectural pattern. This architecture helps to separate the business logic and data handling from the user interface, making the app more modular, testable, and maintainable.
+The Budget Buddy app is built using the MVVM (Model-View-ViewModel) architectural pattern. This architecture helps to separate the business logic and data handling from the user interface, making the app more modular, testable, and maintainable.
 
 - **Model**: Represents the data and business logic of the application. It handles the data operations and communicates with external services or databases.
 - **View**: The user interface of the app, responsible for displaying the data and handling user interactions.
