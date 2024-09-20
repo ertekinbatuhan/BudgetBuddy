@@ -52,6 +52,39 @@
                ReferencedContainer = "container:Finance Tracker.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "C0736CA02C9DDE7C00B2CE90"
+               BuildableName = "Finance TrackerUnitTests.xctest"
+               BlueprintName = "Finance TrackerUnitTests"
+               ReferencedContainer = "container:Finance Tracker.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "C0736CAF2C9DE5BF00B2CE90"
+               BuildableName = "FinanceTrackerUnitTests.xctest"
+               BlueprintName = "FinanceTrackerUnitTests"
+               ReferencedContainer = "container:Finance Tracker.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "C0736CBC2C9DE70F00B2CE90"
+               BuildableName = "UnitTests.xctest"
+               BlueprintName = "UnitTests"
+               ReferencedContainer = "container:Finance Tracker.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -51,6 +51,8 @@
 		C05563812C6BEB7800CA13AA /* ReminderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05563802C6BEB7800CA13AA /* ReminderViewModel.swift */; };
 		C06263512C5AA8C1001090CB /* TabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06263502C5AA8C1001090CB /* TabItem.swift */; };
 		C06B6D2C2C6D2961008C248A /* CalculateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06B6D2B2C6D2961008C248A /* CalculateViewModel.swift */; };
+		C0736CCA2C9DECFE00B2CE90 /* MockCoinService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0736CC92C9DECFE00B2CE90 /* MockCoinService.swift */; };
+		C0736CCD2C9DED8600B2CE90 /* MockCoinData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0736CCC2C9DED8600B2CE90 /* MockCoinData.swift */; };
 		C092008E2C6CE1680053331C /* AdCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C092008D2C6CE1680053331C /* AdCoordinator.swift */; };
 		C0A2EA752C4FA77900DB9A14 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A2EA742C4FA77900DB9A14 /* CircularProgressView.swift */; };
 		C0A2EA812C4FC34900DB9A14 /* Number+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A2EA802C4FC34900DB9A14 /* Number+Extension.swift */; };
@@ -92,6 +94,27 @@
 
 /* Begin PBXContainerItemProxy section */
 		C01383552C5EBA770008341A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C0D903122C4ED80A00D9AAE4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C0D903192C4ED80A00D9AAE4;
+			remoteInfo = "Finance Tracker";
+		};
+		C0736CA52C9DDE7C00B2CE90 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C0D903122C4ED80A00D9AAE4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C0D903192C4ED80A00D9AAE4;
+			remoteInfo = "Finance Tracker";
+		};
+		C0736CB42C9DE5BF00B2CE90 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C0D903122C4ED80A00D9AAE4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C0D903192C4ED80A00D9AAE4;
+			remoteInfo = "Finance Tracker";
+		};
+		C0736CC12C9DE70F00B2CE90 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C0D903122C4ED80A00D9AAE4 /* Project object */;
 			proxyType = 1;
@@ -167,6 +190,11 @@
 		C05563802C6BEB7800CA13AA /* ReminderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderViewModel.swift; sourceTree = "<group>"; };
 		C06263502C5AA8C1001090CB /* TabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItem.swift; sourceTree = "<group>"; };
 		C06B6D2B2C6D2961008C248A /* CalculateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateViewModel.swift; sourceTree = "<group>"; };
+		C0736CA12C9DDE7C00B2CE90 /* Finance TrackerUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Finance TrackerUnitTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0736CB02C9DE5BF00B2CE90 /* FinanceTrackerUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FinanceTrackerUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0736CBD2C9DE70F00B2CE90 /* UnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0736CC92C9DECFE00B2CE90 /* MockCoinService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCoinService.swift; sourceTree = "<group>"; };
+		C0736CCC2C9DED8600B2CE90 /* MockCoinData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCoinData.swift; sourceTree = "<group>"; };
 		C092008D2C6CE1680053331C /* AdCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdCoordinator.swift; sourceTree = "<group>"; };
 		C0A2EA742C4FA77900DB9A14 /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
 		C0A2EA802C4FC34900DB9A14 /* Number+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Number+Extension.swift"; sourceTree = "<group>"; };
@@ -207,8 +235,33 @@
 		C0F34BE12C71E261004D31C4 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		C0736CBE2C9DE70F00B2CE90 /* UnitTests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = UnitTests; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
+
 /* Begin PBXFrameworksBuildPhase section */
 		C013834E2C5EBA770008341A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0736C9E2C9DDE7C00B2CE90 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0736CAD2C9DE5BF00B2CE90 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0736CBA2C9DE70F00B2CE90 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -352,6 +405,33 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		C0736CAA2C9DE4EE00B2CE90 /* FinanceTrackerTests */ = {
+			isa = PBXGroup;
+			children = (
+				C0736CBE2C9DE70F00B2CE90 /* UnitTests */,
+				C0736CCB2C9DED7800B2CE90 /* Helpers */,
+				C0736CC82C9DECF200B2CE90 /* Mocks */,
+				C0D3B8EC2C5E985D00F5D52C /* UITests */,
+			);
+			path = FinanceTrackerTests;
+			sourceTree = "<group>";
+		};
+		C0736CC82C9DECF200B2CE90 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				C0736CC92C9DECFE00B2CE90 /* MockCoinService.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		C0736CCB2C9DED7800B2CE90 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				C0736CCC2C9DED8600B2CE90 /* MockCoinData.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		C0A2EA862C4FC70C00DB9A14 /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -406,13 +486,13 @@
 			path = FinanceWidget;
 			sourceTree = "<group>";
 		};
-		C0D3B8EC2C5E985D00F5D52C /* Finance TrackerUITests */ = {
+		C0D3B8EC2C5E985D00F5D52C /* UITests */ = {
 			isa = PBXGroup;
 			children = (
 				C0D3B8ED2C5E985D00F5D52C /* Finance_TrackerUITests.swift */,
 				C0D3B8EF2C5E985D00F5D52C /* Finance_TrackerUITestsLaunchTests.swift */,
 			);
-			path = "Finance TrackerUITests";
+			path = UITests;
 			sourceTree = "<group>";
 		};
 		C0D903112C4ED80A00D9AAE4 = {
@@ -420,8 +500,8 @@
 			children = (
 				C0D0D93B2C733B2C00E28C4D /* FinanceWidgetExtension.entitlements */,
 				C0D9031C2C4ED80A00D9AAE4 /* Finance Tracker */,
-				C0D3B8EC2C5E985D00F5D52C /* Finance TrackerUITests */,
 				C0D0D9272C7334BB00E28C4D /* FinanceWidget */,
+				C0736CAA2C9DE4EE00B2CE90 /* FinanceTrackerTests */,
 				C0D9031B2C4ED80A00D9AAE4 /* Products */,
 				C02323322C58D45A00943FEF /* Frameworks */,
 			);
@@ -434,6 +514,9 @@
 				C0D3B8EB2C5E985D00F5D52C /* Finance TrackerUITests.xctest */,
 				C01383512C5EBA770008341A /* Finance TrackerTests.xctest */,
 				C0D0D9222C7334BB00E28C4D /* FinanceWidgetExtension.appex */,
+				C0736CA12C9DDE7C00B2CE90 /* Finance TrackerUnitTests.xctest */,
+				C0736CB02C9DE5BF00B2CE90 /* FinanceTrackerUnitTests.xctest */,
+				C0736CBD2C9DE70F00B2CE90 /* UnitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -500,6 +583,69 @@
 			);
 			productName = "Finance TrackerTests";
 			productReference = C01383512C5EBA770008341A /* Finance TrackerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C0736CA02C9DDE7C00B2CE90 /* Finance TrackerUnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C0736CA92C9DDE7C00B2CE90 /* Build configuration list for PBXNativeTarget "Finance TrackerUnitTests" */;
+			buildPhases = (
+				C0736C9D2C9DDE7C00B2CE90 /* Sources */,
+				C0736C9E2C9DDE7C00B2CE90 /* Frameworks */,
+				C0736C9F2C9DDE7C00B2CE90 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C0736CA62C9DDE7C00B2CE90 /* PBXTargetDependency */,
+			);
+			name = "Finance TrackerUnitTests";
+			packageProductDependencies = (
+			);
+			productName = "Finance TrackerUnitTests";
+			productReference = C0736CA12C9DDE7C00B2CE90 /* Finance TrackerUnitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C0736CAF2C9DE5BF00B2CE90 /* FinanceTrackerUnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C0736CB62C9DE5BF00B2CE90 /* Build configuration list for PBXNativeTarget "FinanceTrackerUnitTests" */;
+			buildPhases = (
+				C0736CAC2C9DE5BF00B2CE90 /* Sources */,
+				C0736CAD2C9DE5BF00B2CE90 /* Frameworks */,
+				C0736CAE2C9DE5BF00B2CE90 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C0736CB52C9DE5BF00B2CE90 /* PBXTargetDependency */,
+			);
+			name = FinanceTrackerUnitTests;
+			packageProductDependencies = (
+			);
+			productName = FinanceTrackerUnitTests;
+			productReference = C0736CB02C9DE5BF00B2CE90 /* FinanceTrackerUnitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C0736CBC2C9DE70F00B2CE90 /* UnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C0736CC32C9DE70F00B2CE90 /* Build configuration list for PBXNativeTarget "UnitTests" */;
+			buildPhases = (
+				C0736CB92C9DE70F00B2CE90 /* Sources */,
+				C0736CBA2C9DE70F00B2CE90 /* Frameworks */,
+				C0736CBB2C9DE70F00B2CE90 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C0736CC22C9DE70F00B2CE90 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				C0736CBE2C9DE70F00B2CE90 /* UnitTests */,
+			);
+			name = UnitTests;
+			packageProductDependencies = (
+			);
+			productName = UnitTests;
+			productReference = C0736CBD2C9DE70F00B2CE90 /* UnitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		C0D0D9212C7334BB00E28C4D /* FinanceWidgetExtension */ = {
@@ -570,11 +716,23 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1540;
+				LastSwiftUpdateCheck = 1600;
 				LastUpgradeCheck = 1540;
 				TargetAttributes = {
 					C01383502C5EBA770008341A = {
 						CreatedOnToolsVersion = 15.4;
+						TestTargetID = C0D903192C4ED80A00D9AAE4;
+					};
+					C0736CA02C9DDE7C00B2CE90 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = C0D903192C4ED80A00D9AAE4;
+					};
+					C0736CAF2C9DE5BF00B2CE90 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = C0D903192C4ED80A00D9AAE4;
+					};
+					C0736CBC2C9DE70F00B2CE90 = {
+						CreatedOnToolsVersion = 16.0;
 						TestTargetID = C0D903192C4ED80A00D9AAE4;
 					};
 					C0D0D9212C7334BB00E28C4D = {
@@ -614,12 +772,36 @@
 				C0D3B8EA2C5E985D00F5D52C /* Finance TrackerUITests */,
 				C01383502C5EBA770008341A /* Finance TrackerTests */,
 				C0D0D9212C7334BB00E28C4D /* FinanceWidgetExtension */,
+				C0736CA02C9DDE7C00B2CE90 /* Finance TrackerUnitTests */,
+				C0736CAF2C9DE5BF00B2CE90 /* FinanceTrackerUnitTests */,
+				C0736CBC2C9DE70F00B2CE90 /* UnitTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		C013834F2C5EBA770008341A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0736C9F2C9DDE7C00B2CE90 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0736CAE2C9DE5BF00B2CE90 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0736CBB2C9DE70F00B2CE90 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -663,6 +845,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0736C9D2C9DDE7C00B2CE90 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0736CAC2C9DE5BF00B2CE90 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0736CB92C9DE70F00B2CE90 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0736CCA2C9DECFE00B2CE90 /* MockCoinService.swift in Sources */,
+				C0736CCD2C9DED8600B2CE90 /* MockCoinData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -759,6 +964,21 @@
 			target = C0D903192C4ED80A00D9AAE4 /* Finance Tracker */;
 			targetProxy = C01383552C5EBA770008341A /* PBXContainerItemProxy */;
 		};
+		C0736CA62C9DDE7C00B2CE90 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C0D903192C4ED80A00D9AAE4 /* Finance Tracker */;
+			targetProxy = C0736CA52C9DDE7C00B2CE90 /* PBXContainerItemProxy */;
+		};
+		C0736CB52C9DE5BF00B2CE90 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C0D903192C4ED80A00D9AAE4 /* Finance Tracker */;
+			targetProxy = C0736CB42C9DE5BF00B2CE90 /* PBXContainerItemProxy */;
+		};
+		C0736CC22C9DE70F00B2CE90 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C0D903192C4ED80A00D9AAE4 /* Finance Tracker */;
+			targetProxy = C0736CC12C9DE70F00B2CE90 /* PBXContainerItemProxy */;
+		};
 		C0D0D9302C7334BC00E28C4D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = C0D0D9212C7334BB00E28C4D /* FinanceWidgetExtension */;
@@ -823,6 +1043,120 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.batuhanberkertekin.Finance-TrackerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Finance Tracker.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Finance Tracker";
+			};
+			name = Release;
+		};
+		C0736CA72C9DDE7C00B2CE90 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PQ82KF7KP4;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.batuhanberkertekin.Finance-TrackerUnitTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Finance Tracker.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Finance Tracker";
+			};
+			name = Debug;
+		};
+		C0736CA82C9DDE7C00B2CE90 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PQ82KF7KP4;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.batuhanberkertekin.Finance-TrackerUnitTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Finance Tracker.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Finance Tracker";
+			};
+			name = Release;
+		};
+		C0736CB72C9DE5BF00B2CE90 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PQ82KF7KP4;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.batuhanberkertekin.FinanceTrackerUnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Finance Tracker.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Finance Tracker";
+			};
+			name = Debug;
+		};
+		C0736CB82C9DE5BF00B2CE90 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PQ82KF7KP4;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.batuhanberkertekin.FinanceTrackerUnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Finance Tracker.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Finance Tracker";
+			};
+			name = Release;
+		};
+		C0736CC42C9DE70F00B2CE90 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PQ82KF7KP4;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.batuhanberkertekin.UnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Finance Tracker.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Finance Tracker";
+			};
+			name = Debug;
+		};
+		C0736CC52C9DE70F00B2CE90 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PQ82KF7KP4;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.batuhanberkertekin.UnitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -1043,7 +1377,6 @@
 		C0D903292C4ED80B00D9AAE4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Finance Tracker/Finance Tracker.entitlements";
@@ -1081,7 +1414,6 @@
 		C0D9032A2C4ED80B00D9AAE4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Finance Tracker/Finance Tracker.entitlements";
@@ -1124,6 +1456,33 @@
 			buildConfigurations = (
 				C01383572C5EBA770008341A /* Debug */,
 				C01383582C5EBA770008341A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C0736CA92C9DDE7C00B2CE90 /* Build configuration list for PBXNativeTarget "Finance TrackerUnitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C0736CA72C9DDE7C00B2CE90 /* Debug */,
+				C0736CA82C9DDE7C00B2CE90 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C0736CB62C9DE5BF00B2CE90 /* Build configuration list for PBXNativeTarget "FinanceTrackerUnitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C0736CB72C9DE5BF00B2CE90 /* Debug */,
+				C0736CB82C9DE5BF00B2CE90 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C0736CC32C9DE70F00B2CE90 /* Build configuration list for PBXNativeTarget "UnitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C0736CC42C9DE70F00B2CE90 /* Debug */,
+				C0736CC52C9DE70F00B2CE90 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

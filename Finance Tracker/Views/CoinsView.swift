@@ -46,6 +46,7 @@ struct CoinsView: View {
             .navigationBarTitleDisplayMode(.inline)
             .onAppear {
                 coinViewModel.fetchCoins()
+                
             }
         }
     }
