@@ -3,7 +3,7 @@ import SwiftUI
 import SwiftData
 
 //MARK: - Provider
-struct Provider: TimelineProvider {
+struct Provider: @preconcurrency TimelineProvider {
     @MainActor func placeholder(in context: Context) -> SimpleEntry {
         SimpleEntry(date: Date(), totalIncome: 0.0, totalExpense: 0.0)
     }

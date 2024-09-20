@@ -26,7 +26,7 @@ class CoinService : CoinServiceProtocol {
     // MARK: - fetchCoins
     // Fetches coin data from the API and handles the response.
     func fetchCoins(completion: @escaping (Result<[Coin], CoinError>) -> Void) {
-        let url = Constants.URLs.coinURL
+        let url = Constants.API.coinURL()
         
         AF.request(url, method: .get).responseDecodable(of: [Coin].self) { response in
             switch response.result {
