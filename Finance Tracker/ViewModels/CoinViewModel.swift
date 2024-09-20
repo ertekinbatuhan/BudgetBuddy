@@ -19,8 +19,7 @@ protocol CoinViewModelProtocol: ObservableObject {
 }
 
 // MARK: - CoinViewModel
-// ViewModel for managing coin data and interactions.
-class CoinViewModel: ObservableObject, CoinViewModelProtocol{
+class CoinViewModel: ObservableObject, CoinViewModelProtocol {
     
     // MARK: - Published Properties
     @Published var coin = [Coin]()
@@ -28,32 +27,30 @@ class CoinViewModel: ObservableObject, CoinViewModelProtocol{
     
     // MARK: - Private Properties
     private let coinService: CoinServiceProtocol
+    private var sortedCoins: [Coin] = []
     
     // MARK: - Initialization
-    // Initialization logic and setup here.
     init(coinService: CoinServiceProtocol = CoinService.shared) {
         self.coinService = coinService
-        fetchCoins()
     }
     
     // MARK: - Computed Properties
-    // Computed properties for sorting and filtering coin data.
     var topEarners: [Coin] {
-        coin.sorted(by: { $0.priceChangePercentage24HInCurrency ?? 0 > $1.priceChangePercentage24HInCurrency ?? 0 })
+        sortedCoins.filter { $0.priceChangePercentage24HInCurrency ?? 0 > 0 }
     }
     
     var topLosers: [Coin] {
-        coin.sorted(by: { $0.priceChangePercentage24HInCurrency ?? 0 < $1.priceChangePercentage24HInCurrency ?? 0 })
+        sortedCoins.filter { $0.priceChangePercentage24HInCurrency ?? 0 < 0 }
     }
     
     // MARK: - Methods
-    // Methods for fetching coin data and handling results.
     func fetchCoins() {
         coinService.fetchCoins { [weak self] result in
             DispatchQueue.main.async {
                 switch result {
                 case .success(let coins):
                     self?.coin = coins
+                    self?.sortedCoins = coins.sorted(by: { $0.priceChangePercentage24HInCurrency ?? 0 > $1.priceChangePercentage24HInCurrency ?? 0 })
                 case .failure(let error):
                     self?.error = error
                 }
