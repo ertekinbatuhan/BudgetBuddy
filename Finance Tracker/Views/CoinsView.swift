@@ -9,9 +9,17 @@ import SwiftUI
 
 struct CoinsView: View {
     
-    @ObservedObject private var coinViewModel = CoinViewModel()
+    // MARK: - Properties
+    @ObservedObject private var coinViewModel: CoinViewModel
+    
+    // MARK: - Initialization
+    init(coinService: CoinServiceProtocol) {
+        self.coinViewModel = CoinViewModel(coinService: coinService)
+    }
+    
     @Environment(\.colorScheme) var colorScheme
     
+    // MARK: - Body
     var body: some View {
         NavigationStack {
             ScrollView {
@@ -46,12 +54,11 @@ struct CoinsView: View {
             .navigationBarTitleDisplayMode(.inline)
             .onAppear {
                 coinViewModel.fetchCoins()
-                
             }
         }
     }
 }
 
 #Preview {
-    CoinsView()
+    CoinsView(coinService: CoinService())
 }

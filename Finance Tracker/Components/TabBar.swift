@@ -31,7 +31,7 @@ struct TabBar: View {
                 Text(TabItem.summary.title)
             }
             
-            CoinsView().tag(TabItem.coins).tabItem{
+            CoinsView(coinService: CoinService()).tag(TabItem.coins).tabItem{
                 Image(systemName: TabItem.coins.imageName)
                 Text(TabItem.coins.title)
             }

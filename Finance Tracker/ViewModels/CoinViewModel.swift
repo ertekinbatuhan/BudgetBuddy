@@ -30,7 +30,7 @@ class CoinViewModel: ObservableObject, CoinViewModelProtocol {
     private var sortedCoins: [Coin] = []
     
     // MARK: - Initialization
-    init(coinService: CoinServiceProtocol = CoinService.shared) {
+    init(coinService: CoinServiceProtocol) {
         self.coinService = coinService
     }
     

@@ -8,23 +8,15 @@
 import Foundation
 import Alamofire
 
-//MARK: - Protocol
+// MARK: - Protocol
 protocol CoinServiceProtocol {
     func fetchCoins(completion: @escaping (Result<[Coin], CoinError>) -> Void)
 }
 
 // MARK: - CoinService
-// Implements CoinServiceProtocol to fetch coin data.
-class CoinService : CoinServiceProtocol {
+class CoinService: CoinServiceProtocol {
     
-    // MARK: - Singleton Instance
-    static let shared = CoinService()
-    
-    // Private initializer to prevent multiple instances.
-    private init() {}
-    
-    // MARK: - fetchCoins
-    // Fetches coin data from the API and handles the response.
+    // Fetches coins from the API
     func fetchCoins(completion: @escaping (Result<[Coin], CoinError>) -> Void) {
         let url = Constants.API.coinURL()
         
