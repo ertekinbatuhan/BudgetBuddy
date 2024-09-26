@@ -17,7 +17,6 @@
 - Manage various financial categories such as investments, salaries, shopping, and debt payments.
 - Get personalized insights and recommendations using integrated AI features to improve your financial management.
 - View comprehensive summaries of your financial status, including total income, expenses, and balance.  
-- Analyze trends over time with interactive charts and historical data views.
 - Monitor your cryptocurrency holdings and track their performance.
 - Experience a seamless user interface with smooth animations and dynamic visuals.
 
