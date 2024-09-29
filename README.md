@@ -69,7 +69,7 @@ The Budget Buddy app is built using the MVVM (Model-View-ViewModel) architectura
 1. Clone this repository:
 
 ```bash
-git clone https://github.com/ertekinbatuhan/finance-tracker.git
+git clone https://github.com/ertekinbatuhan/BudgetBuddy.git
 
 ```
 
