@@ -51,6 +51,9 @@ struct SummaryView: View {
             }
             .sheet(isPresented: $isShowingCalendar) {
                 CalendarView()
+            }.onAppear {
+                viewModel.allFinances = allFinances
+                viewModel.createGroupedFinances(allFinances)
             }
         }
     }

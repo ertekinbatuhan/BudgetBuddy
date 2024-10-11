@@ -18,7 +18,7 @@ protocol FinanceViewModelProtocol {
     func createGroupedFinances(_ finances: [Finance])
 }
 
-class FinanceViewModel: FinanceViewModelProtocol, ObservableObject {
+final class FinanceViewModel: FinanceViewModelProtocol, ObservableObject {
     // MARK: - Published Properties
     @Published var groupedFinances: [GroupedFinances] = []
     @Published var originalGroupedFinances: [GroupedFinances] = []

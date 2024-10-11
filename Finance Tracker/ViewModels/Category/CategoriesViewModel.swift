@@ -16,7 +16,7 @@ protocol CategoriesViewModelProtocol {
     func deleteCategory(context: ModelContext)
 }
 
-class CategoriesViewModel: ObservableObject, CategoriesViewModelProtocol {
+final class CategoriesViewModel: ObservableObject, CategoriesViewModelProtocol {
     // MARK: - Published Properties
     @Published var addCategory: Bool = false
     @Published var categoryName: String = ""

@@ -14,7 +14,7 @@ protocol CoinServiceProtocol {
 }
 
 // MARK: - CoinService
-class CoinService: CoinServiceProtocol {
+final class CoinService: CoinServiceProtocol {
     
     // Fetches coins from the API
     func fetchCoins(completion: @escaping (Result<[Coin], CoinError>) -> Void) {

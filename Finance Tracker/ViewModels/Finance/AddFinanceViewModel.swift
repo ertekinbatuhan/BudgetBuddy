@@ -7,7 +7,7 @@ protocol AddFinanceViewModelProtocol {
     func addFinance(context: ModelContext)
 }
 
-class AddFinanceViewModel: AddFinanceViewModelProtocol, ObservableObject {
+final class AddFinanceViewModel: AddFinanceViewModelProtocol, ObservableObject {
     // MARK: - Published Properties
     @Published var title: String = ""
     @Published var subTitle: String = ""

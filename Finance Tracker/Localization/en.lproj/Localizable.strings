@@ -109,6 +109,6 @@
 
 "WELCOME_MESSAGE_AI" = "Welcome to BudgetBuddy AI";
 "PROMPT_PLACEHOLDER_AI" = "You can ask anything";
-"LOADING_MESSAGE_AI" = "How can I assist you?";
+"LOADING_MESSAGE_AI" = "How can I help you?";
 "ERROR_MESSAGE_AI" = "Something went wrong";
 "NO_RESULT_MESSAGE_AI" = "No result found";

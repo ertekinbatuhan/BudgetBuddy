@@ -19,7 +19,7 @@ protocol CoinViewModelProtocol: ObservableObject {
 }
 
 // MARK: - CoinViewModel
-class CoinViewModel: ObservableObject, CoinViewModelProtocol {
+final class CoinViewModel: ObservableObject, CoinViewModelProtocol {
     
     // MARK: - Published Properties
     @Published var coin = [Coin]()

@@ -18,7 +18,7 @@ protocol ReminderViewModelProtocol {
     func requestNotificationAuthorization()
 }
 
-class ReminderViewModel: ObservableObject, ReminderViewModelProtocol {
+final class ReminderViewModel: ObservableObject, ReminderViewModelProtocol {
     
     // MARK: - Published Properties
     @Published var searchText = ""

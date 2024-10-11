@@ -311,17 +311,15 @@
 		C027F28B2C4F86FF004E539E /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				C02BE7342C8C549A004738B9 /* AIView.swift */,
-				C02BE7142C8C5407004738B9 /* CoinsView.swift */,
-				C0D903352C4EE0A500D9AAE4 /* AddFinanceView.swift */,
-				C0D903312C4EDC2C00D9AAE4 /* CategoriesView.swift */,
-				C0D9032F2C4EDBBA00D9AAE4 /* FinanceView.swift */,
-				C0EBE7412C6BF8F400829ED0 /* ReminderView.swift */,
-				C0EBE7492C6C03E200829ED0 /* AddReminderView.swift */,
-				C0CCC0752C6DE3DF00F03AA3 /* BannerView.swift */,
-				C01130332C70B6FA00D316E9 /* SummaryView.swift */,
-				C0F34BE12C71E261004D31C4 /* CalendarView.swift */,
-				C03DA92C2C80BD5F00E9E4DB /* FinanceWidgetEntryView.swift */,
+				C0FB61792CB9315F0014855D /* FinanceWidget */,
+				C0FB61782CB9314D0014855D /* AI */,
+				C0FB61762CB931270014855D /* Banner */,
+				C0FB61752CB9311F0014855D /* Summary */,
+				C0FB61742CB931150014855D /* Categories */,
+				C0FB61732CB9310C0014855D /* Calendar */,
+				C0FB61722CB931020014855D /* Coins */,
+				C0FB61712CB930EE0014855D /* Reminder */,
+				C0FB61772CB931370014855D /* Finance */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -456,12 +454,11 @@
 		C0A2EAAA2C4FD03000DB9A14 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				C02BE7372C8C549A004738B9 /* CoinViewModel.swift */,
-				C0A81BC32C501E9B005AF972 /* CategoriesViewModel.swift */,
-				C0E107492C515BEB009AE8D1 /* AddFinanceViewModel.swift */,
-				C0E1074B2C515F53009AE8D1 /* FinanceViewModel.swift */,
-				C05563802C6BEB7800CA13AA /* ReminderViewModel.swift */,
-				C06B6D2B2C6D2961008C248A /* CalculateViewModel.swift */,
+				C0FB617E2CB931A30014855D /* Reminder */,
+				C0FB617D2CB9319C0014855D /* Calculate */,
+				C0FB617C2CB931920014855D /* Finance */,
+				C0FB617B2CB931820014855D /* Category */,
+				C0FB617A2CB931790014855D /* Coin */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -469,8 +466,8 @@
 		C0A441B02C6660E300005E18 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				C02BE7392C8C549A004738B9 /* CoinService.swift */,
-				C05563792C6BDB0700CA13AA /* NotificationManager.swift */,
+				C0FB61702CB930870014855D /* Notification */,
+				C0FB616E2CB9306D0014855D /* Coin */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -560,6 +557,137 @@
 				C0EBE7462C6BFAB500829ED0 /* notfound.json */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		C0FB616E2CB9306D0014855D /* Coin */ = {
+			isa = PBXGroup;
+			children = (
+				C02BE7392C8C549A004738B9 /* CoinService.swift */,
+			);
+			path = Coin;
+			sourceTree = "<group>";
+		};
+		C0FB61702CB930870014855D /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				C05563792C6BDB0700CA13AA /* NotificationManager.swift */,
+			);
+			path = Notification;
+			sourceTree = "<group>";
+		};
+		C0FB61712CB930EE0014855D /* Reminder */ = {
+			isa = PBXGroup;
+			children = (
+				C0EBE7412C6BF8F400829ED0 /* ReminderView.swift */,
+				C0EBE7492C6C03E200829ED0 /* AddReminderView.swift */,
+			);
+			path = Reminder;
+			sourceTree = "<group>";
+		};
+		C0FB61722CB931020014855D /* Coins */ = {
+			isa = PBXGroup;
+			children = (
+				C02BE7142C8C5407004738B9 /* CoinsView.swift */,
+			);
+			path = Coins;
+			sourceTree = "<group>";
+		};
+		C0FB61732CB9310C0014855D /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				C0F34BE12C71E261004D31C4 /* CalendarView.swift */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		C0FB61742CB931150014855D /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				C0D903312C4EDC2C00D9AAE4 /* CategoriesView.swift */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		C0FB61752CB9311F0014855D /* Summary */ = {
+			isa = PBXGroup;
+			children = (
+				C01130332C70B6FA00D316E9 /* SummaryView.swift */,
+			);
+			path = Summary;
+			sourceTree = "<group>";
+		};
+		C0FB61762CB931270014855D /* Banner */ = {
+			isa = PBXGroup;
+			children = (
+				C0CCC0752C6DE3DF00F03AA3 /* BannerView.swift */,
+			);
+			path = Banner;
+			sourceTree = "<group>";
+		};
+		C0FB61772CB931370014855D /* Finance */ = {
+			isa = PBXGroup;
+			children = (
+				C0D903352C4EE0A500D9AAE4 /* AddFinanceView.swift */,
+				C0D9032F2C4EDBBA00D9AAE4 /* FinanceView.swift */,
+			);
+			path = Finance;
+			sourceTree = "<group>";
+		};
+		C0FB61782CB9314D0014855D /* AI */ = {
+			isa = PBXGroup;
+			children = (
+				C02BE7342C8C549A004738B9 /* AIView.swift */,
+			);
+			path = AI;
+			sourceTree = "<group>";
+		};
+		C0FB61792CB9315F0014855D /* FinanceWidget */ = {
+			isa = PBXGroup;
+			children = (
+				C03DA92C2C80BD5F00E9E4DB /* FinanceWidgetEntryView.swift */,
+			);
+			path = FinanceWidget;
+			sourceTree = "<group>";
+		};
+		C0FB617A2CB931790014855D /* Coin */ = {
+			isa = PBXGroup;
+			children = (
+				C02BE7372C8C549A004738B9 /* CoinViewModel.swift */,
+			);
+			path = Coin;
+			sourceTree = "<group>";
+		};
+		C0FB617B2CB931820014855D /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				C0A81BC32C501E9B005AF972 /* CategoriesViewModel.swift */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		C0FB617C2CB931920014855D /* Finance */ = {
+			isa = PBXGroup;
+			children = (
+				C0E1074B2C515F53009AE8D1 /* FinanceViewModel.swift */,
+				C0E107492C515BEB009AE8D1 /* AddFinanceViewModel.swift */,
+			);
+			path = Finance;
+			sourceTree = "<group>";
+		};
+		C0FB617D2CB9319C0014855D /* Calculate */ = {
+			isa = PBXGroup;
+			children = (
+				C06B6D2B2C6D2961008C248A /* CalculateViewModel.swift */,
+			);
+			path = Calculate;
+			sourceTree = "<group>";
+		};
+		C0FB617E2CB931A30014855D /* Reminder */ = {
+			isa = PBXGroup;
+			children = (
+				C05563802C6BEB7800CA13AA /* ReminderViewModel.swift */,
+			);
+			path = Reminder;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

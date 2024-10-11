@@ -9,7 +9,7 @@ import Foundation
 import UserNotifications
 
 // MARK: - NotificationManager Class
-class NotificationManager: NSObject, UNUserNotificationCenterDelegate {
+final class NotificationManager: NSObject, UNUserNotificationCenterDelegate {
     
     // MARK: - Shared Instance
     static let shared = NotificationManager()

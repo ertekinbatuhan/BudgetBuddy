@@ -9,7 +9,7 @@ import Observation
 import SwiftUI
 
 @Observable
-class CalculateViewModel {
+final class CalculateViewModel {
     
     @ObservationIgnored @AppStorage("calculateCount") var calculateCount = 0
 }
