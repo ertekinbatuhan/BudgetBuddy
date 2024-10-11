@@ -17,7 +17,6 @@
 - Manage various financial categories such as investments, salaries, shopping, and debt payments.
 - Get personalized insights and recommendations using integrated AI features to improve your financial management.
 - View comprehensive summaries of your financial status, including total income, expenses, and balance.  
-- Analyze trends over time with interactive charts and historical data views.
 - Monitor your cryptocurrency holdings and track their performance.
 - Experience a seamless user interface with smooth animations and dynamic visuals.
 
@@ -70,13 +69,25 @@ The Budget Buddy app is built using the MVVM (Model-View-ViewModel) architectura
 1. Clone this repository:
 
 ```bash
-git clone https://github.com/ertekinbatuhan/finance-tracker.git
+git clone https://github.com/ertekinbatuhan/BudgetBuddy.git
 
 ```
+2. Navigate to the project directory:
 
-2. Open the project with Xcode:
+```bash
+cd BudgetBuddy
+```
+  
+3. Open the project with Xcode:
 ```bash
 open FinanceTracker.xcodeproj
-
 ```
-3. Run the project.
+4. Add required dependencies using Swift Package Manager:
+
+ - In Xcode, go to File > Add Packages and add any required packages.
+ 
+  
+
+5. Run the application:
+- Select your target device or simulator.
+- Click the Run button (or use the shortcut Cmd + R) to build and run the application.
