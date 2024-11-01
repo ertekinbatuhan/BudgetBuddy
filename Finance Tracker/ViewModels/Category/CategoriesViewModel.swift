@@ -14,6 +14,8 @@ protocol CategoriesViewModelProtocol {
     func addNewCategory(context: ModelContext)
     func requestDeleteCategory(_ category: Category)
     func deleteCategory(context: ModelContext)
+    func deleteFinance(_ finance: Finance, context: ModelContext)
+    func dismissRequestedCategory()
 }
 
 final class CategoriesViewModel: ObservableObject, CategoriesViewModelProtocol {
@@ -21,8 +23,14 @@ final class CategoriesViewModel: ObservableObject, CategoriesViewModelProtocol {
     @Published var addCategory: Bool = false
     @Published var categoryName: String = ""
     @Published var deleteRequest: Bool = false
-    @Published var requestedCategory: Category?
-    @Published var allCategories: [Category] = []
+    @Published private(set) var requestedCategory: Category?
+    @Published private(set) var allCategories: [Category] = []
+    
+    // MARK: - Dismiss Request
+    func dismissRequestedCategory() {
+        self.requestedCategory = nil
+        self.deleteRequest = false
+    }
     
     // MARK: - Fetching Categories
     func fetchCategories(categories: [Category]) {
@@ -35,38 +43,46 @@ final class CategoriesViewModel: ObservableObject, CategoriesViewModelProtocol {
         context.insert(category)
         categoryName = ""
         addCategory = false
+        saveContext(context)
     }
     
-    // MARK: - Deleting Categories
+    // MARK: - Requesting Deletion of Category
     func requestDeleteCategory(_ category: Category) {
-        deleteRequest.toggle()
-        requestedCategory = category
+        self.requestedCategory = category
+        self.deleteRequest = true
     }
     
+    
+    // MARK: - Deleting Category
     func deleteCategory(context: ModelContext) {
-        if let requestedCategory = requestedCategory {
-            if let finances = requestedCategory.finances {
-                for finance in finances {
-                    context.delete(finance)
-                }
+        guard let requestedCategory = requestedCategory else { return }
+        
+        // Delete related financial records
+        if let finances = requestedCategory.finances {
+            for finance in finances {
+                context.delete(finance)
             }
-            context.delete(requestedCategory)
-            do {
-                try context.save()
-            } catch {
-                print("Error saving context after deleting category: \(error)")
-            }
-            self.requestedCategory = nil
         }
+        
+        // Delete the category
+        context.delete(requestedCategory)
+        saveContext(context)
+        self.requestedCategory = nil
     }
     
-    // MARK: - Deleting Finance
+    // MARK: - Deleting Financial Records
     func deleteFinance(_ finance: Finance, context: ModelContext) {
         context.delete(finance)
+        saveContext(context)
+    }
+    
+    // MARK: - Saving the Context
+    private func saveContext(_ context: ModelContext) {
         do {
             try context.save()
         } catch {
-            print("Error saving context after deleting finance: \(error)")
+            print("Error saving context: \(error)")
         }
     }
 }
+

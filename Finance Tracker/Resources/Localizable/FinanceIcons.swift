@@ -11,4 +11,9 @@ import SwiftUI
 struct FinanceIcons {
     static let incomeIcon = "arrow.up.circle.fill"
     static let expenseIcon = "arrow.down.circle.fill"
+    static let reminderIcon = "calendar.badge.plus"
+    static let homeIcon = "homekit"
+    static let summaryIcon = "doc.text.magnifyingglass"
+    static let coinsIcon = "bitcoinsign.circle"
+    static let categoriesIcon = "list.clipboard.fill" 
 }

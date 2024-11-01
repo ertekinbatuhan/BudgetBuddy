@@ -17,18 +17,16 @@ enum TabItem: String {
     var imageName: String {
         switch self {
         case .reminders:
-            return "calendar.badge.plus"
+            return FinanceIcons.reminderIcon
         case .home:
-            return "homekit"
+            return FinanceIcons.homeIcon
         case .summary:
-            return "doc.text.magnifyingglass"
+            return FinanceIcons.summaryIcon
         case .coins:
-            return "bitcoinsign.circle"
+            return FinanceIcons.coinsIcon
         case .categories:
-            return "list.clipboard.fill"
-      
+            return FinanceIcons.categoriesIcon
         }
-    
     }
     
     var title: String {
@@ -46,4 +44,3 @@ enum TabItem: String {
         }
     }
 }
-

@@ -121,16 +121,12 @@ struct CategoriesView: View {
         }
         .alert("ALERT_DELETE_CATEGORY", isPresented: $viewModel.deleteRequest) {
             Button(role: .destructive) {
-                viewModel.deleteCategory(context: context)
-                if calculateViewModel.calculateCount % 3 == 0 {
-                    adCoordinator.presentAd()
-                }
-                calculateViewModel.calculateCount += 1
+                 viewModel.deleteCategory(context: context)
             } label: {
                 Text("GENERAL_DELETE_BUTTON")
             }
             Button(role: .cancel) {
-                viewModel.requestedCategory = nil
+                viewModel.dismissRequestedCategory()
             } label: {
                 Text("GENERAL_CANCEL_BUTTON")
             }
@@ -142,6 +138,7 @@ struct CategoriesView: View {
             viewModel.fetchCategories(categories: allCategories)
         }
     }
+    
 }
 
 #Preview {

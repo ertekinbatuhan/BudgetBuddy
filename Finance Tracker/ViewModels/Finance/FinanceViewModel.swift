@@ -20,13 +20,13 @@ protocol FinanceViewModelProtocol {
 
 final class FinanceViewModel: FinanceViewModelProtocol, ObservableObject {
     // MARK: - Published Properties
-    @Published var groupedFinances: [GroupedFinances] = []
-    @Published var originalGroupedFinances: [GroupedFinances] = []
+    @Published private(set) var groupedFinances: [GroupedFinances] = []
+    @Published private(set) var originalGroupedFinances: [GroupedFinances] = []
+    @Published private(set) var categoryColors: [Category: Color] = [:]
     @Published var searchText: String = ""
     @Published var addFinance: Bool = false
     @Published var selectedType: FinanceType = .expense
-    @Published var categoryColors: [Category: Color] = [:]
-    
+   
     // MARK: - Internal Properties
     var allFinances: [Finance] = []
     var allCategories: [Category] = []
