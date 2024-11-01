@@ -14,7 +14,7 @@ struct FinanceWidgetEntryView: View {
     var body: some View {
         VStack(alignment: .leading) {
             VStack {
-                Text(NSLocalizedString("GENERAL_TOTAL", comment: "Total amount"))
+                Text(LocalizedStrings.generalTotal.text)
                     .font(.headline)
                 Text(NumberFormatter.currencyFormatter.string(from: NSNumber(value: entry.total)) ?? "\(entry.total)")
                     .font(.largeTitle)
@@ -27,9 +27,9 @@ struct FinanceWidgetEntryView: View {
             
             HStack {
                 VStack {
-                    Image(systemName: "arrow.up.circle.fill")
+                    Image(systemName: FinanceIcons.incomeIcon)
                         .foregroundColor(.green)
-                    Text(NSLocalizedString("FINANCE_TYPE_INCOME", comment: "Income"))
+                    Text(LocalizedStrings.financeTypeIncome.text)
                         .font(.headline)
                     Text(NumberFormatter.currencyFormatter.string(from: NSNumber(value: entry.totalIncome)) ?? "\(entry.totalIncome)")
                         .font(.title2)
@@ -38,9 +38,9 @@ struct FinanceWidgetEntryView: View {
                 }
                 Spacer()
                 VStack {
-                    Image(systemName: "arrow.down.circle.fill")
+                    Image(systemName: FinanceIcons.expenseIcon)
                         .foregroundColor(.red)
-                    Text(NSLocalizedString("FINANCE_TYPE_EXPENSE", comment: "Expense"))
+                    Text(LocalizedStrings.financeTypeExpense.text)
                         .font(.headline)
                     Text(NumberFormatter.currencyFormatter.string(from: NSNumber(value: entry.totalExpense)) ?? "\(entry.totalExpense)")
                         .font(.title2)
