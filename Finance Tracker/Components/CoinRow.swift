@@ -8,42 +8,43 @@
 import SwiftUI
 
 // MARK: - CoinRow
-// A view that displays a row for a single coin in a list.
+// A view that displays a row for a single coin in a list, including its image, name, symbol, current price, and price change percentage.
 struct CoinRow: View {
-    // MARK: - Properties
     let coin: Coin
+    var imageHeight: CGFloat = 40  // Default height for the coin image
+    var imageWidth: CGFloat = 40   // Default width for the coin image
+    var verticalPadding: CGFloat = 8 // Vertical padding for the row
+    var horizontalPadding: CGFloat = 16 // Horizontal padding for the row
     
-    // MARK: - Body
     var body: some View {
         HStack {
             // MARK: - Coin Image
             AsyncImage(url: URL(string: coin.image)) { phase in
                 switch phase {
                 case .empty:
-                    ProgressView()
+                    ProgressView()  // Show a loading indicator while the image is loading
                 case .success(let image):
                     image
                         .resizable()
                         .aspectRatio(contentMode: .fill)
-                        .frame(width: 40, height: 40)
+                        .frame(width: imageWidth, height: imageHeight)  // Set image dimensions
                         .cornerRadius(8)
                 case .failure:
-                    Image(systemName: "photo")
+                    Image(systemName: "photo")  // Default image if loading fails
                         .resizable()
                         .aspectRatio(contentMode: .fill)
-                        .frame(width: 40, height: 40)
+                        .frame(width: imageWidth, height: imageHeight)  // Set image dimensions
                         .cornerRadius(8)
                 @unknown default:
-                    EmptyView()
+                    EmptyView()  // Handle any unknown cases
                 }
             }
             
+            // MARK: - Coin Details
             VStack(alignment: .leading, spacing: 2) {
-                // MARK: - Coin Name
-                Text("\(coin.name)")
+                Text("\(coin.name)")  
                     .font(.headline)
                 
-                // MARK: - Coin Symbol
                 Text("\(coin.symbol.uppercased())")
                     .font(.subheadline)
                     .foregroundColor(.secondary)
@@ -51,25 +52,26 @@ struct CoinRow: View {
             
             Spacer()
             
+            // MARK: - Coin Price and Change Percentage
             VStack(alignment: .trailing, spacing: 2) {
-                // MARK: - Current Price
-                Text(coin.currentPrice.toCurrency())
+                Text(coin.currentPrice.toCurrency())  // Display the current price formatted as currency
                     .font(.subheadline)
                     .foregroundColor(.secondary)
                 
-                // MARK: - Price Change Percentage
+                // Display the price change percentage, if available
                 if let changePercentage = coin.priceChangePercentage24HInCurrency {
+                    // Change text color based on whether the change percentage is positive or negative
                     Text(changePercentage.toPercentage())
                         .font(.subheadline)
                         .foregroundColor(changePercentage >= 0 ? .green : .red)
                 } else {
-                    Text("N/A")
+                    Text("N/A")  // Indicates price change percentage data is not available
                         .font(.subheadline)
                         .foregroundColor(.gray)
                 }
             }
         }
-        .padding(.vertical, 8)
-        .padding(.horizontal)
+        .padding(.vertical, verticalPadding)
+        .padding(.horizontal, horizontalPadding)
     }
 }
