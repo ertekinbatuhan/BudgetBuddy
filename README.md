@@ -45,6 +45,12 @@
 
 - **Lottie**: 
   - Integrated for smooth animations, providing an engaging and visually appealing user experience.
+ 
+ ## Tech Stack
+- Xcode: Version 16
+- Language: Swift 6.0
+- Minimum iOS Version: 17.0
+- Dependency Manager: SPM
     
 
   
