@@ -8,6 +8,8 @@
 import SwiftUI
 import SwiftData
 
+
+
 // MARK: - Protocol
 protocol CategoriesViewModelProtocol {
     func fetchCategories(categories: [Category])
@@ -26,7 +28,7 @@ final class CategoriesViewModel: ObservableObject, CategoriesViewModelProtocol {
     @Published private(set) var requestedCategory: Category?
     @Published private(set) var allCategories: [Category] = []
     
-    // MARK: - Dismiss Request
+    // MARK: - Dismissing Request
     func dismissRequestedCategory() {
         self.requestedCategory = nil
         self.deleteRequest = false
@@ -43,7 +45,7 @@ final class CategoriesViewModel: ObservableObject, CategoriesViewModelProtocol {
         context.insert(category)
         categoryName = ""
         addCategory = false
-        saveContext(context)
+        DataManager.shared.save(context: context)  // Centralized save function
     }
     
     // MARK: - Requesting Deletion of Category
@@ -52,7 +54,6 @@ final class CategoriesViewModel: ObservableObject, CategoriesViewModelProtocol {
         self.deleteRequest = true
     }
     
-    
     // MARK: - Deleting Category
     func deleteCategory(context: ModelContext) {
         guard let requestedCategory = requestedCategory else { return }
@@ -60,29 +61,17 @@ final class CategoriesViewModel: ObservableObject, CategoriesViewModelProtocol {
         // Delete related financial records
         if let finances = requestedCategory.finances {
             for finance in finances {
-                context.delete(finance)
+                DataManager.shared.delete(finance, context: context)  // Centralized delete function
             }
         }
         
-        // Delete the category
-        context.delete(requestedCategory)
-        saveContext(context)
+        // Delete the category itself
+        DataManager.shared.delete(requestedCategory, context: context)
         self.requestedCategory = nil
     }
     
     // MARK: - Deleting Financial Records
     func deleteFinance(_ finance: Finance, context: ModelContext) {
-        context.delete(finance)
-        saveContext(context)
-    }
-    
-    // MARK: - Saving the Context
-    private func saveContext(_ context: ModelContext) {
-        do {
-            try context.save()
-        } catch {
-            print("Error saving context: \(error)")
-        }
+        DataManager.shared.delete(finance, context: context)
     }
 }
-

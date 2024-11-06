@@ -46,17 +46,10 @@ final class ReminderViewModel: ObservableObject, ReminderViewModelProtocol {
         
         let newReminder = Reminder(title: title, date: date, notes: notes)
         
-        do {
-            context.insert(newReminder)
-            try context.save()
-            
-            scheduleNotification(for: newReminder)
-            
-            completion(true)
-        } catch {
-            print("Failed to save reminder: \(error.localizedDescription)")
-            completion(false)
-        }
+        context.insert(newReminder)
+        DataManager.shared.save(context: context)
+        scheduleNotification(for: newReminder)
+        completion(true)
     }
     
     func deleteReminder(_ reminder: Reminder?, context: ModelContext) {
@@ -65,12 +58,7 @@ final class ReminderViewModel: ObservableObject, ReminderViewModelProtocol {
             return
         }
         
-        context.delete(reminder)
-        do {
-            try context.save()
-        } catch {
-            print("There was a problem when deleting: \(error.localizedDescription)")
-        }
+        DataManager.shared.delete(reminder, context: context)
     }
     
     // MARK: - Notification Management
