@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import Alamofire
 
 // MARK: - Protocol
 // Protocol defining the contract for a ViewModel managing coin data.
@@ -15,11 +14,12 @@ protocol CoinViewModelProtocol: ObservableObject {
     var error: CoinError? { get }
     var topEarners: [Coin] { get }
     var topLosers: [Coin] { get }
-    func fetchCoins()
+    func fetchCoins() async
 }
 
 // MARK: - CoinViewModel
-final class CoinViewModel: ObservableObject, CoinViewModelProtocol {
+@MainActor
+final class CoinViewModel: ObservableObject,CoinViewModelProtocol {
     
     // MARK: - Published Properties
     @Published var coin = [Coin]()
@@ -44,17 +44,16 @@ final class CoinViewModel: ObservableObject, CoinViewModelProtocol {
     }
     
     // MARK: - Methods
-    func fetchCoins() {
-        coinService.fetchCoins { [weak self] result in
-            DispatchQueue.main.async {
-                switch result {
-                case .success(let coins):
-                    self?.coin = coins
-                    self?.sortedCoins = coins.sorted(by: { $0.priceChangePercentage24HInCurrency ?? 0 > $1.priceChangePercentage24HInCurrency ?? 0 })
-                case .failure(let error):
-                    self?.error = error
-                }
-            }
+    func fetchCoins() async {
+        do {
+            let coins = try await coinService.fetchCoins()
+            self.coin = coins
+            self.sortedCoins = coins.sorted(by: { $0.priceChangePercentage24HInCurrency ?? 0 > $1.priceChangePercentage24HInCurrency ?? 0 })
+            self.error = nil
+        } catch let coinError as CoinError {
+            self.error = coinError
+        } catch {
+            self.error = .decodingError
         }
     }
 }

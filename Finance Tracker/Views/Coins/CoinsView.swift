@@ -52,8 +52,8 @@ struct CoinsView: View {
             }
             .navigationTitle("COINS_LIVE_PRICES")
             .navigationBarTitleDisplayMode(.inline)
-            .onAppear {
-                coinViewModel.fetchCoins()
+            .task {
+                await coinViewModel.fetchCoins()
             }
         }
     }
