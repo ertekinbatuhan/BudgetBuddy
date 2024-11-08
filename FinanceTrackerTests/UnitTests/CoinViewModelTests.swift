@@ -8,6 +8,7 @@
 import XCTest
 @testable import Finance_Tracker
 
+@MainActor
 final class Finance_TrackerUnitTests: XCTestCase {
     
     var viewModel: CoinViewModel!
@@ -25,41 +26,29 @@ final class Finance_TrackerUnitTests: XCTestCase {
     
     // MARK: - Tests
     
-    func testFetchCoins_whenAPISuccess_showsCoins() {
+    func testFetchCoins_whenAPISuccess_showsCoins() async throws {
         // Given: Mock coin data is prepared
         let mockCoins = createMockCoins()
         mockService.mockCoins = mockCoins
-        let expectation = self.expectation(description: "Fetch coins")
         
         // When: Attempt to fetch coins
-        viewModel.fetchCoins()
+        await viewModel.fetchCoins()
         
-        // Then: Verify the result after a delay
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            XCTAssertNotNil(self.viewModel.coin)
-            XCTAssertEqual(self.viewModel.coin.count, 2)
-            expectation.fulfill()
-        }
-        
-        waitForExpectations(timeout: 1, handler: nil)
+        // Then: Verify the result
+        XCTAssertNotNil(viewModel.coin)
+        XCTAssertEqual(viewModel.coin.count, 2)
     }
     
-    func testFetchCoins_whenAPIError_returnsError() {
+    func testFetchCoins_whenAPIError_returnsError() async throws {
         // Given: Service is set to return an error
         mockService.shouldReturnError = true
-        let expectation = self.expectation(description: "Fetch coins failure")
         
         // When: Attempt to fetch coins
-        viewModel.fetchCoins()
+        await viewModel.fetchCoins()
         
-        // Then: Verify the result after a delay
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            XCTAssertEqual(self.viewModel.coin.count, 0)
-            XCTAssertEqual(self.viewModel.error?.localizedDescription, CoinError.networkError("Test Error").localizedDescription)
-            expectation.fulfill()
-        }
-        
-        waitForExpectations(timeout: 1, handler: nil)
+        // Then: Verify the result
+        XCTAssertEqual(viewModel.coin.count, 0)
+        XCTAssertEqual(viewModel.error?.localizedDescription, CoinError.networkError("Test Error").localizedDescription)
     }
     
     func testPerformanceExample() throws {

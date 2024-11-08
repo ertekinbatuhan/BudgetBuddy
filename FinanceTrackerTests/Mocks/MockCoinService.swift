@@ -11,11 +11,11 @@ class MockCoinService: CoinServiceProtocol {
     var shouldReturnError = false
     var mockCoins: [Coin] = []
     
-    func fetchCoins(completion: @escaping (Result<[Coin], CoinError>) -> Void) {
+    func fetchCoins() async throws -> [Coin] {
         if shouldReturnError {
-            completion(.failure(.networkError("Test Error")))
+            throw CoinError.networkError("Test Error")
         } else {
-            completion(.success(mockCoins))
+            return mockCoins
         }
     }
 }
